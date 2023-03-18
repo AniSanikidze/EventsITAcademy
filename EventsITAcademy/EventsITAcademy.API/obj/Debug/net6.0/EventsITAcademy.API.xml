@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EventsITAcademy.API</name>
+    </assembly>
+    <members>
+        <member name="M:EventsITAcademy.API.Controllers.EventController.Get(System.Threading.CancellationToken,System.Int32)">
+            <summary>
+            Returns event based on provided id, Authorization is not required
+            </summary>
+            <param name="cancellationToken"></param>
+            <param name="id"></param>
+            <returns>Return specific todo</returns>
+            <response code="200">Returns the specific todo and corresponding subtasks data</response>
+            <response code="404">If the todo was not found or todo does not belong to the user</response>
+        </member>
+        <member name="M:EventsITAcademy.API.Controllers.EventController.GetAll(System.Threading.CancellationToken)">
+            <summary>
+            Returns list of user's todos with subtasks
+            </summary>
+            <remarks>
+            Note: Status is an optional query parameter to filter todos based on the following statuses:
+            
+                1 - Active
+                
+                2 - Done
+                
+            By default Status is 0, which retrieves all todos regardless of the status
+            </remarks>
+            <param name="cancellationToken"></param>
+        </member>
+        <member name="M:EventsITAcademy.API.Controllers.EventController.Put(System.Threading.CancellationToken,EventsITAcademy.Application.Events.Requests.UpdateEventRequestModel)">
+            <summary>
+            Updates a todo and its corresponding subtasks
+            </summary>
+            <remarks>
+            
+            PUT/event
+            
+             {
+                "id": 1,
+                "title": "Eveeent",
+                "description": "Updated desc",
+                "startDate": "2023-03-13T16:39:06.224Z",
+                "finishDate": "2023-03-13T16:39:06.224Z",
+                "numberOfTickets": 30,
+                "modificationPeriod": 3
+             }
+            </remarks>
+            <param name="cancellationToken"></param>
+            <param name="request"></param>
+            <returns>Returns newly created todo with subtasks</returns>
+            <response code="200">Returns newly created todo with subtasks</response>
+            <response code="404">If the todo or subtask was not found</response>
+        </member>
+        <member name="M:EventsITAcademy.API.Controllers.UserController.Register(System.Threading.CancellationToken,EventsITAcademy.Application.Users.Requests.CreateUserRequestModel)">
+             <summary>
+             registers user with provided username and password
+             </summary>
+             <remarks>
+             Note id is not required
+            
+                 POST/User
+                 
+                  {
+                     "username": "ExampleUser",
+                     "password": "ExamplePassword"
+                  }   
+             </remarks>
+             <param name="cancellation"></param>
+             <param name="user"></param>
+             <returns>Returns newly created user data</returns>
+             <response code="200">Returns new user</response>
+        </member>
+    </members>
+</doc>

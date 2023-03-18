@@ -1,0 +1,43 @@
+﻿@using EventsITAcademy.Domain.Users
+@using Microsoft.AspNetCore.Identity
+@model EventsITAcademy.Application.Events.Responses.EventResponseModel
+@inject SignInManager<User> SignInManager
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PersonResponseModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinishDate)
+        </dd>
+    </dl>
+    @if(SignInManager.IsSignedIn(User)){
+        <button>Reserve</button>
+        <button>Buy</button>
+    }
+</div>
+<div>
+    @Html.ActionLink("შეცვლა", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="List">Back to List</a>
+</div>

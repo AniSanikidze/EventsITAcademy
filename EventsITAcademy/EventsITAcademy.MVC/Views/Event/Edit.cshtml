@@ -1,0 +1,54 @@
+﻿@model EventsITAcademy.Application.Events.Requests.UpdateEventRequestModel
+
+<h4>Event Update</h4>
+<hr />
+<div class="d-flex align-items-center justify-content-center">
+    <div class="col-6 justify-content-center">
+        <form asp-action="Edit">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FinishDate" class="control-label"></label>
+                <input asp-for="FinishDate" class="form-control" />
+                <span asp-validation-for="FinishDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfTickets" class="control-label"></label>
+                <input asp-for="NumberOfTickets" class="form-control" />
+                <span asp-validation-for="NumberOfTickets" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModificationPeriod" class="control-label"></label>
+                <input asp-for="ModificationPeriod" class="form-control" />
+                <span asp-validation-for="ModificationPeriod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to Events</a>
+</div>
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
