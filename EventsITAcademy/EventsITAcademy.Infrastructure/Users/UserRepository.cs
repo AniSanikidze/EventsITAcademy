@@ -31,12 +31,10 @@ namespace EventsITAcademy.Infrastructure.Users
             //var user = await _applicationContext.Users.SingleOrDefaultAsync(, token);
         }
 
-        public async Task<bool> Exists(CancellationToken cancellationToken, string email)
+        public async Task<bool> Exists(CancellationToken cancellationToken, string userId)
         {
-            return await _applicationContext.Users.AnyAsync(x => x.Email == email &&
+            return await _applicationContext.Users.AnyAsync(x => x.Id == userId &&
                     x.Status != EntityStatuses.Deleted, cancellationToken);
-            //return await _applicationContext.Users.AnyAsync(x => Guid.Parse(x.Id) == userId &&
-            //        x.Status != EntityStatuses.Deleted,cancellationToken);
         }
 
         public async Task<List<User>> GetAllAsync(CancellationToken cancellationToken)

@@ -1,5 +1,6 @@
 ﻿@using EventsITAcademy.Domain.Users
 @using Microsoft.AspNetCore.Identity
+@using System.Security.Claims
 @model EventsITAcademy.Application.Events.Responses.EventResponseModel
 @inject SignInManager<User> SignInManager
 
@@ -32,11 +33,21 @@
             @Html.DisplayFor(model => model.FinishDate)
         </dd>
     </dl>
-    @if(SignInManager.IsSignedIn(User)){
-        <button>Reserve</button>
-        <button>Buy</button>
-    }
+
 </div>
+@*@if (SignInManager.IsSignedIn(User))
+{
+            < a href = "ticket/@this.User.FindFirstValue(ClaimTypes.NameIdentifier)/@Model.Id" > Reserve </ a >
+    <button>Buy</button>
+}*@
+@if(SignInManager.IsSignedIn(User) && Model.NumberOfTickets > 0){
+    <div>
+        @Html.ActionLink("Reserve", "Reserve", "Ticket", new { userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value, eventId = Model.Id})
+    </div>
+    <div>
+        @Html.ActionLink("Buy", "Reserve", "Ticket", new { userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value, eventId = Model.Id})
+    </div>
+}
 <div>
     @Html.ActionLink("შეცვლა", "Edit", new { /* id = Model.PrimaryKey */ }) |
     <a asp-action="List">Back to List</a>

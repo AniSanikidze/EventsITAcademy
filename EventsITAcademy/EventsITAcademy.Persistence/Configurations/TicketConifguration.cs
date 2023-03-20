@@ -14,14 +14,13 @@ namespace EventsITAcademy.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<Ticket> builder)
         {
-            //builder.Property(x => x.Status).IsRequired();
-            //builder.Property(x => x.CreatedAt).IsRequired().HasColumnType("datetime");
-            //builder.Property(x => x.ModifiedAt).IsRequired().HasColumnType("datetime");
+            builder.Property(x => x.Status).IsRequired();
+            builder.Property(x => x.CreatedAt).IsRequired().HasColumnType("datetime");
+            builder.Property(x => x.ModifiedAt).IsRequired().HasColumnType("datetime");
+            builder.Property(x => x.ReservationDeadline).IsRequired().HasColumnType("datetime");
 
-            //builder.HasOne(x => x.Event).WithMany(x => x.Tickets).HasForeignKey(x => x.EventId).OnDelete(DeleteBehavior.NoAction);
-            //builder.HasOne(x => x.User).WithMany(x => x.Tickets).HasForeignKey(x => x.UserId);
-
-
+            builder.HasOne(x => x.Event).WithMany(x => x.Tickets).HasForeignKey(x => x.EventId).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.User).WithMany(x => x.Tickets).HasForeignKey(x => x.UserId);
 
         }
     }

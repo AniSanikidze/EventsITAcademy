@@ -10,7 +10,7 @@ namespace EventsITAcademy.Application.Events.Repositories
 {
     public interface IEventRepository
     {
-        Task<List<Event>> GetAllAsync(CancellationToken cancellationToken);
+        Task<List<Event>> GetAllAsync(CancellationToken cancellationToken, Expression<Func<Event,bool>> predicate);
         Task<List<Event>> GetAllUnconfirmedAsync(CancellationToken cancellationToken);
 
         Task<List<Event>> GetUserEventsAsync(CancellationToken cancellationToken, string userId);

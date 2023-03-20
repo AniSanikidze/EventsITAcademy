@@ -16,7 +16,10 @@ namespace EventsITAcademy.Application.Events.Responses
         public DateTime FinishDate { get; set; }
         public int NumberOfTickets { get; set; }
         public bool IsActive { get; set; }
+        public bool IsEditable { get; set; }
+        public bool IsArchived { get; set; }
         public int ModificationPeriod { get; set; }
         public string OwnerId { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

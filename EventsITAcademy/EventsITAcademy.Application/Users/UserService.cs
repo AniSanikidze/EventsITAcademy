@@ -45,13 +45,14 @@ namespace EventsITAcademy.Application.Users
             var userEntity = user.Adapt<User>();
             //userEntity.Password = GenerateHash(userEntity.Password);
             var retrievedUser = _userManager.Users.Where(u => u.Email == user.Email).FirstOrDefault();
+            if (retrievedUser == null)
+                throw new Exception("User does not exist");
+
             var role = _userManager.GetRolesAsync(retrievedUser).Result;
 
 
             //var retrievedUser = await _userRepository.GetByEmailAsync(cancellation, userEntity.Email);
             //var retrievedUser = await _userManager.FindByEmailAsync(user.Email);
-            if (retrievedUser == null)
-                throw new Exception("User does not exist");
 
             _signInManager.Options.SignIn.RequireConfirmedAccount = false;
 
@@ -130,10 +131,17 @@ namespace EventsITAcademy.Application.Users
             //return user;
         }
 
+        //public async Task<bool> ExistsAsync(CancellationToken cancellation, string userId)
+        //{
+        //    //return await _userRepository.Exists()
+        //}
+
         public async Task<List<UserResponseModel>> GetAllUsersAsync(CancellationToken cancellation)
         {
             var users = await _userRepository.GetAllAsync(cancellation);
             return users.Adapt<List<UserResponseModel>>();
         }
+
+
     }
 }

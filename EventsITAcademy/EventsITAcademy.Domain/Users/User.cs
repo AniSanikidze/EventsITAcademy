@@ -14,7 +14,7 @@ namespace EventsITAcademy.Domain.Users
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
         public EntityStatuses Status { get; set; }
-        //public List<Ticket> Tickets { get; set; }
+        public List<Ticket> Tickets { get; set; }
         public List<Event> Events { get; set; }
     }
 }

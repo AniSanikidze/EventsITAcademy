@@ -44,9 +44,9 @@ namespace EventsITAcademy.Infrastructure.Events
 
 
 
-        public async Task<List<Event>> GetAllAsync(CancellationToken cancellationToken)
+        public async Task<List<Event>> GetAllAsync(CancellationToken cancellationToken, Expression<Func<Event,bool>> predicate)
         {
-            return await _applicationContext.Events.Where(x => x.Status == EntityStatuses.Active && x.IsActive == true).ToListAsync(cancellationToken);
+            return await _applicationContext.Events.Where(predicate).ToListAsync(cancellationToken);
         }
 
         public async Task<List<Event>> GetAllUnconfirmedAsync(CancellationToken cancellationToken)

@@ -12,12 +12,19 @@ using EventsITAcademy.Application.Users.Repositories;
 using EventsITAcademy.Infrastructure.Users;
 using EventsITAcademy.Application.CustomHasher;
 using EventsITAcademy.Persistence.Seed;
+using EventsITAcademy.Application.Tickets;
+using EventsITAcademy.Application.Tickets.Repositories;
+using EventsITAcademy.Infrastructure.Tickets;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IEventService, EventService>();
 builder.Services.AddScoped<IEventRepository, EventRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ITicketService, TicketService>();
+builder.Services.AddScoped<ITicketRepository, TicketRepository>();
+
+
 builder.Services.AddSession(conf => conf.IdleTimeout = TimeSpan.FromMinutes(15));
 builder.Services.AddScoped<IPasswordHasher<User>, CustomPasswordHasher>();
 builder.Services.AddControllersWithViews();
@@ -62,6 +69,11 @@ app.UseRouting();
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.MapControllerRoute("Ticket",
+    "ticket/{userId}/{eventId}",
+    new { controller = "search", action = "reserve", userId = "", eventId = "" }
+);
 
 app.MapControllerRoute(
     name: "default",

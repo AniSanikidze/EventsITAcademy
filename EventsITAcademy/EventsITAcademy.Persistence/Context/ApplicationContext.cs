@@ -33,7 +33,7 @@ namespace EventsITAcademy.Persistence.Context
         #endregion  
         #region DbSets
         public DbSet<Event> Events { get; set; }
-        //public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
         //public DbSet<Audit> Audits { get; set; }
 
         #endregion

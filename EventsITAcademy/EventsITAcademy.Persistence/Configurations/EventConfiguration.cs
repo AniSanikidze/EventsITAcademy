@@ -15,11 +15,12 @@ namespace EventsITAcademy.Persistence.Configurations
         {
             builder.Property(x => x.Title).IsRequired().HasMaxLength(100);
             builder.Property(x => x.Description).IsRequired().HasMaxLength(350);
-            builder.Property(x => x.StartDate).IsRequired().HasColumnType("date");
-            builder.Property(x => x.FinishDate).IsRequired().HasColumnType("date");
+            builder.Property(x => x.StartDate).IsRequired().HasColumnType("datetime");
+            builder.Property(x => x.FinishDate).IsRequired().HasColumnType("datetime");
             builder.Property(x => x.NumberOfTickets).IsRequired();
             builder.Property(x => x.IsActive).IsRequired();
             builder.Property(x => x.ModificationPeriod).IsRequired();
+            builder.Property(x => x.ReservationPeriod).IsRequired();
 
             builder.Property(x => x.Status).IsRequired();
             builder.Property(x => x.CreatedAt).IsRequired().HasColumnType("datetime");

@@ -1,7 +1,10 @@
 ﻿using EventsITAcademy.Application.Events;
+using EventsITAcademy.Application.Events.Requests;
 using EventsITAcademy.Application.Users;
+using Mapster;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace EventsITAcademy.MVC.Controllers
 {
@@ -28,5 +31,35 @@ namespace EventsITAcademy.MVC.Controllers
             var users = await _userService.GetAllUsersAsync(cancellationToken);
             return View(users);
         }
+
+        //[Authorize(Roles = "Admin")]
+        //public async Task<IActionResult> EditEvent(int id, CancellationToken cancellationToken)
+        //{
+        //    if (id == 0)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var @event = await _eventService.GetAsync(cancellationToken, id);
+        //    return View(@event.Adapt<AdminUpdateEventRequestModel>());
+        //}
+
+        //[Authorize(Roles = "Admin")]
+        //[HttpPost]
+        //public async Task<IActionResult> Edit(AdminEventRequestModel eventRequest, CancellationToken cancellationToken)
+        //{
+        //    var role = User.FindFirst(ClaimTypes.Role).Value;
+        //    var userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+        //    if (eventRequest.FinishDate < eventRequest.StartDate)
+        //    {
+        //        ModelState.AddModelError("", "Finish Date cannot be less than the start date");
+        //    }
+        //    else if (ModelState.IsValid)
+        //    {
+        //        await _eventService.UpdateAsync(cancellationToken, eventRequest, null, role);
+        //        TempData["success"] = "Event updated successfully";
+        //        return RedirectToAction("List");
+        //    }
+        //    return View();
+        //}
     }
 }

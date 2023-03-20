@@ -29,7 +29,7 @@
             </remarks>
             <param name="cancellationToken"></param>
         </member>
-        <member name="M:EventsITAcademy.API.Controllers.EventController.Put(System.Threading.CancellationToken,EventsITAcademy.Application.Events.Requests.UpdateEventRequestModel)">
+        <member name="M:EventsITAcademy.API.Controllers.EventController.Put(System.Threading.CancellationToken,EventsITAcademy.Application.Events.Requests.UserUpdateEventRequestModel)">
             <summary>
             Updates a todo and its corresponding subtasks
             </summary>

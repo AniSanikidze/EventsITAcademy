@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EventsITAcademy.Application.Events.Requests
 {
-    public class UpdateEventRequestModel
+    public class UserUpdateEventRequestModel
     {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -14,6 +14,5 @@ namespace EventsITAcademy.Application.Events.Requests
         public DateTime StartDate { get; set; }
         public DateTime FinishDate { get; set; }
         public int NumberOfTickets { get; set; }
-        public int ModificationPeriod { get; set; }
     }
 }

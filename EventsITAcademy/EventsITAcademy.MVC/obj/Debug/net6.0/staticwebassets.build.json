@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AwLIf7i6eBPFRfJWMFcRmRGoKztqNELK7iId9PINB4s=",
+  "Hash": "Z7FoEel/BqPjV952LtR+cvmGebusvEJKHYQUuqJBFTo=",
   "Source": "EventsITAcademy.MVC",
   "BasePath": "_content/EventsITAcademy.MVC",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "EventsITAcademy.MVC\\wwwroot",
       "Source": "EventsITAcademy.MVC",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "Pattern": "**"
     }
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\6.0.14\\staticwebassets\\V5\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\EventsITAcademy.MVC.styles.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\EventsITAcademy.MVC.styles.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "EventsITAcademy.MVC.styles.css",
       "AssetKind": "All",
@@ -1051,13 +1051,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\EventsITAcademy.MVC.styles.css"
+      "OriginalItemSpec": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\EventsITAcademy.MVC.styles.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\EventsITAcademy.MVC.bundle.scp.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\EventsITAcademy.MVC.bundle.scp.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "EventsITAcademy.MVC.bundle.scp.css",
       "AssetKind": "All",
@@ -1068,13 +1068,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\EventsITAcademy.MVC.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\EventsITAcademy.MVC.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\css\\site.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\fonts\\fontawesome-webfont.ttf",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\fonts\\fontawesome-webfont.ttf",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/css/fonts/fontawesome-webfont.ttf",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\css\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\fonts\\icomoon.ttf",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\fonts\\icomoon.ttf",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/css/fonts/icomoon.ttf",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\css\\fonts\\icomoon.ttf"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\fonts\\Material-Design-Iconic-Font.ttf",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\fonts\\Material-Design-Iconic-Font.ttf",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/css/fonts/Material-Design-Iconic-Font.ttf",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\css\\fonts\\Material-Design-Iconic-Font.ttf"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\fonts\\materialdesignicons-webfont.ttf",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\fonts\\materialdesignicons-webfont.ttf",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/css/fonts/materialdesignicons-webfont.ttf",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\css\\fonts\\materialdesignicons-webfont.ttf"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\fonts\\Simple-Line-Icons.ttf",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\fonts\\Simple-Line-Icons.ttf",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/css/fonts/Simple-Line-Icons.ttf",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\css\\fonts\\Simple-Line-Icons.ttf"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\fonts\\themify.ttf",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\fonts\\themify.ttf",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/css/fonts/themify.ttf",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\css\\fonts\\themify.ttf"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\pages\\breadcrumb-page.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\pages\\breadcrumb-page.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/css/pages/breadcrumb-page.css",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\css\\pages\\breadcrumb-page.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\pages\\dashboard1.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\pages\\dashboard1.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/css/pages/dashboard1.css",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\css\\pages\\dashboard1.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\pages\\error-pages.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\pages\\error-pages.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/css/pages/error-pages.css",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\css\\pages\\error-pages.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\pages\\google-vector-map.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\pages\\google-vector-map.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/css/pages/google-vector-map.css",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\css\\pages\\google-vector-map.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\pages\\icon-page.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\pages\\icon-page.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/css/pages/icon-page.css",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\css\\pages\\icon-page.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\pages\\other-pages.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\pages\\other-pages.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/css/pages/other-pages.css",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\css\\pages\\other-pages.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\pages\\widget-page.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\pages\\widget-page.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/css/pages/widget-page.css",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\css\\pages\\widget-page.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\style.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\css\\style.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/css/style.css",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\css\\style.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\js\\custom.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\js\\custom.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/js/custom.js",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\js\\custom.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\js\\custom.min.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\js\\custom.min.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/js/custom.min.js",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\js\\custom.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\js\\dashboard1.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\js\\dashboard1.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/js/dashboard1.js",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\js\\dashboard1.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\js\\perfect-scrollbar.jquery.min.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\js\\perfect-scrollbar.jquery.min.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/js/perfect-scrollbar.jquery.min.js",
       "AssetKind": "All",
@@ -1394,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\js\\perfect-scrollbar.jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\js\\sidebarmenu.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\js\\sidebarmenu.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/js/sidebarmenu.js",
       "AssetKind": "All",
@@ -1411,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\js\\sidebarmenu.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\js\\waves.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\js\\waves.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/js/waves.js",
       "AssetKind": "All",
@@ -1428,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\js\\waves.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\colors\\default-dark.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\colors\\default-dark.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/colors/default-dark.scss",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\colors\\default-dark.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\animation.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\animation.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/core/animation.scss",
       "AssetKind": "All",
@@ -1462,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\core\\animation.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\app.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\app.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/core/app.scss",
       "AssetKind": "All",
@@ -1479,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\core\\app.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\buttons.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\buttons.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/core/buttons.scss",
       "AssetKind": "All",
@@ -1496,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\core\\buttons.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\core.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\core.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/core/core.scss",
       "AssetKind": "All",
@@ -1513,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\core\\core.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\form-pages.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\form-pages.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/core/form-pages.scss",
       "AssetKind": "All",
@@ -1530,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\core\\form-pages.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\header.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\header.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/core/header.scss",
       "AssetKind": "All",
@@ -1547,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\core\\header.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\other-common.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\other-common.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/core/other-common.scss",
       "AssetKind": "All",
@@ -1564,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\core\\other-common.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\perfect-scrollbar.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\perfect-scrollbar.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/core/perfect-scrollbar.scss",
       "AssetKind": "All",
@@ -1581,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\core\\perfect-scrollbar.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\scafholding.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\scafholding.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/core/scafholding.scss",
       "AssetKind": "All",
@@ -1598,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\core\\scafholding.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\sidebar.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\sidebar.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/core/sidebar.scss",
       "AssetKind": "All",
@@ -1615,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\core\\sidebar.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\spinner.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\spinner.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/core/spinner.scss",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\core\\spinner.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\table-pages.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\table-pages.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/core/table-pages.scss",
       "AssetKind": "All",
@@ -1649,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\core\\table-pages.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\theme-settings.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\core\\theme-settings.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/core/theme-settings.scss",
       "AssetKind": "All",
@@ -1666,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\core\\theme-settings.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\custom.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\custom.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/custom.scss",
       "AssetKind": "All",
@@ -1683,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\custom.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\pages\\breadcrumb-page.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\pages\\breadcrumb-page.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/pages/breadcrumb-page.scss",
       "AssetKind": "All",
@@ -1700,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\pages\\breadcrumb-page.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\pages\\dashboard1.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\pages\\dashboard1.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/pages/dashboard1.scss",
       "AssetKind": "All",
@@ -1717,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\pages\\dashboard1.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\pages\\error-pages.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\pages\\error-pages.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/pages/error-pages.scss",
       "AssetKind": "All",
@@ -1734,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\pages\\error-pages.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\pages\\google-vector-map.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\pages\\google-vector-map.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/pages/google-vector-map.scss",
       "AssetKind": "All",
@@ -1751,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\pages\\google-vector-map.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\pages\\icon-page.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\pages\\icon-page.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/pages/icon-page.scss",
       "AssetKind": "All",
@@ -1768,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\pages\\icon-page.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\pages\\other-pages.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\pages\\other-pages.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/pages/other-pages.scss",
       "AssetKind": "All",
@@ -1785,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\pages\\other-pages.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\pages\\widget-page.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\pages\\widget-page.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/pages/widget-page.scss",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\pages\\widget-page.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\prepros-6.config",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\prepros-6.config",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/prepros-6.config",
       "AssetKind": "All",
@@ -1819,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\prepros-6.config"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\responsive.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\responsive.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/responsive.scss",
       "AssetKind": "All",
@@ -1836,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\responsive.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\style.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\style.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/style.scss",
       "AssetKind": "All",
@@ -1853,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\style.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\variable.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\variable.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/variable.scss",
       "AssetKind": "All",
@@ -1870,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\variable.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\widgets\\common-widget.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\widgets\\common-widget.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/widgets/common-widget.scss",
       "AssetKind": "All",
@@ -1887,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\widgets\\common-widget.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\widgets\\feed.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\widgets\\feed.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/widgets/feed.scss",
       "AssetKind": "All",
@@ -1904,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\widgets\\feed.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\widgets\\msg-box.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\widgets\\msg-box.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/widgets/msg-box.scss",
       "AssetKind": "All",
@@ -1921,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\widgets\\msg-box.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\widgets\\profile.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\widgets\\profile.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/widgets/profile.scss",
       "AssetKind": "All",
@@ -1938,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\widgets\\profile.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\widgets\\steamline.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\widgets\\steamline.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/widgets/steamline.scss",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\widgets\\steamline.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\widgets\\widgets.scss",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\dist\\scss\\widgets\\widgets.scss",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "dist/scss/widgets/widgets.scss",
       "AssetKind": "All",
@@ -1972,10 +1972,10 @@
       "OriginalItemSpec": "wwwroot\\dist\\scss\\widgets\\widgets.scss"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\favicon.ico",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -1989,10 +1989,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\js\\site.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -2006,10 +2006,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\css\\bootstrap.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/css/bootstrap.css",
       "AssetKind": "All",
@@ -2023,10 +2023,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\css\\bootstrap.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -2040,10 +2040,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -2057,10 +2057,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -2074,10 +2074,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -2091,10 +2091,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -2108,10 +2108,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -2125,10 +2125,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -2142,10 +2142,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -2159,10 +2159,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -2176,10 +2176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -2193,10 +2193,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -2210,10 +2210,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -2227,10 +2227,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -2244,10 +2244,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -2261,10 +2261,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -2278,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -2295,10 +2295,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -2312,10 +2312,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -2329,10 +2329,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -2346,10 +2346,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -2363,10 +2363,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -2380,10 +2380,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -2397,10 +2397,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -2414,10 +2414,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -2431,10 +2431,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -2448,10 +2448,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -2465,10 +2465,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -2482,10 +2482,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -2499,10 +2499,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -2516,10 +2516,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -2533,10 +2533,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -2550,10 +2550,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -2567,10 +2567,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -2584,10 +2584,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -2601,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -2618,10 +2618,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -2635,10 +2635,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -2652,10 +2652,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -2669,10 +2669,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -2686,10 +2686,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -2703,10 +2703,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -2720,10 +2720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -2737,10 +2737,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -2754,10 +2754,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -2771,10 +2771,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -2788,10 +2788,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2805,10 +2805,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -2822,10 +2822,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.eot",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.eot",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/fonts/glyphicons-halflings-regular.eot",
       "AssetKind": "All",
@@ -2839,10 +2839,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.eot"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.svg",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.svg",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/fonts/glyphicons-halflings-regular.svg",
       "AssetKind": "All",
@@ -2856,10 +2856,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.svg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.ttf",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.ttf",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/fonts/glyphicons-halflings-regular.ttf",
       "AssetKind": "All",
@@ -2873,10 +2873,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.ttf"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.woff",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.woff",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/fonts/glyphicons-halflings-regular.woff",
       "AssetKind": "All",
@@ -2890,10 +2890,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.woff"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.woff2",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.woff2",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/fonts/glyphicons-halflings-regular.woff2",
       "AssetKind": "All",
@@ -2907,10 +2907,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\fonts\\glyphicons-halflings-regular.woff2"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/js/bootstrap.js",
       "AssetKind": "All",
@@ -2924,10 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2941,10 +2941,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\js\\npm.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\js\\npm.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/js/npm.js",
       "AssetKind": "All",
@@ -2958,10 +2958,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\npm.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -2975,10 +2975,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\core.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\core.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery/core.js",
       "AssetKind": "All",
@@ -2992,10 +2992,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\core.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -3009,10 +3009,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -3026,10 +3026,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -3043,10 +3043,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\jquery.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\jquery.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery/jquery.js",
       "AssetKind": "All",
@@ -3060,10 +3060,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\jquery.min.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\jquery.min.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery/jquery.min.js",
       "AssetKind": "All",
@@ -3077,10 +3077,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\jquery.min.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\jquery.min.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery/jquery.min.map",
       "AssetKind": "All",
@@ -3094,10 +3094,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\jquery.slim.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\jquery.slim.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery/jquery.slim.js",
       "AssetKind": "All",
@@ -3111,10 +3111,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.slim.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery/jquery.slim.min.js",
       "AssetKind": "All",
@@ -3128,10 +3128,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.slim.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery/jquery.slim.min.map",
       "AssetKind": "All",
@@ -3145,10 +3145,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.slim.min.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -3162,10 +3162,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -3179,10 +3179,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -3196,10 +3196,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -3213,10 +3213,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -3230,10 +3230,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -3247,10 +3247,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -3264,10 +3264,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -3281,10 +3281,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "EventsITAcademy.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
       "BasePath": "_content/EventsITAcademy.MVC",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",

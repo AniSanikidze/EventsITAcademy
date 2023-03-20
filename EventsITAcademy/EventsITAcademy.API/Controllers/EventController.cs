@@ -167,7 +167,7 @@ namespace EventsITAcademy.API.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [Produces("application/json")]
         [HttpPut("v1/event")]
-        public async Task<ActionResult<EventResponseModel>> Put(CancellationToken cancellationToken, UpdateEventRequestModel request)
+        public async Task<ActionResult<EventResponseModel>> Put(CancellationToken cancellationToken, UserUpdateEventRequestModel request)
         {
             return Ok(await _service.UpdateAsync(cancellationToken, request, userIdClaim, role));
         }

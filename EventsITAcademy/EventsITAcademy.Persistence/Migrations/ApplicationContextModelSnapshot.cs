@@ -39,9 +39,15 @@ namespace EventsITAcademy.Persistence.Migrations
                         .HasColumnType("nvarchar(350)");
 
                     b.Property<DateTime>("FinishDate")
-                        .HasColumnType("date");
+                        .HasColumnType("datetime");
 
                     b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsArchived")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsEditable")
                         .HasColumnType("bit");
 
                     b.Property<int>("ModificationPeriod")
@@ -57,8 +63,11 @@ namespace EventsITAcademy.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("ReservationPeriod")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("StartDate")
-                        .HasColumnType("date");
+                        .HasColumnType("datetime");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -84,17 +93,34 @@ namespace EventsITAcademy.Persistence.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime");
+
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime");
+
+                    b.Property<DateTime>("ReservationDeadline")
+                        .HasColumnType("datetime");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
+                    b.Property<int>("TicketStatus")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Ticket");
+                    b.HasIndex("EventId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Tickets");
                 });
 
             modelBuilder.Entity("EventsITAcademy.Domain.Users.User", b =>
@@ -319,6 +345,25 @@ namespace EventsITAcademy.Persistence.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("EventsITAcademy.Domain.Tickets.Ticket", b =>
+                {
+                    b.HasOne("EventsITAcademy.Domain.Events.Event", "Event")
+                        .WithMany("Tickets")
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("EventsITAcademy.Domain.Users.User", "User")
+                        .WithMany("Tickets")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Event");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -370,9 +415,16 @@ namespace EventsITAcademy.Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("EventsITAcademy.Domain.Events.Event", b =>
+                {
+                    b.Navigation("Tickets");
+                });
+
             modelBuilder.Entity("EventsITAcademy.Domain.Users.User", b =>
                 {
                     b.Navigation("Events");
+
+                    b.Navigation("Tickets");
                 });
 #pragma warning restore 612, 618
         }

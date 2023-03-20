@@ -4,6 +4,7 @@ using Mapster;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace EventsITAcademy.MVC.Controllers
 {
@@ -42,7 +43,7 @@ namespace EventsITAcademy.MVC.Controllers
             }
             else if (ModelState.IsValid)
             {
-                await _eventService.CreateAsync(cancellationToken, eventRequest, "d3a5212f-e95f-47f7-8cc4-e9e1bca5546e");
+                await _eventService.CreateAsync(cancellationToken, eventRequest, User.FindFirst(ClaimTypes.NameIdentifier).Value);
                 TempData["success"] = "Event created successfully";
                 return RedirectToAction("List");
             }
@@ -56,11 +57,11 @@ namespace EventsITAcademy.MVC.Controllers
                 return NotFound();
             }
             var @event = await _eventService.GetAsync(cancellationToken, id);
-            return View(@event.Adapt<UpdateEventRequestModel>());
+            return View(@event.Adapt<UserUpdateEventRequestModel>());
         }
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Edit(UpdateEventRequestModel eventRequest, CancellationToken cancellationToken)
+        public async Task<IActionResult> Edit(UserUpdateEventRequestModel eventRequest, CancellationToken cancellationToken)
         {
             var role = User;
             if (eventRequest.FinishDate < eventRequest.StartDate)

@@ -5,5 +5,7 @@
     <h1>Id: @Model.Id</h1>
     <h2>Title: @Model.Title</h2>
     <a href="/Event/Details/@Model.Id">See Details</a>
-    <a class="btn btn-group-toggle" href="/Event/Edit/@Model.Id">Edit</a>
+    @if(@Model.IsEditable){
+        <a class="btn btn-group-toggle" href="/Event/Edit/@Model.Id">Edit</a>
+    }
 </div>
