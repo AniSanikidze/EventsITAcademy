@@ -15,5 +15,6 @@ namespace EventsITAcademy.Application.Tickets.Responses
         public int EventId { get; set; }
         public TicketStatuses TicketStatus { get; set; }
         public DateTime ReservationDeadline { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

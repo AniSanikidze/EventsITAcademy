@@ -1,4 +1,5 @@
 ﻿using EventsITAcademy.Application.Tickets.Repositories;
+using EventsITAcademy.Domain.Events;
 using EventsITAcademy.Domain.Tickets;
 using EventsITAcademy.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
@@ -44,10 +45,24 @@ namespace EventsITAcademy.Infrastructure.Tickets
         }
 
         #endregion
-        public async Task<Ticket> Reserve(CancellationToken cancellationToken, Ticket ticket)
+        public async Task<Ticket> CreateTicketAsync(CancellationToken cancellationToken, Ticket ticket)
         {
             await _applicationContext.Tickets.AddAsync(ticket, cancellationToken);
             await _applicationContext.SaveChangesAsync(cancellationToken);
+            return ticket;
+        }
+
+        public async Task<Ticket> UpdateTicketStatusAsync(CancellationToken cancellationToken, Ticket ticket)
+        {
+            var retrievedTicket = await GetReservedAsync(cancellationToken, ticket.UserId, ticket.EventId);
+            _applicationContext.Entry(retrievedTicket).State = EntityState.Detached;
+            ticket.CreatedAt = retrievedTicket.CreatedAt;
+            ticket.TicketStatus = TicketStatuses.Sold;
+            ticket.ReservationDeadline = null;
+
+            _applicationContext.Tickets.Update(ticket);
+            await _applicationContext.SaveChangesAsync(cancellationToken);
+            //Aq unda davabruno mxolod id
             return ticket;
         }
     }

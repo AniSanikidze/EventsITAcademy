@@ -27,7 +27,7 @@ namespace EventsITAcademy.Workers
                 }
             }
         }
-        public async Task ArchiveEvent(CancellationToken cancellationToken)
+        public async Task ArchiveAndLimitEventEdit(CancellationToken cancellationToken)
         {
             var events = await _eventService.GetAllAsync(cancellationToken);
             foreach (var @event in events)
@@ -36,17 +36,11 @@ namespace EventsITAcademy.Workers
                 {
                     await _eventService.ArchiveEvent(cancellationToken, @event.Id);
                 }
-            }
-        }
-        public async Task LimitEventEdit(CancellationToken cancellationToken)
-        {
-            var events = await _eventService.GetAllAsync(cancellationToken);
-            foreach (var @event in events)
-            {
-                if (@event.CreatedAt.AddMinutes(@event.ModificationPeriod) <= DateTime.Now)
-                {
-                    await _eventService.SetEventUneditableAsync(cancellationToken, @event.Id);
-                }
+
+                //if (@event.CreatedAt.AddMinutes(@event.ModificationPeriod) <= DateTime.Now)
+                //{
+                //    await _eventService.SetEventUneditableAsync(cancellationToken, @event.Id);
+                //}
             }
         }
     }

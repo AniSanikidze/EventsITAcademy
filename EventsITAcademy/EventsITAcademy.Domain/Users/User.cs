@@ -1,11 +1,6 @@
 ﻿using EventsITAcademy.Domain.Events;
 using EventsITAcademy.Domain.Tickets;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EventsITAcademy.Domain.Users
 {

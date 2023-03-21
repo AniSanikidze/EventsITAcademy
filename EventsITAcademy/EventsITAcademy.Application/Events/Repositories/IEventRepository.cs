@@ -16,7 +16,7 @@ namespace EventsITAcademy.Application.Events.Repositories
         Task<List<Event>> GetUserEventsAsync(CancellationToken cancellationToken, string userId);
         Task<Event> GetAsync(CancellationToken cancellationToken, int id);
         Task<Event> GetUserEventAsync(CancellationToken cancellationToken, int id, string userId);
-        Task CreateAsync(CancellationToken cancellationToken, Event @event);
+        Task<Event> CreateAsync(CancellationToken cancellationToken, Event @event);
         Task<Event> UpdateAsync(CancellationToken cancellationToken, Event @event);
         //Task<Event> UpdateToDoStatusAsync(CancellationToken cancellationToken, int id, int ownerId);
         Task DeleteAsync(CancellationToken cancellationToken, int id);

@@ -10,19 +10,19 @@ using System.Threading.Tasks;
 
 namespace EventsITAcademy.Workers.BackgroundWorkers
 {
-    public class LimitEventEditWorker : BackgroundService
+    public class EventWorker : BackgroundService
     {
         private readonly ILogger<TicketWorker> _logger;
         private readonly CrontabSchedule _crontabScheduler;
         private readonly IServiceProvider _serviceProvider;
         private DateTime _nextRun;
 
-        private string Schedule => "*/59 */1 * * * *";
+        private string Schedule => "*/2 * * * * ";
 
-        public LimitEventEditWorker(ILogger<TicketWorker> logger, IServiceProvider serviceProvider)
+        public EventWorker(ILogger<TicketWorker> logger, IServiceProvider serviceProvider)
         {
             _logger = logger;
-            _crontabScheduler = CrontabSchedule.Parse(Schedule, new CrontabSchedule.ParseOptions { IncludingSeconds = true });
+            _crontabScheduler = CrontabSchedule.Parse(Schedule);
             _nextRun = _crontabScheduler.GetNextOccurrence(DateTime.Now);
             _serviceProvider = serviceProvider;
         }
@@ -38,7 +38,7 @@ namespace EventsITAcademy.Workers.BackgroundWorkers
                     using (var scope = _serviceProvider.CreateScope())
                     {
                         var service = scope.ServiceProvider.GetRequiredService<ServiceClient>();
-                        await service.LimitEventEdit(stoppingToken);
+                        await service.ArchiveAndLimitEventEdit(stoppingToken);
                     }
 
                     _logger.LogInformation("Limit event edit worker running at :{0}", DateTime.Now.ToString());

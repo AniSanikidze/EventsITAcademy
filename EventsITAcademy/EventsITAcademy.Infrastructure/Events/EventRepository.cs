@@ -26,10 +26,11 @@ namespace EventsITAcademy.Infrastructure.Events
 
         #endregion
 
-        public async Task CreateAsync(CancellationToken cancellationToken, Event @event)
+        public async Task<Event> CreateAsync(CancellationToken cancellationToken, Event @event)
         {
             await _applicationContext.Events.AddAsync(@event,cancellationToken);
             await _applicationContext.SaveChangesAsync(cancellationToken);
+            return @event;
         }
 
         public Task DeleteAsync(CancellationToken cancellationToken, int id)
@@ -56,7 +57,7 @@ namespace EventsITAcademy.Infrastructure.Events
 
         public async Task<Event> GetAsync(CancellationToken cancellationToken, int id)
         {
-            return await _applicationContext.Events.FirstOrDefaultAsync(x => x.Id == id && 
+            return await _applicationContext.Events.Include(x => x.Image).FirstOrDefaultAsync(x => x.Id == id && 
             x.Status == EntityStatuses.Active, cancellationToken);
         }
 
@@ -76,6 +77,8 @@ namespace EventsITAcademy.Infrastructure.Events
             var retrievedEvent = await GetAsync(cancellationToken, @event.Id);
             _applicationContext.Entry(retrievedEvent).State = EntityState.Detached;
             @event.CreatedAt = retrievedEvent.CreatedAt;
+            @event.ModificationPeriod = retrievedEvent.ModificationPeriod;
+            @event.ReservationPeriod = retrievedEvent.ReservationPeriod;
             _applicationContext.Events.Update(@event);
             await _applicationContext.SaveChangesAsync(cancellationToken);
             return await GetAsync(cancellationToken,@event.Id);

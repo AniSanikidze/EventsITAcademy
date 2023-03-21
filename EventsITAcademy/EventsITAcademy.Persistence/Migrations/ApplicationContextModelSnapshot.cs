@@ -47,9 +47,6 @@ namespace EventsITAcademy.Persistence.Migrations
                     b.Property<bool>("IsArchived")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsEditable")
-                        .HasColumnType("bit");
-
                     b.Property<int>("ModificationPeriod")
                         .HasColumnType("int");
 
@@ -84,6 +81,42 @@ namespace EventsITAcademy.Persistence.Migrations
                     b.ToTable("Events");
                 });
 
+            modelBuilder.Entity("EventsITAcademy.Domain.Images.Image", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime");
+
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
+
+                    b.Property<byte[]>("ImageData")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("ImageName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EventId")
+                        .IsUnique();
+
+                    b.ToTable("Images");
+                });
+
             modelBuilder.Entity("EventsITAcademy.Domain.Tickets.Ticket", b =>
                 {
                     b.Property<int>("Id")
@@ -101,7 +134,7 @@ namespace EventsITAcademy.Persistence.Migrations
                     b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime");
 
-                    b.Property<DateTime>("ReservationDeadline")
+                    b.Property<DateTime?>("ReservationDeadline")
                         .HasColumnType("datetime");
 
                     b.Property<int>("Status")
@@ -345,6 +378,17 @@ namespace EventsITAcademy.Persistence.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("EventsITAcademy.Domain.Images.Image", b =>
+                {
+                    b.HasOne("EventsITAcademy.Domain.Events.Event", "Event")
+                        .WithOne("Image")
+                        .HasForeignKey("EventsITAcademy.Domain.Images.Image", "EventId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Event");
+                });
+
             modelBuilder.Entity("EventsITAcademy.Domain.Tickets.Ticket", b =>
                 {
                     b.HasOne("EventsITAcademy.Domain.Events.Event", "Event")
@@ -417,6 +461,9 @@ namespace EventsITAcademy.Persistence.Migrations
 
             modelBuilder.Entity("EventsITAcademy.Domain.Events.Event", b =>
                 {
+                    b.Navigation("Image")
+                        .IsRequired();
+
                     b.Navigation("Tickets");
                 });
 

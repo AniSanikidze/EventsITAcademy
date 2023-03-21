@@ -10,6 +10,8 @@ namespace EventsITAcademy.Application.Tickets.Requests
     public class TicketRequestModel
     {
         public int EventId { get; set; }
+        public string UserId { get; set; }
         public int ReservationPeriodInMinutes { get; set; }
+        public TicketStatuses TicketStatus { get; set; }
     }
 }

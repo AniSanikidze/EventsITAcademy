@@ -13,7 +13,7 @@ namespace EventsITAcademy.Domain.Tickets
         public string UserId { get; set; }
         public int EventId { get; set; }
         public TicketStatuses TicketStatus { get; set; }
-        public DateTime ReservationDeadline { get; set; }
+        public DateTime? ReservationDeadline { get; set; }
         public User User { get; set; }
         public Event Event { get; set; }
     }
@@ -21,6 +21,6 @@ namespace EventsITAcademy.Domain.Tickets
     public enum TicketStatuses
     {
         Reserved,
-        Bought
+        Sold
     }
 }

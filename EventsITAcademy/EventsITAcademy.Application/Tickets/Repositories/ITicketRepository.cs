@@ -13,7 +13,8 @@ namespace EventsITAcademy.Application.Tickets.Repositories
     {
         Task<Ticket> GetReservedAsync(CancellationToken cancellationToken, string userId, int eventId);
         Task<List<Ticket>> GetAllReservedAsync(CancellationToken cancellationToken);
-        Task<Ticket> Reserve(CancellationToken cancellationToken, Ticket ticket);
+        Task<Ticket> CreateTicketAsync(CancellationToken cancellationToken, Ticket ticket);
+        Task<Ticket> UpdateTicketStatusAsync(CancellationToken cancellationToken, Ticket ticket);
         Task<bool> RemoveReservationAsync(CancellationToken cancellationToken, Ticket ticket);
         Task<bool> Exists(CancellationToken cancellationToken, Expression<Func<Ticket, bool>> predicate);
 

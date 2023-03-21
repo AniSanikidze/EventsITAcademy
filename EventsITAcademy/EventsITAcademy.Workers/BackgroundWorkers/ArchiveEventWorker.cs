@@ -38,7 +38,7 @@ namespace EventsITAcademy.Workers.BackgroundWorkers
                     using (var scope = _serviceProvider.CreateScope())
                     {
                         var service = scope.ServiceProvider.GetRequiredService<ServiceClient>();
-                        await service.ArchiveEvent(stoppingToken);
+                        //await service.ArchiveEvent(stoppingToken);
                     }
 
                     _logger.LogInformation("Archive event worker running at :{0}", DateTime.Now.ToString());

@@ -19,7 +19,7 @@ namespace EventsITAcademy.MVC.Controllers
 
         public async Task<IActionResult> List(CancellationToken cancellation = default)
         {
-            var result = await _eventService.GetAllAsync(cancellation);
+            var result = await _eventService.GetAllConfirmedAsync(cancellation);
             return View(result);
         }
 
@@ -70,7 +70,7 @@ namespace EventsITAcademy.MVC.Controllers
             }
             else if (ModelState.IsValid)
             {
-                //await _eventService.UpdateAsync(cancellationToken, eventRequest, "525c0c12-81e7-4ad7-9b21-8c3d3b728f4b");
+                await _eventService.UpdateAsync(cancellationToken, eventRequest, User.FindFirst(ClaimTypes.NameIdentifier).Value);
                 TempData["success"] = "Event updated successfully";
                 return RedirectToAction("List");
             }

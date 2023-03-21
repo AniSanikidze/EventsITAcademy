@@ -11,6 +11,7 @@ namespace EventsITAcademy.Application.Events
     public interface IEventService
     {
         Task<List<EventResponseModel>> GetAllAsync(CancellationToken cancellationToken);
+        Task<List<EventResponseModel>> GetAllConfirmedAsync(CancellationToken cancellationToken);
         Task<List<EventResponseModel>> GetUserEventsAsync(CancellationToken cancellationToken, string userId);
         Task<List<EventResponseModel>> GetAllUnconfirmedAsync(CancellationToken cancellationToken);
         Task<EventResponseModel> ConfirmEventAsync(CancellationToken cancellationToken, int id);
@@ -18,7 +19,7 @@ namespace EventsITAcademy.Application.Events
         Task<EventResponseModel> ArchiveEvent(CancellationToken cancellationToken, int id);
         Task<EventResponseModel> SetEventUneditableAsync(CancellationToken cancellationToken, int id);
         Task<EventResponseModel> CreateAsync(CancellationToken cancellationToken, EventRequestModel eventRequest, string userId);
-        Task<EventResponseModel> UpdateAsync(CancellationToken cancellationToken, UserUpdateEventRequestModel eventRequest, string userId, string role);
+        Task<EventResponseModel> UpdateAsync(CancellationToken cancellationToken, UserUpdateEventRequestModel eventRequest, string userId);
         Task<EventResponseModel> UpdateEventByAdminAsync(CancellationToken cancellationToken, AdminUpdateEventRequestModel eventRequest);
         //Task<EventResponseModel> PatchAsync(CancellationToken cancellationToken, JsonPatchDocument<ToDoUpdateModel> patchRequest, int id, int userId);
         Task DeleteAsync(CancellationToken cancellationToken, int id, int userId);

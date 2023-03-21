@@ -5,6 +5,7 @@ using EventsITAcademy.Application.Tickets.Responses;
 using EventsITAcademy.Application.Users.Repositories;
 using EventsITAcademy.Domain.Events;
 using EventsITAcademy.Domain.Tickets;
+using EventsITAcademy.Domain.Users;
 using Mapster;
 
 namespace EventsITAcademy.Application.Tickets
@@ -20,6 +21,28 @@ namespace EventsITAcademy.Application.Tickets
             _ticketRepository = ticketRepository;
             _userRepository = userRepository;
             _eventRepository = eventRepository;
+        }
+
+        public async Task<TicketResponseModel> Buy(CancellationToken cancellationToken, int eventId, string userId)
+        {
+            #region Change Ticket Status From Reserved To Sold
+            var reservedTicket = await _ticketRepository.GetReservedAsync(cancellationToken, userId, eventId);
+            if (reservedTicket != null)
+            {
+                var soldTicket = reservedTicket.Adapt<Ticket>();
+                await _ticketRepository.UpdateTicketStatusAsync(cancellationToken, soldTicket);
+                return soldTicket.Adapt<TicketResponseModel>();
+            }
+            #endregion
+
+            TicketRequestModel ticketRequest = new TicketRequestModel
+            {
+                EventId = eventId,
+                UserId = userId,
+                TicketStatus = TicketStatuses.Sold,
+            };
+
+            return await AddTicketAsync(cancellationToken, ticketRequest); ;
         }
 
         public async Task<List<TicketResponseModel>> GetAllReservedAsync(CancellationToken cancellationToken)
@@ -41,9 +64,20 @@ namespace EventsITAcademy.Application.Tickets
             return await _ticketRepository.RemoveReservationAsync(cancellationToken, ticket);
         }
 
-        public async Task<TicketResponseModel> Reserve(CancellationToken cancellationToken, TicketRequestModel ticketRequest, string userId)
+        public async Task<TicketResponseModel> Reserve(CancellationToken cancellationToken,int eventId, string userId)
         {
-            if (!await _userRepository.Exists(cancellationToken, userId))
+            TicketRequestModel ticketRequest = new TicketRequestModel
+            {
+                EventId = eventId,
+                UserId = userId,
+                TicketStatus = TicketStatuses.Reserved
+            };
+            return await AddTicketAsync(cancellationToken, ticketRequest);
+        }
+
+        public async Task<TicketResponseModel> AddTicketAsync(CancellationToken cancellationToken, TicketRequestModel ticketRequest)
+        {
+            if (!await _userRepository.Exists(cancellationToken, ticketRequest.UserId))
             {
                 throw new Exception("User not found");
             }
@@ -53,11 +87,15 @@ namespace EventsITAcademy.Application.Tickets
                 throw new Exception("Event not found");
             }
 
-            if (await _ticketRepository.Exists(cancellationToken, x => x.UserId == userId && x.EventId == ticketRequest.EventId
-            && (x.TicketStatus == TicketStatuses.Reserved || x.TicketStatus == TicketStatuses.Bought)))
+            if (ticketRequest.TicketStatus == TicketStatuses.Reserved)
             {
-                throw new Exception("Ticket is already taken");
+                if (await _ticketRepository.Exists(cancellationToken, x => x.UserId == ticketRequest.UserId && x.EventId == ticketRequest.EventId
+                        && (x.TicketStatus == TicketStatuses.Reserved)))
+                {
+                    throw new Exception("Ticket is already taken");
+                }
             }
+
             var @event = await _eventRepository.GetAsync(cancellationToken, ticketRequest.EventId);
             if (@event.NumberOfTickets > 0)
             {
@@ -66,10 +104,11 @@ namespace EventsITAcademy.Application.Tickets
             }
 
             var ticket = ticketRequest.Adapt<Ticket>();
-            ticket.TicketStatus = TicketStatuses.Reserved;
-            ticket.UserId = userId;
-            ticket.ReservationDeadline = DateTime.Now.AddMinutes(@event.ReservationPeriod);
-            var reservedTicket = await _ticketRepository.Reserve(cancellationToken, ticket);
+            if(ticket.TicketStatus == TicketStatuses.Reserved)
+                ticket.ReservationDeadline = DateTime.Now.AddMinutes(@event.ReservationPeriod);
+            else
+                ticket.ReservationDeadline = null;
+            var reservedTicket = await _ticketRepository.CreateTicketAsync(cancellationToken, ticket);
             return reservedTicket.Adapt<TicketResponseModel>();
         }
     }

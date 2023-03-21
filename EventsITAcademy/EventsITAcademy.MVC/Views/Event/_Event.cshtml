@@ -5,7 +5,7 @@
     <h1>Id: @Model.Id</h1>
     <h2>Title: @Model.Title</h2>
     <a href="/Event/Details/@Model.Id">See Details</a>
-    @if(@Model.IsEditable){
+    @if(@Model.ModificationDeadline > DateTime.Now){
         <a class="btn btn-group-toggle" href="/Event/Edit/@Model.Id">Edit</a>
     }
 </div>

@@ -62,8 +62,8 @@ IHostBuilder CreateHostBuilder(string[] args) =>
         services.AddScoped<IEventRepository, EventRepository>();
         services.AddScoped<IEventService, EventService  >();
         services.AddHostedService<TicketWorker>();
-        services.AddHostedService<ArchiveEventWorker>();
-        services.AddHostedService<LimitEventEditWorker>();
+        //services.AddHostedService<ArchiveEventWorker>();
+        services.AddHostedService<EventWorker>();
 
     })
     .UseSerilog();

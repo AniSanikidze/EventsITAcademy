@@ -32,6 +32,9 @@
         <dd>
             @Html.DisplayFor(model => model.FinishDate)
         </dd>
+        <dd>
+            <img src="@Model.ImageDataUrl"/>
+        </dd>
     </dl>
 
 </div>
@@ -45,7 +48,7 @@
         @Html.ActionLink("Reserve", "Reserve", "Ticket", new { userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value, eventId = Model.Id})
     </div>
     <div>
-        @Html.ActionLink("Buy", "Reserve", "Ticket", new { userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value, eventId = Model.Id})
+        @Html.ActionLink("Buy", "Buy", "Ticket", new { userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value, eventId = Model.Id})
     </div>
 }
 <div>

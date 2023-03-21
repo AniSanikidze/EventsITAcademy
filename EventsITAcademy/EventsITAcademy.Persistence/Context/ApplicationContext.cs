@@ -1,5 +1,6 @@
 ﻿using EventsITAcademy.Domain;
 using EventsITAcademy.Domain.Events;
+using EventsITAcademy.Domain.Images;
 using EventsITAcademy.Domain.Tickets;
 using EventsITAcademy.Domain.Users;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -34,6 +35,7 @@ namespace EventsITAcademy.Persistence.Context
         #region DbSets
         public DbSet<Event> Events { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Image> Images { get; set; }
         //public DbSet<Audit> Audits { get; set; }
 
         #endregion

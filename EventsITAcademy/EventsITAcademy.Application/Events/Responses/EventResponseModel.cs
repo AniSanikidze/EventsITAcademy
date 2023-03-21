@@ -21,5 +21,7 @@ namespace EventsITAcademy.Application.Events.Responses
         public int ModificationPeriod { get; set; }
         public string OwnerId { get; set; }
         public DateTime CreatedAt { get; set; }
+        public DateTime ModificationDeadline => CreatedAt.AddMinutes(ModificationPeriod);
+        public string ImageDataUrl { get; set; }
     }
 }

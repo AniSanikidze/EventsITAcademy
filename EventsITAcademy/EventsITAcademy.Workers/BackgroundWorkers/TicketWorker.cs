@@ -17,7 +17,7 @@ namespace EventsITAcademy.Workers.BackgroundWorkers
         private readonly IServiceProvider _serviceProvider;
         private DateTime _nextRun;
 
-        private string Schedule => "*/45 * * * * *";
+        private string Schedule => "50 * * * * * ";
 
         public TicketWorker(ILogger<TicketWorker> logger, IServiceProvider serviceProvider)
         {

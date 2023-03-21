@@ -76,7 +76,7 @@ namespace EventsITAcademy.API.Controllers
         [HttpGet("v1/events")]
         public async Task<ActionResult<IEnumerable<EventResponseModel>>> GetAll(CancellationToken cancellationToken)
         {
-            return Ok(await _service.GetAllAsync(cancellationToken));
+            return Ok(await _service.GetAllConfirmedAsync(cancellationToken));
         }
 
         [Authorize(Roles = "Admin,Moderator")]
@@ -84,6 +84,7 @@ namespace EventsITAcademy.API.Controllers
         [HttpGet("v1/events/unconfirmed")]
         public async Task<ActionResult<IEnumerable<EventResponseModel>>> GetAllUnconfirmed(CancellationToken cancellationToken)
         {
+
             return Ok(await _service.GetAllUnconfirmedAsync(cancellationToken));
         }
 
@@ -169,7 +170,7 @@ namespace EventsITAcademy.API.Controllers
         [HttpPut("v1/event")]
         public async Task<ActionResult<EventResponseModel>> Put(CancellationToken cancellationToken, UserUpdateEventRequestModel request)
         {
-            return Ok(await _service.UpdateAsync(cancellationToken, request, userIdClaim, role));
+            return Ok(await _service.UpdateAsync(cancellationToken, request, userIdClaim));
         }
         ///// <summary>
         ///// Markes todo status as done

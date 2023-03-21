@@ -40,9 +40,17 @@ namespace EventsITAcademy.API.Controllers
 
         [Produces("application/json")]
         [HttpPost("v1/ticket/reserve")]
-        public async Task<ActionResult<EventResponseModel>> Reserve(CancellationToken cancellationToken, TicketRequestModel request)
+        public async Task<ActionResult<EventResponseModel>> Reserve(CancellationToken cancellationToken, int eventId)
         {
-            return Ok(await _service.Reserve(cancellationToken, request, userIdClaim));
+            return Ok(await _service.Reserve(cancellationToken, eventId, userIdClaim));
+        }
+
+
+        [Produces("application/json")]
+        [HttpPost("v1/ticket/buy")]
+        public async Task<ActionResult<EventResponseModel>> Buy(CancellationToken cancellationToken, int eventId)
+        {
+            return Ok(await _service.Buy(cancellationToken, eventId, userIdClaim));
         }
     }
 }
