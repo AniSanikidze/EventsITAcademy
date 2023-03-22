@@ -16,23 +16,23 @@ namespace EventsITAcademy.MVC.Controllers
         }
         public async Task<IActionResult> Reserve(CancellationToken cancellationToken, string userId, int eventId)
         {
-            //TicketRequestModel ticketRequestModel = new TicketRequestModel()
-            //{
-            //    EventId = eventId,
-            //};
             //when the ticket is already taken, it should be handled 
-            await _ticketService.Reserve(cancellationToken, eventId, userId);
-            return RedirectToAction("List","Event");
+            try
+            {
+                await _ticketService.Reserve(cancellationToken, eventId, userId);
+                TempData["success"] = "Ticket successfully reserved";
+            }
+            catch(Exception ex)
+            {
+                TempData["warning"] = ex.Message;
+            }
+            return RedirectToAction("List", "Event");
         }
 
         public async Task<IActionResult> Buy(CancellationToken cancellationToken, string userId, int eventId)
         {
-            //TicketRequestModel ticketRequestModel = new TicketRequestModel()
-            //{
-            //    EventId = eventId,
-            //};
-            //when the ticket is already taken, it should be handled 
             await _ticketService.Buy(cancellationToken, eventId, userId);
+            TempData["success"] = "Ticket successfully bought";
             return RedirectToAction("List", "Event");
         }
     }

@@ -1,77 +1,19 @@
 ﻿@using EventsITAcademy.Application.Events.Responses
 @model IEnumerable<EventResponseModel>
+<head>
+    <link href="~/css/events.css" rel="stylesheet" />
+</head>
 
 <partial name="_Notification"/>
+
 <h1>Events</h1>
-@foreach (var @eventModel in Model)
-{
-    <partial name="_Event" model="@eventModel"/>
-@*    <div>
-        <h1>Id: @eventModel.Id</h1>
-        <h2>Title: @eventModel.Title</h2>
-        <button>Reserve</button>
-        <button>Buy</button>
-        <a href="/Event/Details/@eventModel.Id">See Details</a>
-        <a class="btn btn-group-toggle" href="/Event/Edit/@eventModel.Id">Edit</a>
-    </div>*@
-}
+<hr/>
 
+<div class="grid">
+    @foreach (var @eventModel in Model)
+    {
 
+        <partial name="_Event" model="@eventModel" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="horizontalSlider__SliderContainer-spilm1-0 iRRogf restore-scroll">
-        <div style="transform:none" class="horizontalSlider__SliderWrapper-spilm1-1 eOteRS">
-            <div data-testid="event-item" title="დებატები" itemtype="Event" class="eventItem__EventItemContainer-sc-1xt5420-0 dkrLdB eventsSlider__EventsSliderItem-x05fpr-0 gXYFTc">
-                <a data-testid="anchor-tag" href="/event/338446">
-                    <a data-testid="anchor-tag">
-                        <div class="eventItem__EventItemPosterWrapper-sc-1xt5420-1 dRbwPj">
-                            <img src="https://static.tkt.ge/img/dfdd136b-75e1-4280-8a35-e997447b44c3.jpeg" class="eventItem__EventItemPosterImg-sc-1xt5420-2 ipnWfk">
-                            <h3 data-testid="floating-date" class="eventItem__EventItemDate-sc-1xt5420-4 bLSxyM">14<br>მარ</h3>
-                            <div class="eventItem__EventItemPosterOverlay-sc-1xt5420-3 buFjQj"></div>
-                            <label data-testid="price-label" class="eventItem__EventItemPrice-sc-1xt5420-9 eqEqpI" style="opacity: 0; transform: translateY(10px) translateZ(0px);">30 ₾</label></div>
-                            <div class="eventItem__EventItemDescWrapper-sc-1xt5420-5 dhclPd">
-                                <h4 data-testid="title" class="eventItem__EventItemDescTitle-sc-1xt5420-6 kILkzH">დებატები</h4>
-                                <p data-testid="location" class="eventItem__EventItemDescLocation-sc-1xt5420-7 jgeSIb">Bukhari Stand-up Club</p>
-                                <p class="eventItem__EventItemDescTime-sc-1xt5420-8 gCYzTE">სამშაბათი, 21:30</p></div></a></a></div>
-                                <div data-testid="event-item" title="Art &amp; Jazz Performance Tako" itemtype="Event" class="eventItem__EventItemContainer-sc-1xt5420-0 dkrLdB eventsSlider__EventsSliderItem-x05fpr-0 gXYFTc">
-                                    <a data-testid="anchor-tag" href="/event/339640">
-                                        <a data-testid="anchor-tag">
-                                            <div class="eventItem__EventItemPosterWrapper-sc-1xt5420-1 dRbwPj">
-                                                <img src="https://static.tkt.ge/img/0f5ec1cc-52b5-41b6-b4ce-206d757a02d1.jpeg" class="eventItem__EventItemPosterImg-sc-1xt5420-2 ipnWfk">
-                                                <h3 data-testid="floating-date" class="eventItem__EventItemDate-sc-1xt5420-4 bLSxyM">14<br>მარ</h3>
-                                                <div class="eventItem__EventItemPosterOverlay-sc-1xt5420-3 buFjQj"></div>
-                                                <label data-testid="price-label" class="eventItem__EventItemPrice-sc-1xt5420-9 eqEqpI" style="opacity: 0; transform: translateY(10px) translateZ(0px);">20 ₾</label></div>
-                                                <div class="eventItem__EventItemDescWrapper-sc-1xt5420-5 dhclPd">
-                                                    <h4 data-testid="title" class="eventItem__EventItemDescTitle-sc-1xt5420-6 kILkzH">Art &amp; Jazz Performance Tako</h4>
-                                                    <p data-testid="location" class="eventItem__EventItemDescLocation-sc-1xt5420-7 jgeSIb">არტერია</p>
-                                                    <p class="eventItem__EventItemDescTime-sc-1xt5420-8 gCYzTE">სამშაბათი, 21:00</p></div></a></a></div>
-                                                    <div data-testid="event-item" title="სისხლიანი ქორწილი" itemtype="Event" class="eventItem__EventItemContainer-sc-1xt5420-0 dkrLdB eventsSlider__EventsSliderItem-x05fpr-0 gXYFTc">
-                                                        <a data-testid="anchor-tag" href="/event/339644"><a data-testid="anchor-tag"><div class="eventItem__EventItemPosterWrapper-sc-1xt5420-1 dRbwPj">
-                                                            <img src="https://static.tkt.ge/img/d70c7a6d-f7a6-4e16-89a2-d0d223889892.jpeg" class="eventItem__EventItemPosterImg-sc-1xt5420-2 ipnWfk">
-                                                            <h3 data-testid="floating-date" class="eventItem__EventItemDate-sc-1xt5420-4 bLSxyM">14<br>მარ</h3>
-                                                            <div class="eventItem__EventItemPosterOverlay-sc-1xt5420-3 buFjQj"></div>
-                                                            <label data-testid="price-label" class="eventItem__EventItemPrice-sc-1xt5420-9 eqEqpI" style="opacity: 0; transform: translateY(10px) translateZ(0px);">20 ₾</label></div>
-                                                            <div class="eventItem__EventItemDescWrapper-sc-1xt5420-5 dhclPd">
-                                                                <h4 data-testid="title" class="eventItem__EventItemDescTitle-sc-1xt5420-6 kILkzH">სისხლიანი ქორწილი</h4>
-                                                                <p data-testid="location" class="eventItem__EventItemDescLocation-sc-1xt5420-7 jgeSIb">თუმანიშვილის თეატრი</p>
-                                                                <p class="eventItem__EventItemDescTime-sc-1xt5420-8 gCYzTE">სამშაბათი, 20:00</p></div></a></a></div>
-        </div>
-    </div>
-
+    }
+</div>

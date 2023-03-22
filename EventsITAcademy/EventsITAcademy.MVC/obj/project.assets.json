@@ -11149,6 +11149,8 @@
       "EventsITAcademy.Domain >= 1.0.0",
       "EventsITAcademy.Infrastructure >= 1.0.0",
       "EventsITAcademy.Persistence >= 1.0.0",
+      "Mapster >= 7.3.0",
+      "Mapster.Core >= 1.2.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.14",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.14",
@@ -11214,6 +11216,14 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Mapster": {
+            "target": "Package",
+            "version": "[7.3.0, )"
+          },
+          "Mapster.Core": {
+            "target": "Package",
+            "version": "[1.2.0, )"
+          },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.14, )"

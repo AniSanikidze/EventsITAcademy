@@ -17,6 +17,7 @@ namespace EventsITAcademy.Application.Events
         Task<EventResponseModel> ConfirmEventAsync(CancellationToken cancellationToken, int id);
         Task<EventResponseModel> GetAsync(CancellationToken cancellationToken, int id);
         Task<EventResponseModel> ArchiveEvent(CancellationToken cancellationToken, int id);
+        Task<EventResponseModel> ActivateEvent(CancellationToken cancellationToken, int id);
         Task<EventResponseModel> SetEventUneditableAsync(CancellationToken cancellationToken, int id);
         Task<EventResponseModel> CreateAsync(CancellationToken cancellationToken, EventRequestModel eventRequest, string userId);
         Task<EventResponseModel> UpdateAsync(CancellationToken cancellationToken, UserUpdateEventRequestModel eventRequest, string userId);

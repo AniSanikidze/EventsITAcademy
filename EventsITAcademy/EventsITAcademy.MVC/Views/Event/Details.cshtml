@@ -7,43 +7,65 @@
 @{
     ViewData["Title"] = "Details";
 }
-
-<h2>Details</h2>
+<head>
+    <link href="~/css/events.css" rel="stylesheet" />
+</head>
+<h2> Event Details</h2>
 
 <div>
-    <h4>PersonResponseModel</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Id)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.StartDate)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.FinishDate)
-        </dd>
-        <dd>
-            <img src="@Model.ImageDataUrl"/>
-        </dd>
-    </dl>
+    <div class="details-div">
 
+        <img src="@Model.ImageDataUrl" class="details-img" />
+        <div class="div-info">
+            <div style="margin-left:20px;">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+                </dt>
+                    @Html.DisplayFor(model => model.Title)
+                <br/>
+                <dt>
+                @Html.DisplayNameFor(model => model.Description)</dt>
+                <p class="desc">
+                    @Html.DisplayFor(model => model.Description)
+                </p>
+                <dt>
+                    @Html.DisplayNameFor(model => model.StartDate) - @Html.DisplayNameFor(model => model.FinishDate)
+                </dt>
+                <div style="display:flex">
+                    @Html.DisplayFor(model => model.StartDate)
+                    -
+                    @Html.DisplayFor(model => model.FinishDate)
+                </div>
+                <dt>
+                    @Html.DisplayNameFor(x => x.NumberOfTickets)
+                </dt>
+                @Html.DisplayFor(model => model.NumberOfTickets)
+
+            </div>
+            <div style="margin-left:20px;">
+                @if (SignInManager.IsSignedIn(User) && Model.NumberOfTickets > 0)
+                {
+                    <div class="btn btn-outline-secondary" style="text-decoration:none !important">
+                        @Html.ActionLink("Reserve", "Reserve", "Ticket", new { userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value, eventId = Model.Id})
+                    </div>
+                    <div class="btn btn-outline-secondary" style="text-decoration:none">
+                        @Html.ActionLink("Buy", "Buy", "Ticket", new { userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value, eventId = Model.Id})
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
 </div>
+
 @*@if (SignInManager.IsSignedIn(User))
 {
             < a href = "ticket/@this.User.FindFirstValue(ClaimTypes.NameIdentifier)/@Model.Id" > Reserve </ a >
     <button>Buy</button>
 }*@
-@if(SignInManager.IsSignedIn(User) && Model.NumberOfTickets > 0){
+@*@if (SignInManager.IsSignedIn(User) && Model.NumberOfTickets > 0)
+{
     <div>
         @Html.ActionLink("Reserve", "Reserve", "Ticket", new { userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value, eventId = Model.Id})
     </div>
@@ -54,4 +76,4 @@
 <div>
     @Html.ActionLink("შეცვლა", "Edit", new { /* id = Model.PrimaryKey */ }) |
     <a asp-action="List">Back to List</a>
-</div>
+</div>*@

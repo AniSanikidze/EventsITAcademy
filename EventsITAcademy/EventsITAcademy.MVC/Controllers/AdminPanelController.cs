@@ -19,6 +19,10 @@ namespace EventsITAcademy.MVC.Controllers
             _eventService = eventService;
         }
 
+        public IActionResult Index()
+        {
+            return View();
+        }
         public async Task<IActionResult> Users(CancellationToken cancellationToken)
         {
             var users = await _userService.GetAllUsersAsync(cancellationToken);
@@ -27,9 +31,15 @@ namespace EventsITAcademy.MVC.Controllers
 
         public async Task<IActionResult> Events(CancellationToken cancellationToken)
         {
-            //await _eventService.Get
-            var users = await _userService.GetAllUsersAsync(cancellationToken);
-            return View(users);
+            var events = await _eventService.GetAllAsync(cancellationToken);
+            return View("~/Views/Event/List.cshtml",events);
+        }
+
+        [Authorize(Roles ="Admin,Moderator")]
+        public async Task<IActionResult> ActivateEvent(int id,CancellationToken cancellationToken)
+        {
+            var events = await _eventService.ActivateEvent(cancellationToken,id);
+            return RedirectToAction("Events");
         }
 
         //[Authorize(Roles = "Admin")]

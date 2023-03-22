@@ -1,11 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using EventsITAcademy.Application.Events;
 using EventsITAcademy.Application.Events.Repositories;
+using EventsITAcademy.Application.Images;
+using EventsITAcademy.Application.Images.Repositories;
 using EventsITAcademy.Application.Tickets;
 using EventsITAcademy.Application.Tickets.Repositories;
 using EventsITAcademy.Application.Users;
 using EventsITAcademy.Application.Users.Repositories;
 using EventsITAcademy.Infrastructure.Events;
+using EventsITAcademy.Infrastructure.Images;
 using EventsITAcademy.Infrastructure.Tickets;
 using EventsITAcademy.Infrastructure.Users;
 using EventsITAcademy.Persistence.Context;
@@ -60,9 +63,10 @@ IHostBuilder CreateHostBuilder(string[] args) =>
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IEventRepository, EventRepository>();
-        services.AddScoped<IEventService, EventService  >();
+        services.AddScoped<IEventService, EventService>();
+        services.AddScoped<IImageService, ImageService>();
+        services.AddScoped<IImageRepository, ImageRepository>();
         services.AddHostedService<TicketWorker>();
-        //services.AddHostedService<ArchiveEventWorker>();
         services.AddHostedService<EventWorker>();
 
     })

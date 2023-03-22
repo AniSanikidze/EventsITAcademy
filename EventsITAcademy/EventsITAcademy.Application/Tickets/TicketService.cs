@@ -29,7 +29,7 @@ namespace EventsITAcademy.Application.Tickets
             var reservedTicket = await _ticketRepository.GetReservedAsync(cancellationToken, userId, eventId);
             if (reservedTicket != null)
             {
-                var soldTicket = reservedTicket.Adapt<Ticket>();
+                var soldTicket = reservedTicket;
                 await _ticketRepository.UpdateTicketStatusAsync(cancellationToken, soldTicket);
                 return soldTicket.Adapt<TicketResponseModel>();
             }
@@ -100,7 +100,7 @@ namespace EventsITAcademy.Application.Tickets
             if (@event.NumberOfTickets > 0)
             {
                 @event.NumberOfTickets -= 1;
-                await _eventRepository.UpdateAsync(cancellationToken, @event.Adapt<Event>());
+                await _eventRepository.UpdateAsync(cancellationToken, @event);
             }
 
             var ticket = ticketRequest.Adapt<Ticket>();

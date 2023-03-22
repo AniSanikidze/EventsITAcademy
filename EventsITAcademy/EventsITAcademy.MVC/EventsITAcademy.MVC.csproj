@@ -16,6 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="Mapster.Core" Version="1.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.14" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.14" />
@@ -31,6 +33,10 @@
     <ProjectReference Include="..\EventsITAcademy.Domain\EventsITAcademy.Domain.csproj" />
     <ProjectReference Include="..\EventsITAcademy.Infrastructure\EventsITAcademy.Infrastructure.csproj" />
     <ProjectReference Include="..\EventsITAcademy.Persistence\EventsITAcademy.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\NewFolder\" />
   </ItemGroup>	
 
 </Project>

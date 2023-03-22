@@ -1,12 +1,15 @@
 ﻿using EventsITAcademy.Application.CustomHasher;
 using EventsITAcademy.Application.Events;
 using EventsITAcademy.Application.Events.Repositories;
+using EventsITAcademy.Application.Images;
+using EventsITAcademy.Application.Images.Repositories;
 using EventsITAcademy.Application.Tickets;
 using EventsITAcademy.Application.Tickets.Repositories;
 using EventsITAcademy.Application.Users;
 using EventsITAcademy.Application.Users.Repositories;
 using EventsITAcademy.Domain.Users;
 using EventsITAcademy.Infrastructure.Events;
+using EventsITAcademy.Infrastructure.Images;
 using EventsITAcademy.Infrastructure.Tickets;
 using EventsITAcademy.Infrastructure.Users;
 using Microsoft.AspNetCore.Identity;
@@ -24,6 +27,9 @@ namespace EventsITAcademy.API.Infrastructure
             services.AddScoped<IPasswordHasher<User>, CustomPasswordHasher>();
             services.AddScoped<ITicketRepository, TicketRepository>();
             services.AddScoped<ITicketService, TicketService>();
+            services.AddScoped<IImageService, ImageService>();
+            services.AddScoped<IImageRepository, ImageRepository>();
+
 
 
             //services.AddScoped<ISubtaskRepository, SubtaskRepository>();

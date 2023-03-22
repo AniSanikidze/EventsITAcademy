@@ -9,13 +9,14 @@ using EventsITAcademy.Domain.Users;
 using Mapster;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Logging;
 
 namespace EventsITAcademy.Application.Events
 {
     public class EventService : IEventService
     {
         private readonly IEventRepository _eventRepository;
-        private readonly IImageService _imageService; 
+        private readonly IImageService _imageService;
 
         public EventService(IEventRepository eventRepository, IImageService imageService)
         {
@@ -51,12 +52,23 @@ namespace EventsITAcademy.Application.Events
         public async Task<List<EventResponseModel>> GetAllConfirmedAsync(CancellationToken cancellationToken)
         {
             var events = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active && x.IsActive == true);
-            return events.Adapt<List<EventResponseModel>>();
+            var adaptedEvents = events.Adapt<List<EventResponseModel>>();
+            //events.ForEach(x =>
+            //{
+            //    if (x.Image != null)
+            //    {
+            //        string imageBase64Data = Convert.ToBase64String(x.Image.ImageData);
+            //        string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
+            //        adaptedEvents[events.IndexOf(x)].ImageDataUrl = imageDataURL;
+            //    }
+            //});
+
+            return adaptedEvents;
         }
 
         public async Task<EventResponseModel> GetAsync(CancellationToken cancellationToken, int id)
         {
-            if (!await _eventRepository.Exists(cancellationToken, x => x.Id == id && x.Status == EntityStatuses.Active ))
+            if (!await _eventRepository.Exists(cancellationToken, x => x.Id == id && x.Status == EntityStatuses.Active))
             {
                 throw new Exception("Event not found");
             }
@@ -68,7 +80,7 @@ namespace EventsITAcademy.Application.Events
             result.ImageDataUrl = imageDataURL;
             return result;
         }
-        
+
         public async Task<List<EventResponseModel>> GetAllUnconfirmedAsync(CancellationToken cancellationToken)
         {
             var unconfirmedEvents = await _eventRepository.GetAllUnconfirmedAsync(cancellationToken);
@@ -83,13 +95,13 @@ namespace EventsITAcademy.Application.Events
 
         public async Task<EventResponseModel> UpdateAsync(CancellationToken cancellationToken, UserUpdateEventRequestModel eventRequest, string userId)
         {
-            if (!await _eventRepository.Exists(cancellationToken, x => x.Id == eventRequest.Id 
+            if (!await _eventRepository.Exists(cancellationToken, x => x.Id == eventRequest.Id
                 && x.Status == EntityStatuses.Active && x.OwnerId == userId))
             {
                 throw new Exception("Event not found");
             }
             var retrievedEvent = await GetAsync(cancellationToken, eventRequest.Id);
-            if(retrievedEvent.ModificationDeadline <= DateTime.Now)
+            if (retrievedEvent.ModificationDeadline <= DateTime.Now)
             {
                 throw new Exception("Event cannot be modified");
             }
@@ -110,7 +122,7 @@ namespace EventsITAcademy.Application.Events
                 throw new Exception("Event not found");
             }
             var @event = await GetAsync(cancellationToken, id);
-            if(@event.IsActive == true)
+            if (@event.IsActive == true)
             {
                 throw new Exception("Event is already confirmed");
             }
@@ -124,7 +136,7 @@ namespace EventsITAcademy.Application.Events
 
         public async Task<EventResponseModel> UpdateEventByAdminAsync(CancellationToken cancellationToken, AdminUpdateEventRequestModel eventRequest)
         {
-            if (!await _eventRepository.Exists(cancellationToken, x => x.Id == eventRequest.Id 
+            if (!await _eventRepository.Exists(cancellationToken, x => x.Id == eventRequest.Id
                 && x.Status == EntityStatuses.Active))
             {
                 throw new Exception("Event not found");
@@ -140,6 +152,15 @@ namespace EventsITAcademy.Application.Events
             var @event = await GetAsync(cancellationToken, id);
             var archivedEvent = @event.Adapt<Event>();
             archivedEvent.IsArchived = true;
+            var result = await _eventRepository.UpdateAsync(cancellationToken, archivedEvent);
+            return result.Adapt<EventResponseModel>();
+        }
+
+        public async Task<EventResponseModel> ActivateEvent(CancellationToken cancellationToken, int id)
+        {
+            var @event = await GetAsync(cancellationToken, id);
+            var archivedEvent = @event.Adapt<Event>();
+            archivedEvent.IsActive = true;
             var result = await _eventRepository.UpdateAsync(cancellationToken, archivedEvent);
             return result.Adapt<EventResponseModel>();
         }

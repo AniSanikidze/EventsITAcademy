@@ -67,10 +67,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/Event/_Event.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcX0V2ZW50LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -81,6 +77,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/Shared/_AdminPanelLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pblBhbmVsTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/Shared/_Event.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FdmVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/Shared/_LoginPartial.cshtml]

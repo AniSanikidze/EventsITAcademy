@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Z7FoEel/BqPjV952LtR+cvmGebusvEJKHYQUuqJBFTo=",
+  "Hash": "TwaLxwellALEHaWiE9jGew8lxwDeB9RXQRonpPqrS7Q=",
   "Source": "EventsITAcademy.MVC",
   "BasePath": "_content/EventsITAcademy.MVC",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\EventsITAcademy.MVC.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\css\\events.css",
+      "SourceId": "EventsITAcademy.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\",
+      "BasePath": "_content/EventsITAcademy.MVC",
+      "RelativePath": "css/events.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\events.css"
     },
     {
       "Identity": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.MVC\\wwwroot\\css\\site.css",

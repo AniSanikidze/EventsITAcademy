@@ -1,0 +1,135 @@
+﻿.hYkLye {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.hYkLye {
+    display: grid;
+    grid-template:
+        "block-name actions" auto
+        "slides slides" auto / 1fr 1fr;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    margin: 1rem 0px;
+}
+
+.grid {
+    width: calc(100% + 1.25rem);
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.625rem;
+}
+
+.event {
+    flex-basis: calc(33.3333% - 1.25rem);
+    margin: 0.625rem 0.625rem 1.375rem;
+}
+
+.event-inner-div {
+    display: grid;
+    grid-template:
+        "poster" auto
+        "desc" auto / 1fr;
+    position: relative;
+    width: 100%;
+    cursor: pointer
+}
+.inner-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.event-img {
+    position: relative;
+    grid-area: poster / poster / poster / poster;
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.event-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+h4 {
+    font-size: 0.875rem;
+    margin: 0.5rem 0px 0px;
+    padding: 0px;
+    align-self: flex-end;
+    color: rgb(43, 47, 89);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+p {
+    margin: 0.25rem 0px 0px;
+    padding: 0px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: rgb(15, 120, 255);
+}
+
+.event-details-outter {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-info {
+    background-color: rgb(15, 120, 255);
+    border-color: rgb(15, 120, 255);
+    color: white;
+    text-decoration: none;
+}
+
+.details-img {
+    width: 50%;
+    height: 50% !important;
+    top: 0px;
+    left: 0px;
+    border-radius: 6px 6px 0px 0px;
+    /*object-fit: cover;*/
+}
+
+.details-div{
+    display: flex;
+    flex-direction:row;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0px;
+    color: rgb(43, 47, 89);
+    text-shadow: rgba(43, 47, 89, 0.5) 0px 0px 1px;
+}
+
+.desc {
+    font-size: 0.8125rem;
+    color: rgb(95, 100, 153);
+    margin: 0px 0px 1rem;
+    line-height: 1.2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn{
+    color:white;
+}
+
+.btn-outline-secondary{
+    background-color: aliceblue;
+}
+
+.div-info{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}

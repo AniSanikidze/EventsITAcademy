@@ -3,6 +3,7 @@ using EventsITAcademy.Domain.Tickets;
 using EventsITAcademy.Domain.Users;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,9 @@ namespace EventsITAcademy.Domain.Events
         public string OwnerId { get; set; }
         public User User { get; set; }
         public List<Ticket> Tickets { get; set; }
-        public Image Image { get; set; }    
+        public Image Image { get; set; }
+
+        //[NotMapped]
+        //public string ImageDataUrl { }
     }
 }

@@ -18,6 +18,7 @@ using EventsITAcademy.Infrastructure.Tickets;
 using EventsITAcademy.Application.Images.Repositories;
 using EventsITAcademy.Infrastructure.Images;
 using EventsITAcademy.Application.Images;
+using EventsITAcademy.MVC.Infrastructure.Mappings;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IEventService, EventService>();
@@ -54,6 +55,9 @@ builder.Services.AddDefaultIdentity<User>(opt =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//Mapping 
+builder.Services.RegisterMaps();
 
 var app = builder.Build();
 
