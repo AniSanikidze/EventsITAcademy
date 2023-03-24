@@ -1,4 +1,5 @@
-﻿using EventsITAcademy.Application.CustomHasher;
+﻿using EventsITAcademy.Application.Admin;
+using EventsITAcademy.Application.CustomHasher;
 using EventsITAcademy.Application.Events;
 using EventsITAcademy.Application.Events.Repositories;
 using EventsITAcademy.Application.Images;
@@ -29,6 +30,7 @@ namespace EventsITAcademy.API.Infrastructure
             services.AddScoped<ITicketService, TicketService>();
             services.AddScoped<IImageService, ImageService>();
             services.AddScoped<IImageRepository, ImageRepository>();
+            services.AddScoped<IAdminService, AdminService>();
 
 
 

@@ -1,4 +1,5 @@
-﻿using EventsITAcademy.Application.Users.Requests;
+﻿using EventsITAcademy.Application.Events.Responses;
+using EventsITAcademy.Application.Users.Requests;
 using EventsITAcademy.Application.Users.Responses;
 using EventsITAcademy.Domain.Users;
 using System;
@@ -14,6 +15,9 @@ namespace EventsITAcademy.Application.Users
         Task<LoggedInUserResponseModel> AuthenticateAsync(CancellationToken cancellation, LoginUserRequestModel user);
         Task<UserResponseModel> CreateAsync(CancellationToken cancellation, CreateUserRequestModel user);
         Task<List<UserResponseModel>> GetAllUsersAsync(CancellationToken cancellation);
+        Task<List<EventResponseModel>> GetUserEventsAsync(CancellationToken cancellation, string userId);
+
+
 
         //Task<UserResponseModel> ExistsAsync(CancellationToken cancellation, string userId);
 

@@ -19,6 +19,10 @@ using EventsITAcademy.Application.Images.Repositories;
 using EventsITAcademy.Infrastructure.Images;
 using EventsITAcademy.Application.Images;
 using EventsITAcademy.MVC.Infrastructure.Mappings;
+using EventsITAcademy.Application.Admin;
+using EventsITAcademy.Application.Roles;
+using EventsITAcademy.Application.Roles.Repositories;
+using EventsITAcademy.Infrastructure.Roles;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IEventService, EventService>();
@@ -29,6 +33,11 @@ builder.Services.AddScoped<ITicketService, TicketService>();
 builder.Services.AddScoped<ITicketRepository, TicketRepository>();
 builder.Services.AddScoped<IImageRepository, ImageRepository>();
 builder.Services.AddScoped<IImageService, ImageService>();
+builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<IRoleService, RoleService>();
+builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+
+
 
 
 builder.Services.AddSession(conf => conf.IdleTimeout = TimeSpan.FromMinutes(15));

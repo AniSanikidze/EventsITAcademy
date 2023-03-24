@@ -23,7 +23,7 @@ namespace EventsITAcademy.MVC.Controllers
             return View(result);
         }
 
-        public async Task<IActionResult> Details(int id,CancellationToken cancellationToken)
+        public async Task<IActionResult> Details(int id, CancellationToken cancellationToken)
         {
             var @event = await _eventService.GetAsync(cancellationToken, id);
             return View(@event);
@@ -45,14 +45,14 @@ namespace EventsITAcademy.MVC.Controllers
             {
                 await _eventService.CreateAsync(cancellationToken, eventRequest, User.FindFirst(ClaimTypes.NameIdentifier).Value);
                 TempData["success"] = "Event created successfully";
-                return RedirectToAction("List");
+                return RedirectToAction("Events","User");
             }
             return View();
         }
         [Authorize]
-        public async Task<IActionResult> Edit(int id,CancellationToken cancellationToken)
+        public async Task<IActionResult> Edit(int id, CancellationToken cancellationToken)
         {
-            if(id == 0)
+            if (id == 0)
             {
                 return NotFound();
             }
@@ -70,9 +70,17 @@ namespace EventsITAcademy.MVC.Controllers
             }
             else if (ModelState.IsValid)
             {
-                await _eventService.UpdateAsync(cancellationToken, eventRequest, User.FindFirst(ClaimTypes.NameIdentifier).Value);
-                TempData["success"] = "Event updated successfully";
-                return RedirectToAction("List");
+                try
+                {
+                    await _eventService.UpdateAsync(cancellationToken, eventRequest, User.FindFirst(ClaimTypes.NameIdentifier).Value);
+                    TempData["success"] = "Event updated successfully";
+                    return RedirectToAction("Events", "User");
+                }
+                catch(Exception ex)
+                {
+                    TempData["warning"] = ex.Message;
+                }
+
             }
             return View();
         }

@@ -17,3 +17,7 @@ body {
   margin-bottom: 60px;
   background-color: aliceblue;
 }
+
+.form-group{
+    margin-bottom:1rem;
+}

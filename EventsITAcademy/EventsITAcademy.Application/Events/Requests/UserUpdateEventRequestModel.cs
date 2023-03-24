@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,5 +15,6 @@ namespace EventsITAcademy.Application.Events.Requests
         public DateTime StartDate { get; set; }
         public DateTime FinishDate { get; set; }
         public int NumberOfTickets { get; set; }
+        //public IFormFile ImageFile { get; set; }
     }
 }

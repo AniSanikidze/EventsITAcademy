@@ -45,7 +45,7 @@
 
             </div>
             <div style="margin-left:20px;">
-                @if (SignInManager.IsSignedIn(User) && Model.NumberOfTickets > 0)
+                @if (SignInManager.IsSignedIn(User) && (!this.User.IsInRole("Admin") && !this.User.IsInRole("Moderator")) && Model.NumberOfTickets > 0)
                 {
                     <div class="btn btn-outline-secondary" style="text-decoration:none !important">
                         @Html.ActionLink("Reserve", "Reserve", "Ticket", new { userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value, eventId = Model.Id})

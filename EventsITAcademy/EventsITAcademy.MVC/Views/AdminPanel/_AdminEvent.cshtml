@@ -1,0 +1,38 @@
+﻿@using System.Security.Claims
+@model EventsITAcademy.Application.Events.Responses.EventResponseModel
+
+<head>
+    <link href="~/css/events.css" rel="stylesheet" />
+</head>
+
+<div class="event">
+    <div class="event-inner-div">
+        <div class="img-div">
+            <img src="@Model.ImageDataUrl" class="event-img" />
+        </div>
+
+        <div class="event-details-outter">
+            <div class="event-details">
+                <h4><b>ID:</b> @Model.Id</h4>
+                <h4>Title: @Model.Title</h4>
+                <h4>Event Duration: @Model.StartDate - @Model.FinishDate</h4>
+                <h4>Event Owner ID: @Model.OwnerId</h4>
+                <h4>Modification Deadline: @Model.ModificationDeadline</h4>
+                <div style="display:flex;margin: 0.5rem 0px 0px;">
+                    @if (Model.IsArchived == false)
+                    {
+                        @if ((this.User.IsInRole("Admin") || this.User.IsInRole("Moderator")) && !Model.IsActive)
+                        {
+                            <a class="btn btn-sm btn-success" style="margin-right:5px;" href="/AdminPanel/ActivateEvent/@Model.Id">Activate</a>
+
+                        }
+                        <a class="btn btn-sm btn-info" style="margin-right:5px;" href="/AdminPanel/EditEvent/@Model.Id">Edit</a>
+                    }
+                    <a class="btn btn-sm btn-danger" style="margin-right:5px;" href="/AdminPanel/DeleteEvent/@Model.Id">Delete</a>
+                    <a class="btn btn-sm btn-info" style="margin-right:5px;" href="/Event/Details/@Model.Id">See Details</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

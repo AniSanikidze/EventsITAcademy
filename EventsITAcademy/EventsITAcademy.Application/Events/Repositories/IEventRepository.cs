@@ -18,7 +18,7 @@ namespace EventsITAcademy.Application.Events.Repositories
         Task<Event> GetUserEventAsync(CancellationToken cancellationToken, int id, string userId);
         Task<Event> CreateAsync(CancellationToken cancellationToken, Event @event);
         Task<Event> UpdateAsync(CancellationToken cancellationToken, Event @event);
-        //Task<Event> UpdateToDoStatusAsync(CancellationToken cancellationToken, int id, int ownerId);
+        Task<Event> UpdateEventModResPeriodsAsync(CancellationToken cancellationToken, Event @event);
         Task DeleteAsync(CancellationToken cancellationToken, int id);
         Task<bool> Exists(CancellationToken cancellationToken, Expression<Func<Event,bool>> predicate);
     }

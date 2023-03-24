@@ -15,4 +15,8 @@
     <ProjectReference Include="..\EventsITAcademy.Domain\EventsITAcademy.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Admin\Requests\" />
+  </ItemGroup>
+
 </Project>

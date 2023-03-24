@@ -1,4 +1,5 @@
-﻿using EventsITAcademy.Domain.Users;
+﻿using EventsITAcademy.Domain.Images;
+using EventsITAcademy.Domain.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace EventsITAcademy.Application.Events.Responses
         public bool IsEditable { get; set; }
         public bool IsArchived { get; set; }
         public int ModificationPeriod { get; set; }
+        public int ReservationPeriod { get; set; }
         public string OwnerId { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModificationDeadline => CreatedAt.AddMinutes(ModificationPeriod);

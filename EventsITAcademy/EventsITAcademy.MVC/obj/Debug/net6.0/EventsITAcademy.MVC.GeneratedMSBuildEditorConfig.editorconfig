@@ -47,8 +47,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxBZG1pbkhvbWVQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/AdminPanel/AssignRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxBc3NpZ25Sb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/AdminPanel/EditEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxFZGl0RXZlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/AdminPanel/Events.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxFdmVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/AdminPanel/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/AdminPanel/_AdminEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxfQWRtaW5FdmVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/Event/Create.cshtml]
@@ -97,6 +113,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/User/Events.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFdmVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/User/_UserEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfVXNlckV2ZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/EventsITAcademy/EventsITAcademy/EventsITAcademy.MVC/Views/_ViewImports.cshtml]

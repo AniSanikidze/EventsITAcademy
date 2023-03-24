@@ -38,9 +38,13 @@ namespace EventsITAcademy.Application.Events
             return adaptedEvent.Adapt<EventResponseModel>();
         }
 
-        public Task DeleteAsync(CancellationToken cancellationToken, int id, int userId)
+        public async Task DeleteAsync(CancellationToken cancellationToken, int id)
         {
-            throw new NotImplementedException();
+            if (!await _eventRepository.Exists(cancellationToken, x => x.Status != EntityStatuses.Deleted && x.Id == id))
+            {
+                throw new Exception("Event not found");
+            }
+            await _eventRepository.DeleteAsync(cancellationToken, id);
         }
 
         public async Task<List<EventResponseModel>> GetAllAsync(CancellationToken cancellationToken)
@@ -51,7 +55,7 @@ namespace EventsITAcademy.Application.Events
 
         public async Task<List<EventResponseModel>> GetAllConfirmedAsync(CancellationToken cancellationToken)
         {
-            var events = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active && x.IsActive == true);
+            var events = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active && x.IsActive == true && x.IsArchived == false);
             var adaptedEvents = events.Adapt<List<EventResponseModel>>();
             //events.ForEach(x =>
             //{
@@ -74,16 +78,16 @@ namespace EventsITAcademy.Application.Events
             }
 
             var @event = await _eventRepository.GetAsync(cancellationToken, id);
-            string imageBase64Data = Convert.ToBase64String(@event.Image.ImageData);
-            string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
+            //string imageBase64Data = Convert.ToBase64String(@event.Image.ImageData);
+            //string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
             var result = @event.Adapt<EventResponseModel>();
-            result.ImageDataUrl = imageDataURL;
+            //result.ImageDataUrl = imageDataURL;
             return result;
         }
 
         public async Task<List<EventResponseModel>> GetAllUnconfirmedAsync(CancellationToken cancellationToken)
         {
-            var unconfirmedEvents = await _eventRepository.GetAllUnconfirmedAsync(cancellationToken);
+            var unconfirmedEvents = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active && x.IsArchived == false && x.IsActive == false);
             return unconfirmedEvents.Adapt<List<EventResponseModel>>();
         }
 
@@ -169,9 +173,14 @@ namespace EventsITAcademy.Application.Events
         {
             var @event = await GetAsync(cancellationToken, id);
             var archivedEvent = @event.Adapt<Event>();
-            //archivedEvent.IsEditable = false;
             var result = await _eventRepository.UpdateAsync(cancellationToken, archivedEvent);
             return result.Adapt<EventResponseModel>();
+        }
+
+        public async Task<List<EventResponseModel>> GetAllArchivedAsync(CancellationToken cancellationToken)
+        {
+            var unconfirmedEvents = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active && x.IsArchived == true);
+            return unconfirmedEvents.Adapt<List<EventResponseModel>>();
         }
     }
 }

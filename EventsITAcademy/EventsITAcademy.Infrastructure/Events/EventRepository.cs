@@ -28,14 +28,27 @@ namespace EventsITAcademy.Infrastructure.Events
 
         public async Task<Event> CreateAsync(CancellationToken cancellationToken, Event @event)
         {
-            await _applicationContext.Events.AddAsync(@event,cancellationToken);
+            await _applicationContext.Events.AddAsync(@event, cancellationToken);
             await _applicationContext.SaveChangesAsync(cancellationToken);
             return @event;
         }
 
-        public Task DeleteAsync(CancellationToken cancellationToken, int id)
+        public async Task DeleteAsync(CancellationToken cancellationToken, int id)
         {
-            return null;
+            var entity = await GetAsync(cancellationToken, id);
+            entity.Status = EntityStatuses.Deleted;
+            if (entity.Tickets != null && entity.Tickets.Count > 0)
+            {
+                entity.Tickets?.ForEach(x => x.Status = EntityStatuses.Deleted);
+            }
+
+            if(entity.Image != null)
+            {
+                entity.Image.Status = EntityStatuses.Deleted;
+            }
+
+            _applicationContext.Entry(entity).State = EntityState.Modified;
+            await _applicationContext.SaveChangesAsync(cancellationToken);
         }
 
         public async Task<bool> Exists(CancellationToken cancellationToken, Expression<Func<Event, bool>> predicate)
@@ -45,9 +58,9 @@ namespace EventsITAcademy.Infrastructure.Events
 
 
 
-        public async Task<List<Event>> GetAllAsync(CancellationToken cancellationToken, Expression<Func<Event,bool>> predicate)
+        public async Task<List<Event>> GetAllAsync(CancellationToken cancellationToken, Expression<Func<Event, bool>> predicate)
         {
-            return await _applicationContext.Events.Include(x=>x.Image).Where(predicate).ToListAsync(cancellationToken);
+            return await _applicationContext.Events.Include(x => x.Image).Where(predicate).ToListAsync(cancellationToken);
         }
 
         public async Task<List<Event>> GetAllUnconfirmedAsync(CancellationToken cancellationToken)
@@ -57,7 +70,7 @@ namespace EventsITAcademy.Infrastructure.Events
 
         public async Task<Event> GetAsync(CancellationToken cancellationToken, int id)
         {
-            return await _applicationContext.Events.Include(x => x.Image).FirstOrDefaultAsync(x => x.Id == id && 
+            return await _applicationContext.Events.Include(x => x.Image).FirstOrDefaultAsync(x => x.Id == id &&
             x.Status == EntityStatuses.Active, cancellationToken);
         }
 
@@ -76,12 +89,26 @@ namespace EventsITAcademy.Infrastructure.Events
         {
             var retrievedEvent = await GetAsync(cancellationToken, @event.Id);
             _applicationContext.Entry(retrievedEvent).State = EntityState.Detached;
-            @event.CreatedAt = retrievedEvent.CreatedAt;
+
             @event.ModificationPeriod = retrievedEvent.ModificationPeriod;
             @event.ReservationPeriod = retrievedEvent.ReservationPeriod;
+            @event.CreatedAt = retrievedEvent.CreatedAt;
             _applicationContext.Events.Update(@event);
             await _applicationContext.SaveChangesAsync(cancellationToken);
-            return await GetAsync(cancellationToken,@event.Id);
+            return await GetAsync(cancellationToken, @event.Id);
+        }
+
+        public async Task<Event> UpdateEventModResPeriodsAsync(CancellationToken cancellationToken, Event @event)
+        {
+            var retrievedEvent = await GetAsync(cancellationToken, @event.Id);
+            _applicationContext.Entry(retrievedEvent).State = EntityState.Detached;
+
+            @event.CreatedAt = retrievedEvent.CreatedAt;
+            @event.OwnerId = retrievedEvent.OwnerId;
+            @event.IsActive = retrievedEvent.IsActive;
+            _applicationContext.Events.Update(@event);
+            await _applicationContext.SaveChangesAsync(cancellationToken);
+            return await GetAsync(cancellationToken, @event.Id);
         }
     }
 }

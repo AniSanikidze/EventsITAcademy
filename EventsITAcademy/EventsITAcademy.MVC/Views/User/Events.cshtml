@@ -1,0 +1,20 @@
+﻿@using EventsITAcademy.Application.Events.Responses
+@model IEnumerable<EventResponseModel>
+<head>
+    <link href="~/css/events.css" rel="stylesheet" />
+</head>
+
+<partial name="_Notification"/>
+
+<h1>My Events</h1>
+
+<hr/>
+
+<div class="grid">
+    @foreach (var @eventModel in Model)
+    {
+
+            <partial name="_UserEvent" model="@eventModel" />
+
+    }
+</div>
