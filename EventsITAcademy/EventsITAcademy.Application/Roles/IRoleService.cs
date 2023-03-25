@@ -13,6 +13,6 @@ namespace EventsITAcademy.Application.Roles
         Task AssignRoleToUserAsync(CancellationToken cancellationToken, string userId, string userRoleName);
         List<IdentityRole> GetRolesAsync(CancellationToken cancellationToken);
         Task<String> GetUserRoleAsync(CancellationToken cancellationToken, string userId);
-
+        Task RemoveUserRoleAsync(CancellationToken cancellationToken, string userId);
     }
 }

@@ -29,7 +29,7 @@
             </remarks>
             <param name="cancellationToken"></param>
         </member>
-        <member name="M:EventsITAcademy.API.Controllers.EventController.Put(System.Threading.CancellationToken,EventsITAcademy.Application.Events.Requests.UserUpdateEventRequestModel)">
+        <member name="M:EventsITAcademy.API.Controllers.EventController.Put(System.Threading.CancellationToken,EventsITAcademy.Application.Events.Requests.UpdateEventRequestModel)">
             <summary>
             Updates a todo and its corresponding subtasks
             </summary>
@@ -71,6 +71,67 @@
              <param name="user"></param>
              <returns>Returns newly created user data</returns>
              <response code="200">Returns new user</response>
+        </member>
+        <member name="T:EventsITAcademy.API.Infrastructure.Localizations.ValidationErrorMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:EventsITAcademy.API.Infrastructure.Localizations.ValidationErrorMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:EventsITAcademy.API.Infrastructure.Localizations.ValidationErrorMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:EventsITAcademy.API.Infrastructure.Localizations.ValidationErrorMessages.DescMaxLength">
+            <summary>
+              Looks up a localized string similar to Description can not be be empty and should consist of at most 350 characters.
+            </summary>
+        </member>
+        <member name="P:EventsITAcademy.API.Infrastructure.Localizations.ValidationErrorMessages.EmailRequired">
+            <summary>
+              Looks up a localized string similar to Email address is a required field.
+            </summary>
+        </member>
+        <member name="P:EventsITAcademy.API.Infrastructure.Localizations.ValidationErrorMessages.EventTitleLength">
+            <summary>
+              Looks up a localized string similar to Event title should not be empty and should consist of at most 100 characters.
+            </summary>
+        </member>
+        <member name="P:EventsITAcademy.API.Infrastructure.Localizations.ValidationErrorMessages.FinishDateGreaterThanNow">
+            <summary>
+              Looks up a localized string similar to The end date and time of the event should be greater than the current time.
+            </summary>
+        </member>
+        <member name="P:EventsITAcademy.API.Infrastructure.Localizations.ValidationErrorMessages.InvalidEmail">
+            <summary>
+              Looks up a localized string similar to Invalid email format.
+            </summary>
+        </member>
+        <member name="P:EventsITAcademy.API.Infrastructure.Localizations.ValidationErrorMessages.NumberOfTicketsRequired">
+            <summary>
+              Looks up a localized string similar to Number of tickets field is mandatory and must be greater than 0.
+            </summary>
+        </member>
+        <member name="P:EventsITAcademy.API.Infrastructure.Localizations.ValidationErrorMessages.PasswordLength">
+            <summary>
+              Looks up a localized string similar to Password is a required field and the length should be between 6 and 30.
+            </summary>
+        </member>
+        <member name="P:EventsITAcademy.API.Infrastructure.Localizations.ValidationErrorMessages.StartDateGreaterThanNow">
+            <summary>
+              Looks up a localized string similar to The start date and time of the event should be greater than the current time.
+            </summary>
+        </member>
+        <member name="P:EventsITAcademy.API.Infrastructure.Localizations.ValidationErrorMessages.UsernameLength">
+            <summary>
+              Looks up a localized string similar to Username is a required field and should not exceed 256 characters.
+            </summary>
         </member>
     </members>
 </doc>

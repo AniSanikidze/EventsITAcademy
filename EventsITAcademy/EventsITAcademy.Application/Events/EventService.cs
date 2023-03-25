@@ -97,7 +97,7 @@ namespace EventsITAcademy.Application.Events
             return userEvents.Adapt<List<EventResponseModel>>();
         }
 
-        public async Task<EventResponseModel> UpdateAsync(CancellationToken cancellationToken, UserUpdateEventRequestModel eventRequest, string userId)
+        public async Task<EventResponseModel> UpdateAsync(CancellationToken cancellationToken, UpdateEventRequestModel eventRequest, string userId)
         {
             if (!await _eventRepository.Exists(cancellationToken, x => x.Id == eventRequest.Id
                 && x.Status == EntityStatuses.Active && x.OwnerId == userId))

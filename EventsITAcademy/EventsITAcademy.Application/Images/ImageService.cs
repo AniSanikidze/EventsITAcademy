@@ -38,6 +38,7 @@ namespace EventsITAcademy.Application.Images
             img.ImageName = uploadedImage.FileName;
 
             MemoryStream ms = new MemoryStream();
+
             uploadedImage.CopyTo(ms);
             img.ImageData = ms.ToArray();
 

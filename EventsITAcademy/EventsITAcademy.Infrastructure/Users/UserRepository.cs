@@ -32,6 +32,23 @@ namespace EventsITAcademy.Infrastructure.Users
             //var user = await _applicationContext.Users.SingleOrDefaultAsync(, token);
         }
 
+        public async Task DeleteAsync(CancellationToken cancellationToken, string userId)
+        {
+            var user = await GetAsync(cancellationToken, userId);
+            user.ModifiedAt = DateTime.Now;
+            if (user.Tickets != null && user.Tickets.Count > 0)
+            {
+                user.Tickets?.ForEach(x => x.Status = EntityStatuses.Deleted);
+            }
+            if (user.Events != null && user.Events.Count > 0)
+            {
+                user.Events?.ForEach(x => x.Status = EntityStatuses.Deleted);
+            }
+            user.Status = EntityStatuses.Deleted;
+            _applicationContext.Entry(user).State = EntityState.Modified;
+            await _applicationContext.SaveChangesAsync(cancellationToken);
+        }
+
         public async Task<bool> Exists(CancellationToken cancellationToken, string userId)
         {
             return await _applicationContext.Users.AnyAsync(x => x.Id == userId &&
@@ -45,7 +62,7 @@ namespace EventsITAcademy.Infrastructure.Users
 
         public async Task<User> GetAsync(CancellationToken cancellationToken, string id)
         {
-            return await _applicationContext.Users.SingleOrDefaultAsync(x => x.Id == id && x.Status == EntityStatuses.Active, cancellationToken);
+            return await _applicationContext.Users.Include(x => x.Tickets).Include(x => x.Events).SingleOrDefaultAsync(x => x.Id == id && x.Status == EntityStatuses.Active, cancellationToken);
         }
 
         public async Task<User> GetByEmailAsync(CancellationToken cancellationToken, string email)

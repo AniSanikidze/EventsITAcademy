@@ -1,5 +1,4 @@
 ﻿using EventsITAcademy.Application.Admin;
-using EventsITAcademy.Application.CustomHasher;
 using EventsITAcademy.Application.Events;
 using EventsITAcademy.Application.Events.Repositories;
 using EventsITAcademy.Application.Images;
@@ -14,6 +13,7 @@ using EventsITAcademy.Infrastructure.Images;
 using EventsITAcademy.Infrastructure.Tickets;
 using EventsITAcademy.Infrastructure.Users;
 using Microsoft.AspNetCore.Identity;
+using Utilities.CustomHasher;
 
 namespace EventsITAcademy.API.Infrastructure
 {

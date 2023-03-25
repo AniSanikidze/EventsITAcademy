@@ -33,6 +33,7 @@
     <ProjectReference Include="..\EventsITAcademy.Domain\EventsITAcademy.Domain.csproj" />
     <ProjectReference Include="..\EventsITAcademy.Infrastructure\EventsITAcademy.Infrastructure.csproj" />
     <ProjectReference Include="..\EventsITAcademy.Persistence\EventsITAcademy.Persistence.csproj" />
+    <ProjectReference Include="..\Utilities\Utilities.csproj" />
   </ItemGroup>
 
   <ItemGroup>

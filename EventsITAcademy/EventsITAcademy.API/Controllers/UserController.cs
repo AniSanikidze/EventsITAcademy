@@ -1,4 +1,5 @@
 ﻿using EventsITAcademy.API.Infrastructure.Auth;
+using EventsITAcademy.API.Infrastructure.SwaggerExamples;
 using EventsITAcademy.Application.Users;
 using EventsITAcademy.Application.Users.Requests;
 using EventsITAcademy.Application.Users.Responses;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Filters;
 using System.IdentityModel.Tokens.Jwt;
 
 namespace EventsITAcademy.API.Controllers
@@ -41,9 +43,9 @@ namespace EventsITAcademy.API.Controllers
         /// <param name="user"></param>
         /// <returns>Returns newly created user data</returns>
         /// <response code="200">Returns new user</response>
-        //[ProducesResponseType(typeof(UserExample), StatusCodes.Status200OK)]
-        //[SwaggerResponseExample(StatusCodes.Status200OK, typeof(UserExample))]
-        //[ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(UserExample), StatusCodes.Status200OK)]
+        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(UserExample))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         [Produces("application/json")]
         [Route("/v1/users")]
         [HttpPost]

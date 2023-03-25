@@ -16,10 +16,5 @@ namespace EventsITAcademy.Application.Users
         Task<UserResponseModel> CreateAsync(CancellationToken cancellation, CreateUserRequestModel user);
         Task<List<UserResponseModel>> GetAllUsersAsync(CancellationToken cancellation);
         Task<List<EventResponseModel>> GetUserEventsAsync(CancellationToken cancellation, string userId);
-
-
-
-        //Task<UserResponseModel> ExistsAsync(CancellationToken cancellation, string userId);
-
     }
 }

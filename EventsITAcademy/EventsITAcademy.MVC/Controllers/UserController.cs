@@ -1,9 +1,11 @@
 ﻿using EventsITAcademy.Application.Users;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
 namespace EventsITAcademy.MVC.Controllers
 {
+    [Authorize(Roles = "User")]
     public class UserController : Controller
     {
         private readonly IUserService _userService;

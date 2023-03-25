@@ -171,7 +171,13 @@ namespace EventsITAcademy.MVC.Controllers
             return RedirectToAction("Users");
         }
 
-
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> DeleteUser(string id, CancellationToken cancellationToken)
+        {
+            await _roleService.RemoveUserRoleAsync(cancellationToken, id);
+            await _adminService.DeleteUserAsync(cancellationToken, id);
+            return RedirectToAction("Users");
+        }
 
 
 

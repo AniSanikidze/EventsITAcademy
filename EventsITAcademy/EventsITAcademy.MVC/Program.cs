@@ -10,7 +10,6 @@ using EventsITAcademy.Infrastructure.Events;
 using EventsITAcademy.Application.Users;
 using EventsITAcademy.Application.Users.Repositories;
 using EventsITAcademy.Infrastructure.Users;
-using EventsITAcademy.Application.CustomHasher;
 using EventsITAcademy.Persistence.Seed;
 using EventsITAcademy.Application.Tickets;
 using EventsITAcademy.Application.Tickets.Repositories;
@@ -23,6 +22,7 @@ using EventsITAcademy.Application.Admin;
 using EventsITAcademy.Application.Roles;
 using EventsITAcademy.Application.Roles.Repositories;
 using EventsITAcademy.Infrastructure.Roles;
+using Utilities.CustomHasher;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IEventService, EventService>();
@@ -52,9 +52,6 @@ builder.Services.AddDbContext<ApplicationContext>(options =>
 builder.Services.AddDefaultIdentity<User>(opt =>
 {
     opt.Password.RequiredLength = 7;
-    //opt.Password.RequireDigit = false;
-    //opt.Password.RequireUppercase = false;
-    //A better solution would be to send an email message to the owner of this account, with the information that the account already exists.
     opt.User.RequireUniqueEmail = true;
 }
 //SignIn.RequireConfirmedAccount = true

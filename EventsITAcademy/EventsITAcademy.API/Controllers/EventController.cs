@@ -135,9 +135,10 @@ namespace EventsITAcademy.API.Controllers
         //[SwaggerResponseExample(StatusCodes.Status200OK, typeof(ToDoExample))]
         //[ProducesResponseType(StatusCodes.Status404NotFound)]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [Authorize(Roles = "User")]
         [Produces("application/json")]
-        [HttpPost("v1/todos/")]
-        public async Task<ActionResult<EventResponseModel>> Post(CancellationToken cancellationToken, EventRequestModel request)
+        [HttpPost("v1/events/")]
+        public async Task<ActionResult<EventResponseModel>> Post(CancellationToken cancellationToken, [FromForm] EventRequestModel request)
         {
             return Ok(await _service.CreateAsync(cancellationToken, request, userIdClaim));
         }
@@ -168,7 +169,7 @@ namespace EventsITAcademy.API.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [Produces("application/json")]
         [HttpPut("v1/event")]
-        public async Task<ActionResult<EventResponseModel>> Put(CancellationToken cancellationToken, UserUpdateEventRequestModel request)
+        public async Task<ActionResult<EventResponseModel>> Put(CancellationToken cancellationToken, UpdateEventRequestModel request)
         {
             return Ok(await _service.UpdateAsync(cancellationToken, request, userIdClaim));
         }

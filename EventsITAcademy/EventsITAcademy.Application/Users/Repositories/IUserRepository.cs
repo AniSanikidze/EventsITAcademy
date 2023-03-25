@@ -21,6 +21,6 @@ namespace EventsITAcademy.Application.Users.Repositories
         Task<bool> Exists(CancellationToken cancellationToken, string userId);
 
         Task<List<Event>> GetUserEventsAsync(CancellationToken cancellationToken, string userId);
-
+        Task DeleteAsync(CancellationToken cancellationToken, string userId);
     }
 }

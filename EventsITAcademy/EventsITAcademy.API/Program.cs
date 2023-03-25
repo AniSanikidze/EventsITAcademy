@@ -1,16 +1,30 @@
 using EventsITAcademy.API.Infrastructure;
 using EventsITAcademy.API.Infrastructure.Auth;
 using EventsITAcademy.API.Infrastructure.Extensions;
+using EventsITAcademy.API.Infrastructure.Mappings;
 using EventsITAcademy.Domain.Users;
 using EventsITAcademy.Persistence.Context;
 using EventsITAcademy.Persistence.Seed;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.OpenApi.Models;
+using Serilog;
 using Swashbuckle.AspNetCore.Filters;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Logging.ClearProviders();
+//Serilog
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .MinimumLevel.Override("Microsoft.EntityFrameworkCore.Database.Command", Serilog.Events.LogEventLevel.Warning)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 // Add services to the container.
 
@@ -57,7 +71,7 @@ builder.Services.AddSwaggerGen(option =>
 });
 builder.Services.AddSwaggerExamplesFromAssemblies(Assembly.GetExecutingAssembly());
 
-//Add HWT Token
+//Add JWT Token
 builder.Services.AddTokenAuthentication(builder.Configuration.GetSection(nameof(JWTConfiguration)).GetSection(nameof(JWTConfiguration.Secret)).Value);
 builder.Services.Configure<JWTConfiguration>(builder.Configuration.GetSection(nameof(JWTConfiguration)));
 
@@ -65,15 +79,23 @@ builder.Services.Configure<JWTConfiguration>(builder.Configuration.GetSection(na
 builder.Services.AddServices();
 var connectionString = builder.Configuration.GetConnectionString("ApplicationContextConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationContextConnection' not found.");
 
+//Add DbContext
 builder.Services.AddDbContext<ApplicationContext>(options =>
     options.UseSqlServer(connectionString));
 
+//Add Identity
 builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationContext>();
 
 //AddHttpContextAccessor
 builder.Services.AddHttpContextAccessor();
+
+//Add Fluent Validator
+builder.Services.AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+//Mapping 
+builder.Services.RegisterMaps();
 
 var app = builder.Build();
 
@@ -83,8 +105,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+//GlobalExceptionHandling middleware
+app.UseGlobalExceptionHandler();
 app.UseHttpsRedirection();
+//Request Response Logging Middleware
+app.UseRequestLogging();
 
 app.UseAuthentication();
 
@@ -94,4 +119,16 @@ app.MapControllers();
 //Seeding
 EventsITAcademySeed.Initialize(app.Services);
 
-app.Run();
+try
+{
+    Log.Information("Starting web host...");
+    app.Run();
+}
+catch(Exception ex)
+{
+    Log.Fatal(ex,"Host terminated");
+}
+finally
+{
+    Log.CloseAndFlush();    
+}

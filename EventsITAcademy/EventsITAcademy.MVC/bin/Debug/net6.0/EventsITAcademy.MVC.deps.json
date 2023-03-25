@@ -18,7 +18,8 @@
           "Microsoft.AspNetCore.Identity.UI": "6.0.14",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.14",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.14",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.13"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.13",
+          "Utilities": "1.0.0"
         },
         "runtime": {
           "EventsITAcademy.MVC.dll": {}
@@ -2519,6 +2520,14 @@
         "runtime": {
           "EventsITAcademy.Persistence.dll": {}
         }
+      },
+      "Utilities/1.0.0": {
+        "dependencies": {
+          "EventsITAcademy.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Utilities.dll": {}
+        }
       }
     }
   },
@@ -3951,6 +3960,11 @@
       "sha512": ""
     },
     "EventsITAcademy.Persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Utilities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

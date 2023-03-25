@@ -34,6 +34,21 @@ namespace EventsITAcademy.Application.Roles
             await _userManager.AddToRoleAsync(user, chosenRole.Name);
         }
 
+        public async Task RemoveUserRoleAsync(CancellationToken cancellationToken, string userId)
+        {
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Id == userId, cancellationToken);
+            if (user == null)
+                throw new Exception("User not found");
+
+            var userRoleInDb = await GetUserRoleAsync(cancellationToken, userId);
+
+            if(userRoleInDb == null)
+            {
+                throw new Exception("User's Role not found");
+            }
+            await _userManager.RemoveFromRoleAsync(user, userRoleInDb);
+        }
+
         public List<IdentityRole> GetRolesAsync(CancellationToken cancellationToken)
         {
             return _roleManager.Roles.ToList();
@@ -48,5 +63,7 @@ namespace EventsITAcademy.Application.Roles
             var userRole = await _userManager.GetRolesAsync(user);
             return userRole.ElementAt(0);
         }
+
+
     }
 }

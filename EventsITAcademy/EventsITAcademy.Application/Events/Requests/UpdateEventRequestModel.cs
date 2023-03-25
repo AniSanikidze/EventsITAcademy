@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EventsITAcademy.Application.Events.Requests
 {
-    public class UserUpdateEventRequestModel
+    public class UpdateEventRequestModel
     {
         public int Id { get; set; }
         public string Title { get; set; }

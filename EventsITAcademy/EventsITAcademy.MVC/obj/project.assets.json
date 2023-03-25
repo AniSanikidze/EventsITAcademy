@@ -4089,6 +4089,19 @@
         "runtime": {
           "bin/placeholder/EventsITAcademy.Persistence.dll": {}
         }
+      },
+      "Utilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "EventsITAcademy.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Utilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Utilities.dll": {}
+        }
       }
     }
   },
@@ -11141,6 +11154,11 @@
       "type": "project",
       "path": "../EventsITAcademy.Persistence/EventsITAcademy.Persistence.csproj",
       "msbuildProject": "../EventsITAcademy.Persistence/EventsITAcademy.Persistence.csproj"
+    },
+    "Utilities/1.0.0": {
+      "type": "project",
+      "path": "../Utilities/Utilities.csproj",
+      "msbuildProject": "../Utilities/Utilities.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11155,7 +11173,8 @@
       "Microsoft.AspNetCore.Identity.UI >= 6.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.14",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.14",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.13"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.13",
+      "Utilities >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11202,6 +11221,9 @@
             },
             "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.Persistence\\EventsITAcademy.Persistence.csproj": {
               "projectPath": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.Persistence\\EventsITAcademy.Persistence.csproj"
+            },
+            "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\Utilities\\Utilities.csproj": {
+              "projectPath": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\Utilities\\Utilities.csproj"
             }
           }
         }

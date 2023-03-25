@@ -20,9 +20,10 @@ namespace EventsITAcademy.Application.Admin
         private readonly IUserRepository _userRepository;
 
 
-        public AdminService(IEventRepository eventRepository)
+        public AdminService(IEventRepository eventRepository,IUserRepository userRepository)
         {
             _eventRepository = eventRepository;
+            _userRepository = userRepository;
         }
 
         public async Task<int> DeleteEventAsync(CancellationToken cancellationToken, int eventId)
@@ -64,6 +65,16 @@ namespace EventsITAcademy.Application.Admin
                 throw new Exception("User not found");
             }
             return user.Adapt<UserResponseModel>();
+        }
+
+        public async Task DeleteUserAsync(CancellationToken cancellation, string userId)
+        {
+            if(!await _userRepository.Exists(cancellation, userId))
+            {
+                throw new Exception("User not found");
+            }
+            await _userRepository.DeleteAsync(cancellation, userId);
+
         }
 
         public enum UserRolesEnum

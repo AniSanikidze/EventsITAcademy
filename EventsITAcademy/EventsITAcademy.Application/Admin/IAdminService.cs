@@ -15,5 +15,6 @@ namespace EventsITAcademy.Application.Admin
         Task<int> DeleteEventAsync(CancellationToken cancellationToken, int eventId);
         Task<List<UserResponseModel>> GetAllUsersAsync(CancellationToken cancellation);
         Task<UserResponseModel> GetUserAsync(CancellationToken cancellation, string id);
+        Task DeleteUserAsync(CancellationToken cancellation, string userId);
     }
 }

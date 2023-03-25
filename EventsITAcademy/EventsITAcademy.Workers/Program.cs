@@ -20,7 +20,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-Console.WriteLine("Hello, World!");
+
 
 var configuration = new ConfigurationBuilder()
     .SetBasePath(AppContext.BaseDirectory)
@@ -31,13 +31,12 @@ Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(configuration)
     .CreateLogger();
 
-//var connectionString = configuration.GetConnectionString("ConnectionString") ?? throw new InvalidOperationException("'ConnectionString' not found.");
-//services.AddDbContext<ApplicationContext>(options =>
-//    options.UseSqlServer(connectionString));
 try
 {
-
-    await CreateHostBuilder(args).Build().RunAsync();
+    
+    var builder = CreateHostBuilder(args);
+    Log.Information("Background worker starting...");
+    await builder.Build().RunAsync();
 }
 catch (Exception ex)
 {

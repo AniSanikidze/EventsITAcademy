@@ -57,11 +57,11 @@ namespace EventsITAcademy.MVC.Controllers
                 return NotFound();
             }
             var @event = await _eventService.GetAsync(cancellationToken, id);
-            return View(@event.Adapt<UserUpdateEventRequestModel>());
+            return View(@event.Adapt<UpdateEventRequestModel>());
         }
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Edit(UserUpdateEventRequestModel eventRequest, CancellationToken cancellationToken)
+        public async Task<IActionResult> Edit(UpdateEventRequestModel eventRequest, CancellationToken cancellationToken)
         {
             var role = User;
             if (eventRequest.FinishDate < eventRequest.StartDate)

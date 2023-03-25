@@ -564,3 +564,5 @@ C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.MVC\obj\Debug\net6
 C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.MVC\obj\Debug\net6.0\EventsITAcademy.MVC.pdb
 C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.MVC\obj\Debug\net6.0\EventsITAcademy.MVC.genruntimeconfig.cache
 C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.MVC\obj\Debug\net6.0\ref\EventsITAcademy.MVC.dll
+C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.MVC\bin\Debug\net6.0\Utilities.dll
+C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.MVC\bin\Debug\net6.0\Utilities.pdb
