@@ -17,10 +17,9 @@ using EventsITAcademy.Workers.BackgroundWorkers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-
-
 
 var configuration = new ConfigurationBuilder()
     .SetBasePath(AppContext.BaseDirectory)
@@ -36,7 +35,7 @@ try
     
     var builder = CreateHostBuilder(args);
     Log.Information("Background worker starting...");
-    await builder.Build().RunAsync();
+    await builder.Build().RunAsync().ConfigureAwait(false);
 }
 catch (Exception ex)
 {
@@ -44,7 +43,7 @@ catch (Exception ex)
 }
 finally
 {
-    await Log.CloseAndFlushAsync();
+    await Log.CloseAndFlushAsync().ConfigureAwait(false);
 }
 
 IHostBuilder CreateHostBuilder(string[] args) =>
@@ -67,6 +66,5 @@ IHostBuilder CreateHostBuilder(string[] args) =>
         services.AddScoped<IImageRepository, ImageRepository>();
         services.AddHostedService<TicketWorker>();
         services.AddHostedService<EventWorker>();
-
     })
     .UseSerilog();

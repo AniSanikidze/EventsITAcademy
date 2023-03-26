@@ -11,7 +11,7 @@ namespace EventsITAcademy.API.Infrastructure.SwaggerExamples
             {
                 Id = new Guid().ToString(),
                 UserName = "ExampleUser",
-                Email = "exampleuser@gmail.com"
+                Email = "exampleuser@gmail.com",
             };
         }
     }

@@ -7,23 +7,25 @@
 
 <div class="event">
     <div class="event-inner-div">
-        <a href="/Event/Details/@Model.Id" class="inner-link">
-            <div class="img-div">
-                <img src="@Model.ImageDataUrl" class="event-img" />
+        <div class="img-div">
+            <img src="@Url.Content(@Model.ImageDataUrl)" class="event-img" />
+        </div>
+
+        <div class="event-details-outter">
+            <div class="event-details">
+                <h4> @Model.Title</h4>
+                <p class="text-dark">@Model.StartDate - @Model.FinishDate</p>
+                <p>Modification Deadline: @Model.ModificationDeadline</p>
             </div>
 
-            <div class="event-details-outter">
-                <div class="event-details">
-                    <h4> @Model.Title</h4>
-                    <p class="text-dark">@Model.StartDate - @Model.FinishDate</p>
-                    <p>Modification Deadline: @Model.ModificationDeadline</p>
-                </div>
-                @if (Model.ModificationDeadline > DateTime.Now)
-                {
-                    <a class="btn btn-md btn-success" href="/Event/Edit/@Model.Id">Edit</a>
-                }
-                @*<a class="btn-sm btn-info" href="/Event/Details/@Model.Id">See Details</a>*@
-            </div>
-            </a>
+        </div>
+        <div style="display:flex;margin: 0.5rem 0px 0px;">
+
+            @if (Model.ModificationDeadline > DateTime.Now)
+            {
+                <a class="btn btn-sm btn-success" style="margin-right:5px;"href="/Event/Edit/@Model.Id">Edit</a>
+            }
+            <a class="btn-sm btn-info" href="/Event/Details/@Model.Id">See Details</a>
         </div>
     </div>
+</div>

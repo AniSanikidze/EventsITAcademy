@@ -6,37 +6,20 @@
 
 <div class="d-flex align-items-center justify-content-center">
     <div class="col-md-10 col-lg-5">
-@*
-        @using (Html.BeginForm("AssignRole", "AdminPanel"))
-        {*@
-
             <form asp-action="AssignRole" asp-controller="AdminPanel" method="post">
             <hr class="my-4">
-
-            @*<h4 class="mb-3">Roles</h4>*@
-
-@*            <input asp-for="UserId"></input>
-            <input asp-for="Roles"></input>*@
-
-
             <div class="my-3">
-             @*   @Html.DropDownListFor(model => model.SelectedRole,
-                Model.Roles)*@
-                <h3>User with ID - <input asp-for="UserId"></input></h3>
-                @*<h3>User's current role: @Model.SelectedRole</h3>*@
-                @*@Html.DropDownListFor(model => model.SelectedRole.Text, (IEnumerable<SelectListItem>)Model.Roles, new { @class = "form-control" })*@
-                @*// value that should be set selected of dropdown)*@
+     
+                <h3>User with ID - <input asp-for="UserId"><input></h3>
 
                     <select class="form-select" asp-items="Model.Roles" asp-for="SelectedRole" asp-value="SelectedRole" >
                     <option disabled selected>Select new role...</option>
                     </select>
-          @*          @Html.DropDownList("Text",Model.Roles as SelectList,Model.SelectedRole);*@
             </div>
 
             <hr class="my-4">
 
             <button class="w-100 btn btn-primary btn-lg" type="submit">Save</button>
             </form>
-        @*}*@
     </div>
 </div>

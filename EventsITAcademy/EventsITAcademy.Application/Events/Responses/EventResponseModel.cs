@@ -1,12 +1,4 @@
-﻿using EventsITAcademy.Domain.Images;
-using EventsITAcademy.Domain.Users;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EventsITAcademy.Application.Events.Responses
+﻿namespace EventsITAcademy.Application.Events.Responses
 {
     public class EventResponseModel
     {
@@ -17,13 +9,12 @@ namespace EventsITAcademy.Application.Events.Responses
         public DateTime FinishDate { get; set; }
         public int NumberOfTickets { get; set; }
         public bool IsActive { get; set; }
-        public bool IsEditable { get; set; }
         public bool IsArchived { get; set; }
         public int ModificationPeriod { get; set; }
         public int ReservationPeriod { get; set; }
         public string OwnerId { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime ModificationDeadline => CreatedAt.AddMinutes(ModificationPeriod);
+        public DateTime ModificationDeadline => CreatedAt.AddDays(ModificationPeriod);
         public string ImageDataUrl { get; set; }
     }
 }

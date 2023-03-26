@@ -1,56 +1,63 @@
-﻿using EventsITAcademy.Application.Events;
-using EventsITAcademy.Application.Events.Requests;
-using EventsITAcademy.Application.Events.Responses;
+﻿using EventsITAcademy.Application.Events.Responses;
 using EventsITAcademy.Application.Tickets;
-using EventsITAcademy.Application.Tickets.Requests;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
 
 namespace EventsITAcademy.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/ticket/")]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(Roles ="User")]
     [ApiController]
     public class TicketController : ControllerBase
     {
         private readonly ITicketService _service;
-        private readonly IHttpContextAccessor _contextAccessor;
-        private readonly string userIdClaim;
-        private readonly string role;
+        private readonly string _userIdClaim;
 
         public TicketController(IHttpContextAccessor httpContextAccessor, ITicketService ticketService)
         {
-            _contextAccessor = httpContextAccessor;
             if (httpContextAccessor.HttpContext.User.Claims.Count() > 0)
             {
-                userIdClaim = httpContextAccessor.HttpContext.User.FindFirst("UserId")!.Value;
-                role = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Role)!.Value;
+                _userIdClaim = httpContextAccessor.HttpContext.User.FindFirst("UserId")!.Value;
             }
-
-            bool isAdmin;
-
-            if (httpContextAccessor.HttpContext.User != null)
-                isAdmin = httpContextAccessor.HttpContext.User.IsInRole("Admin");
-
             _service = ticketService;
         }
-
+        /// <summary>
+        /// Endpoint to reserve the ticket
+        /// </summary>
+        /// <remarks>
+        /// Note id is not required
+        /// </remarks>
+        /// <param name="cancellationToken"></param>
+        /// <param name="request"></param>
+        /// <returns>Returnes reserved ticket</returns>
+        /// <response code="200">Returns newly created ticket</response>
+        /// <response code="400">Invalid request</response>
+        /// <response code="404">If the event or user was not found</response>
         [Produces("application/json")]
-        [HttpPost("v1/ticket/reserve")]
+        [HttpPost("reserve")]
         public async Task<ActionResult<EventResponseModel>> Reserve(CancellationToken cancellationToken, int eventId)
         {
-            return Ok(await _service.Reserve(cancellationToken, eventId, userIdClaim));
+            return Ok(await _service.Reserve(cancellationToken, eventId, _userIdClaim));
         }
-
-
+        /// <summary>
+        /// Endpoint to buy the ticket
+        /// </summary>
+        /// <remarks>
+        /// Note id is not required
+        /// </remarks>
+        /// <param name="cancellationToken"></param>
+        /// <param name="request"></param>
+        /// <returns>Returns bought ticket</returns>
+        /// <response code="200">Returns bought ticket</response>
+        /// <response code="400">Invalid request</response>
+        /// <response code="404">If the event or user was not found</response>
         [Produces("application/json")]
-        [HttpPost("v1/ticket/buy")]
+        [HttpPost("buy")]
         public async Task<ActionResult<EventResponseModel>> Buy(CancellationToken cancellationToken, int eventId)
         {
-            return Ok(await _service.Buy(cancellationToken, eventId, userIdClaim));
+            return Ok(await _service.Buy(cancellationToken, eventId, _userIdClaim));
         }
     }
 }

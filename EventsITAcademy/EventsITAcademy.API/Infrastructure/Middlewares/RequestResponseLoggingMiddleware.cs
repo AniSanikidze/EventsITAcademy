@@ -14,9 +14,9 @@ namespace EventsITAcademy.API.Infrastructure.Middlewares
 
         public async Task Invoke(HttpContext httpContext)
         {
-            await LogRequest(httpContext.Request);
+            await LogRequest(httpContext.Request).ConfigureAwait(false);
 
-            Stream originalBody = httpContext.Response.Body;
+            var originalBody = httpContext.Response.Body;
 
             try
             {
@@ -24,12 +24,12 @@ namespace EventsITAcademy.API.Infrastructure.Middlewares
                 {
                     httpContext.Response.Body = memStream;
 
-                    await _next(httpContext);
+                    await _next(httpContext).ConfigureAwait(false);
 
-                    await LogResponse(httpContext.Response, memStream);
+                    LogResponse(httpContext.Response, memStream);
 
                     memStream.Position = 0;
-                    await memStream.CopyToAsync(originalBody);
+                    await memStream.CopyToAsync(originalBody).ConfigureAwait(false);
                 }
             }
             finally
@@ -40,12 +40,12 @@ namespace EventsITAcademy.API.Infrastructure.Middlewares
 
         public async Task LogRequest(HttpRequest httpRequest)
         {
-            string userIdClaim = "";
-            string userNameClaim = "";
-            if (httpRequest.HttpContext.User.Claims.Count() > 0)
+            var userIdClaim = "";
+            var userRole = "";
+            if (httpRequest.HttpContext.User.Claims.Any())
             {
                 userIdClaim = httpRequest.HttpContext.User.FindFirst("UserId").Value;
-                userNameClaim = httpRequest.HttpContext.User.FindFirst(ClaimTypes.Name).Value;
+                userRole = httpRequest.HttpContext.User.FindFirst(ClaimTypes.Role).Value;
             }
             var logInfo = $"*******Request Log*******{Environment.NewLine}" +
                 $"IP = {httpRequest.HttpContext.Connection.RemoteIpAddress.ToString()}{Environment.NewLine}" +
@@ -55,11 +55,10 @@ namespace EventsITAcademy.API.Infrastructure.Middlewares
                 $"Method = {httpRequest.Method}{Environment.NewLine}" +
                 $"Query String = {httpRequest.QueryString.ToString()}{Environment.NewLine}" +
                 $"Path = {httpRequest.Path}{Environment.NewLine}" +
-                $"Body = {await ReadRequestBody(httpRequest)}{Environment.NewLine}" +
+                $"Body = {await ReadRequestBody(httpRequest).ConfigureAwait(false)}{Environment.NewLine}" +
                 $"Request Time = {DateTime.Now}{Environment.NewLine}" +
                 $"UserId = {userIdClaim}{Environment.NewLine}" +
-                $"Username = {userNameClaim}";
-
+                $"User role = {userRole}";
 
             //var completePath = Directory.GetCurrentDirectory() + "\\Infrastructure\\Logging\\Logs.txt";
             //await File.AppendAllTextAsync(completePath, logInfo);
@@ -67,26 +66,26 @@ namespace EventsITAcademy.API.Infrastructure.Middlewares
 
         }
 
-        private async Task<string> ReadRequestBody(HttpRequest request)
+        private static async Task<string> ReadRequestBody(HttpRequest request)
         {
             request.EnableBuffering();
             var buffer = new byte[request.ContentLength ?? 0];
-            await request.Body.ReadAsync(buffer, 0, buffer.Length);
+            await request.Body.ReadAsync(buffer, 0, buffer.Length).ConfigureAwait(false);
             var bodyAsText = Encoding.UTF8.GetString(buffer);
             request.Body.Position = 0;
             return bodyAsText;
         }
-        public async Task LogResponse(HttpResponse httpResponse, MemoryStream memStream)
+        public void LogResponse(HttpResponse httpResponse, MemoryStream memStream)
         {
-            string userIdClaim = "";
-            string userNameClaim = "";
-            if (httpResponse.HttpContext.User.Claims.Count() > 0)
+            var userIdClaim = "";
+            var userNameClaim = "";
+            if (httpResponse.HttpContext.User.Claims.Any())
             {
                 userIdClaim = httpResponse.HttpContext.User.FindFirst("UserId").Value;
                 userNameClaim = httpResponse.HttpContext.User.FindFirst(ClaimTypes.Name).Value;
             }
             memStream.Position = 0;
-            string responseBody = new StreamReader(memStream).ReadToEnd();
+            var responseBody = new StreamReader(memStream).ReadToEnd();
             Console.WriteLine(responseBody);
 
             var logInfo = $"{Environment.NewLine}*******Response Log*******{Environment.NewLine}" +

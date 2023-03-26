@@ -132,11 +132,17 @@
   <data name="InvalidEmail" xml:space="preserve">
     <value>Invalid email format</value>
   </data>
+  <data name="ModificationPeriodRequired" xml:space="preserve">
+    <value>Modification period is required field</value>
+  </data>
   <data name="NumberOfTicketsRequired" xml:space="preserve">
     <value>Number of tickets field is mandatory and must be greater than 0</value>
   </data>
   <data name="PasswordLength" xml:space="preserve">
     <value>Password is a required field and the length should be between 6 and 30</value>
+  </data>
+  <data name="ReservationPeriodRequired" xml:space="preserve">
+    <value>Reservation period is required field</value>
   </data>
   <data name="StartDateGreaterThanNow" xml:space="preserve">
     <value>The start date and time of the event should be greater than the current time</value>

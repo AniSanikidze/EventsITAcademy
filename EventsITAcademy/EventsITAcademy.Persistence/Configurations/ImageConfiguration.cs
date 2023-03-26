@@ -17,9 +17,8 @@ namespace EventsITAcademy.Persistence.Configurations
             builder.Property(x => x.Status).IsRequired();
             builder.Property(x => x.CreatedAt).IsRequired().HasColumnType("datetime");
             builder.Property(x => x.ModifiedAt).IsRequired().HasColumnType("datetime");
-            builder.Property(x => x.ImageData).IsRequired();
+            builder.Property(x => x.ImagePath).IsRequired();
             builder.Property(x => x.ImageName).IsRequired().HasColumnType("nvarchar(100)");
-            //builder.Property(x => x.).IsRequired().HasColumnType("nvarchar(100)");
 
             builder.HasOne(x => x.Event).WithOne(x => x.Image).HasForeignKey<Image>(x => x.EventId);
         }

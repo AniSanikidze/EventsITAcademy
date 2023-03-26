@@ -11,6 +11,5 @@ namespace EventsITAcademy.Application.Images.Repositories
     public interface IImageRepository
     {
         Task<Image> SaveImageAsync(CancellationToken cancellationToken, Image image);
-        //Task<Image> GetImageAsync(CancellationToken cancellationToken,int eventId);
     }
 }

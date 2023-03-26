@@ -25,14 +25,9 @@ namespace EventsITAcademy.API.Infrastructure.Validators
                 .Must(x => x > DateTime.Now)
                 .WithMessage(ValidationErrorMessages.StartDateGreaterThanNow);
 
-
             RuleFor(x => x.StartDate)
                 .Must(x => x > DateTime.Now)
                 .WithMessage(ValidationErrorMessages.FinishDateGreaterThanNow);
-
-            //RuleFor(x => x.ImageFile)
-            //    .Must(x => x)
-            //    .WithMessage(ValidationErrorMessages.FinishDateGreaterThanNow);
         }
     }
 }

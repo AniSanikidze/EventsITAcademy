@@ -57,7 +57,6 @@ namespace EventsITAcademy.Persistence.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("OwnerId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("ReservationPeriod")
@@ -95,13 +94,13 @@ namespace EventsITAcademy.Persistence.Migrations
                     b.Property<int>("EventId")
                         .HasColumnType("int");
 
-                    b.Property<byte[]>("ImageData")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
                     b.Property<string>("ImageName")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime");
@@ -144,7 +143,6 @@ namespace EventsITAcademy.Persistence.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -371,9 +369,7 @@ namespace EventsITAcademy.Persistence.Migrations
                 {
                     b.HasOne("EventsITAcademy.Domain.Users.User", "User")
                         .WithMany("Events")
-                        .HasForeignKey("OwnerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("OwnerId");
 
                     b.Navigation("User");
                 });
@@ -399,9 +395,7 @@ namespace EventsITAcademy.Persistence.Migrations
 
                     b.HasOne("EventsITAcademy.Domain.Users.User", "User")
                         .WithMany("Tickets")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Event");
 
@@ -461,8 +455,7 @@ namespace EventsITAcademy.Persistence.Migrations
 
             modelBuilder.Entity("EventsITAcademy.Domain.Events.Event", b =>
                 {
-                    b.Navigation("Image")
-                        .IsRequired();
+                    b.Navigation("Image");
 
                     b.Navigation("Tickets");
                 });

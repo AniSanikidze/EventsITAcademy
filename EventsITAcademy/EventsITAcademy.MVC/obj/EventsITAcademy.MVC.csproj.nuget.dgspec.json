@@ -35,6 +35,9 @@
             "projectReferences": {
               "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.Domain\\EventsITAcademy.Domain.csproj": {
                 "projectPath": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\EventsITAcademy.Domain\\EventsITAcademy.Domain.csproj"
+              },
+              "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\Utilities\\Utilities.csproj": {
+                "projectPath": "C:\\Users\\User\\EventsITAcademy\\EventsITAcademy\\Utilities\\Utilities.csproj"
               }
             }
           }
@@ -52,6 +55,10 @@
             "Mapster": {
               "target": "Package",
               "version": "[7.3.0, )"
+            },
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
             },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
@@ -119,6 +126,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.13, )"

@@ -36,3 +36,6 @@ C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.Infrastructure\obj
 C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.Infrastructure\obj\Debug\net6.0\refint\EventsITAcademy.Infrastructure.dll
 C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.Infrastructure\obj\Debug\net6.0\EventsITAcademy.Infrastructure.pdb
 C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.Infrastructure\obj\Debug\net6.0\ref\EventsITAcademy.Infrastructure.dll
+C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.Infrastructure\bin\Debug\net6.0\Utilities.dll
+C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.Infrastructure\bin\Debug\net6.0\Utilities.pdb
+C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.Infrastructure\bin\Debug\net6.0\ka-GE\Utilities.resources.dll

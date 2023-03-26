@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace EventsITAcademy.Application.Events.Requests
@@ -19,7 +18,6 @@ namespace EventsITAcademy.Application.Events.Requests
         [Required]
         [Range(0, int.MaxValue, ErrorMessage = "Please enter a value bigger than {1}")]
         public int NumberOfTickets { get; set; }
-        [Required]
         public IFormFile ImageFile { get; set; }
     }
 }

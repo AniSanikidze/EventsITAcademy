@@ -1,15 +1,13 @@
-﻿using EventsITAcademy.Application.Events.Repositories;
+﻿using EventsITAcademy.Application.CustomExceptions;
+using EventsITAcademy.Application.Events.Repositories;
 using EventsITAcademy.Application.Events.Requests;
 using EventsITAcademy.Application.Events.Responses;
 using EventsITAcademy.Application.Images;
-using EventsITAcademy.Application.Images.Repositories;
 using EventsITAcademy.Domain;
 using EventsITAcademy.Domain.Events;
 using EventsITAcademy.Domain.Users;
 using Mapster;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Logging;
+using Utilities.Localizations;
 
 namespace EventsITAcademy.Application.Events
 {
@@ -24,162 +22,130 @@ namespace EventsITAcademy.Application.Events
             _imageService = imageService;
         }
 
-        public async Task<EventResponseModel> CreateAsync(CancellationToken cancellationToken, EventRequestModel eventRequest, string userId)
+        public async Task<int> CreateAsync(CancellationToken cancellationToken, EventRequestModel eventRequest, string userId)
         {
             var adaptedEvent = eventRequest.Adapt<Event>();
             adaptedEvent.OwnerId = userId;
-            adaptedEvent.ModificationPeriod = 60;
+            adaptedEvent.ModificationPeriod = 1;
             adaptedEvent.ReservationPeriod = 10;
-            var @event = await _eventRepository.CreateAsync(cancellationToken, adaptedEvent);
+            var eventId = await _eventRepository.CreateAsync(cancellationToken, adaptedEvent).ConfigureAwait(false);
             if (eventRequest.ImageFile != null)
             {
-                await _imageService.SaveImageAsync(cancellationToken, eventRequest.ImageFile, @event.Id);
+                await _imageService.SaveImageAsync(cancellationToken, eventRequest.ImageFile, eventId).ConfigureAwait(false);
             }
-            return adaptedEvent.Adapt<EventResponseModel>();
+            return eventId;
         }
 
-        public async Task DeleteAsync(CancellationToken cancellationToken, int id)
+        public async Task<int> DeleteAsync(CancellationToken cancellationToken, int id)
         {
-            if (!await _eventRepository.Exists(cancellationToken, x => x.Status != EntityStatuses.Deleted && x.Id == id))
+            if (!await _eventRepository.Exists(cancellationToken, x => x.Status != EntityStatuses.Deleted && x.Id == id).ConfigureAwait(false))
             {
-                throw new Exception("Event not found");
+                throw new ItemNotFoundException(ClassNames.Event + " " + ErrorMessages.NotFound, nameof(User));
             }
-            await _eventRepository.DeleteAsync(cancellationToken, id);
+            await _eventRepository.DeleteAsync(cancellationToken, id).ConfigureAwait(false);
+            return id;
         }
 
         public async Task<List<EventResponseModel>> GetAllAsync(CancellationToken cancellationToken)
         {
-            var events = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active);
+            var events = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active && x.IsActive == true).ConfigureAwait(false);
             return events.Adapt<List<EventResponseModel>>();
         }
 
         public async Task<List<EventResponseModel>> GetAllConfirmedAsync(CancellationToken cancellationToken)
         {
-            var events = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active && x.IsActive == true && x.IsArchived == false);
+            var events = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active && x.IsActive == true && x.IsArchived == false).ConfigureAwait(false);
             var adaptedEvents = events.Adapt<List<EventResponseModel>>();
-            //events.ForEach(x =>
-            //{
-            //    if (x.Image != null)
-            //    {
-            //        string imageBase64Data = Convert.ToBase64String(x.Image.ImageData);
-            //        string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
-            //        adaptedEvents[events.IndexOf(x)].ImageDataUrl = imageDataURL;
-            //    }
-            //});
 
             return adaptedEvents;
         }
 
         public async Task<EventResponseModel> GetAsync(CancellationToken cancellationToken, int id)
         {
-            if (!await _eventRepository.Exists(cancellationToken, x => x.Id == id && x.Status == EntityStatuses.Active))
+            if (!await _eventRepository.Exists(cancellationToken, x => x.Id == id && x.Status == EntityStatuses.Active).ConfigureAwait(false))
             {
-                throw new Exception("Event not found");
+                throw new ItemNotFoundException(ClassNames.Event + " " + ErrorMessages.NotFound, nameof(User));
             }
 
-            var @event = await _eventRepository.GetAsync(cancellationToken, id);
-            //string imageBase64Data = Convert.ToBase64String(@event.Image.ImageData);
-            //string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
+            var @event = await _eventRepository.GetAsync(cancellationToken, id).ConfigureAwait(false);
             var result = @event.Adapt<EventResponseModel>();
-            //result.ImageDataUrl = imageDataURL;
             return result;
         }
 
         public async Task<List<EventResponseModel>> GetAllUnconfirmedAsync(CancellationToken cancellationToken)
         {
-            var unconfirmedEvents = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active && x.IsArchived == false && x.IsActive == false);
+            var unconfirmedEvents = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active && x.IsArchived == false && x.IsActive == false).ConfigureAwait(false);
             return unconfirmedEvents.Adapt<List<EventResponseModel>>();
         }
 
-        public async Task<List<EventResponseModel>> GetUserEventsAsync(CancellationToken cancellationToken, string userId)
-        {
-            var userEvents = await _eventRepository.GetUserEventsAsync(cancellationToken, userId);
-            return userEvents.Adapt<List<EventResponseModel>>();
-        }
+        //public async Task<List<EventResponseModel>> GetUserEventsAsync(CancellationToken cancellationToken, string userId)
+        //{
+        //    var userEvents = await _eventRepository.GetUserEventsAsync(cancellationToken, userId).ConfigureAwait(false);
+        //    return userEvents.Adapt<List<EventResponseModel>>();
+        //}
 
-        public async Task<EventResponseModel> UpdateAsync(CancellationToken cancellationToken, UpdateEventRequestModel eventRequest, string userId)
+        public async Task<int> UpdateAsync(CancellationToken cancellationToken, UpdateEventRequestModel eventRequest, string userId)
         {
             if (!await _eventRepository.Exists(cancellationToken, x => x.Id == eventRequest.Id
-                && x.Status == EntityStatuses.Active && x.OwnerId == userId))
+                && x.Status == EntityStatuses.Active && x.OwnerId == userId).ConfigureAwait(false))
             {
-                throw new Exception("Event not found");
+                throw new ItemNotFoundException(ClassNames.Event + " " + ErrorMessages.NotFound, nameof(User));
             }
-            var retrievedEvent = await GetAsync(cancellationToken, eventRequest.Id);
+            var retrievedEvent = await GetAsync(cancellationToken, eventRequest.Id).ConfigureAwait(false);
             if (retrievedEvent.ModificationDeadline <= DateTime.Now)
             {
-                throw new Exception("Event cannot be modified");
+                throw new EventModificationException(ErrorMessages.EventModificationForbidden,nameof(Event));
             }
 
-            Event @event = eventRequest.Adapt<Event>();
+            var @event = eventRequest.Adapt<Event>();
             @event.IsActive = false;
             @event.OwnerId = userId;
-            var result = await _eventRepository.UpdateAsync(cancellationToken, @event);
-            //var result = await GetAsync(cancellationToken, @event.Id);
-            return result.Adapt<EventResponseModel>();
+            var result = await _eventRepository.UpdateAsync(cancellationToken, @event).ConfigureAwait(false);
+            return result;
         }
-
-        public async Task<EventResponseModel> ConfirmEventAsync(CancellationToken cancellationToken, int id)
-        {
-            if (!await _eventRepository.Exists(cancellationToken, x => x.Id == id
-                && x.Status == EntityStatuses.Active))
-            {
-                throw new Exception("Event not found");
-            }
-            var @event = await GetAsync(cancellationToken, id);
-            if (@event.IsActive == true)
-            {
-                throw new Exception("Event is already confirmed");
-            }
-
-            @event.IsActive = true;
-            var confirmedEvent = @event.Adapt<Event>();
-            var result = await _eventRepository.UpdateAsync(cancellationToken, confirmedEvent);
-            //var result = await _eventRepository.ConfirmEvent(cancellationToken, confirmedEvent);
-            return result.Adapt<EventResponseModel>();
-        }
-
-        public async Task<EventResponseModel> UpdateEventByAdminAsync(CancellationToken cancellationToken, AdminUpdateEventRequestModel eventRequest)
+        public async Task<int> UpdateEventByAdminAsync(CancellationToken cancellationToken, AdminUpdateEventRequestModel eventRequest)
         {
             if (!await _eventRepository.Exists(cancellationToken, x => x.Id == eventRequest.Id
-                && x.Status == EntityStatuses.Active))
+                && x.Status == EntityStatuses.Active).ConfigureAwait(false))
             {
-                throw new Exception("Event not found");
+                throw new ItemNotFoundException(ClassNames.Event + " " + ErrorMessages.NotFound, nameof(User));
             }
 
-            Event @event = eventRequest.Adapt<Event>();
-            var result = await _eventRepository.UpdateAsync(cancellationToken, @event);
-            return result.Adapt<EventResponseModel>();
+            var @event = eventRequest.Adapt<Event>();
+            var result = await _eventRepository.UpdateAsync(cancellationToken, @event).ConfigureAwait(false);
+            return result;
         }
 
-        public async Task<EventResponseModel> ArchiveEvent(CancellationToken cancellationToken, int id)
+        public async Task<int> ArchiveEvent(CancellationToken cancellationToken, int id)
         {
-            var @event = await GetAsync(cancellationToken, id);
+            var @event = await GetAsync(cancellationToken, id).ConfigureAwait(false);
             var archivedEvent = @event.Adapt<Event>();
             archivedEvent.IsArchived = true;
-            var result = await _eventRepository.UpdateAsync(cancellationToken, archivedEvent);
-            return result.Adapt<EventResponseModel>();
+            archivedEvent.Status = EntityStatuses.Archived;
+            var result = await _eventRepository.UpdateAsync(cancellationToken, archivedEvent).ConfigureAwait(false);
+            return result;
         }
 
-        public async Task<EventResponseModel> ActivateEvent(CancellationToken cancellationToken, int id)
+        public async Task<int> ActivateEvent(CancellationToken cancellationToken, int id)
         {
-            var @event = await GetAsync(cancellationToken, id);
+            var @event = await GetAsync(cancellationToken, id).ConfigureAwait(false);
             var archivedEvent = @event.Adapt<Event>();
             archivedEvent.IsActive = true;
-            var result = await _eventRepository.UpdateAsync(cancellationToken, archivedEvent);
-            return result.Adapt<EventResponseModel>();
+            var result = await _eventRepository.UpdateAsync(cancellationToken, archivedEvent).ConfigureAwait(false);
+            return result;
         }
 
-        public async Task<EventResponseModel> SetEventUneditableAsync(CancellationToken cancellationToken, int id)
+        public async Task<int> SetEventUneditableAsync(CancellationToken cancellationToken, int id)
         {
-            var @event = await GetAsync(cancellationToken, id);
+            var @event = await GetAsync(cancellationToken, id).ConfigureAwait(false);
             var archivedEvent = @event.Adapt<Event>();
-            var result = await _eventRepository.UpdateAsync(cancellationToken, archivedEvent);
-            return result.Adapt<EventResponseModel>();
+            var result = await _eventRepository.UpdateAsync(cancellationToken, archivedEvent).ConfigureAwait(false);
+            return result;
         }
 
         public async Task<List<EventResponseModel>> GetAllArchivedAsync(CancellationToken cancellationToken)
         {
-            var unconfirmedEvents = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active && x.IsArchived == true);
+            var unconfirmedEvents = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active && x.IsArchived == true).ConfigureAwait(false);
             return unconfirmedEvents.Adapt<List<EventResponseModel>>();
         }
     }

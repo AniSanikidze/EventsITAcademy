@@ -16,31 +16,23 @@
     <hr />
     <div class="details-div">
 
-        <img src="@Model.ImageDataUrl" class="details-img" />
+        <img src="@Url.Content(@Model.ImageDataUrl)" class="details-img" />
         <div class="div-info">
             <div style="margin-left:20px;">
-                <dt>
-                    @Html.DisplayNameFor(model => model.Title)
-                </dt>
-                </dt>
-                    @Html.DisplayFor(model => model.Title)
-                <br/>
-                <dt>
-                @Html.DisplayNameFor(model => model.Description)</dt>
+                @Html.DisplayNameFor(model => model.Title)
+                @Html.DisplayFor(model => model.Title)
+                <br />
+                @Html.DisplayNameFor(model => model.Description)</>
                 <p class="desc">
                     @Html.DisplayFor(model => model.Description)
                 </p>
-                <dt>
-                    @Html.DisplayNameFor(model => model.StartDate) - @Html.DisplayNameFor(model => model.FinishDate)
-                </dt>
+                @Html.DisplayNameFor(model => model.StartDate) - @Html.DisplayNameFor(model => model.FinishDate)
                 <div style="display:flex">
                     @Html.DisplayFor(model => model.StartDate)
                     -
                     @Html.DisplayFor(model => model.FinishDate)
                 </div>
-                <dt>
-                    @Html.DisplayNameFor(x => x.NumberOfTickets)
-                </dt>
+                @Html.DisplayNameFor(x => x.NumberOfTickets)
                 @Html.DisplayFor(model => model.NumberOfTickets)
 
             </div>
@@ -48,10 +40,10 @@
                 @if (SignInManager.IsSignedIn(User) && (!this.User.IsInRole("Admin") && !this.User.IsInRole("Moderator")) && Model.NumberOfTickets > 0)
                 {
                     <div class="btn btn-outline-secondary" style="text-decoration:none !important">
-                        @Html.ActionLink("Reserve", "Reserve", "Ticket", new { userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value, eventId = Model.Id})
+                        @Html.ActionLink("Reserve", "Reserve", "Ticket", new { userId = this.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value, eventId = Model.Id})
                     </div>
                     <div class="btn btn-outline-secondary" style="text-decoration:none">
-                        @Html.ActionLink("Buy", "Buy", "Ticket", new { userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value, eventId = Model.Id})
+                        @Html.ActionLink("Buy", "Buy", "Ticket", new { userId = this.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value, eventId = Model.Id})
                     </div>
                 }
             </div>

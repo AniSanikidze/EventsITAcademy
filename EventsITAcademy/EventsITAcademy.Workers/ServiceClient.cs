@@ -18,29 +18,24 @@ namespace EventsITAcademy.Workers
 
         public async Task RemoveTicketReservations(CancellationToken cancellationToken)
         {
-            var tickets = await _ticketService.GetAllReservedAsync(cancellationToken);
+            var tickets = await _ticketService.GetAllReservedAsync(cancellationToken).ConfigureAwait(false);
             foreach (var ticket in tickets)
             {
                 if(ticket.ReservationDeadline <= DateTime.Now)
                 {
-                    await _ticketService.RemoveReservationAsync(cancellationToken, ticket.UserId, ticket.EventId);
+                    await _ticketService.RemoveReservationAsync(cancellationToken, ticket.UserId, ticket.EventId).ConfigureAwait(false);
                 }
             }
         }
-        public async Task ArchiveAndLimitEventEdit(CancellationToken cancellationToken)
+        public async Task ArchiveEvent(CancellationToken cancellationToken)
         {
-            var events = await _eventService.GetAllAsync(cancellationToken);
+            var events = await _eventService.GetAllAsync(cancellationToken).ConfigureAwait(false);
             foreach (var @event in events)
             {
                 if (@event.FinishDate <= DateTime.Now)
                 {
-                    await _eventService.ArchiveEvent(cancellationToken, @event.Id);
+                    await _eventService.ArchiveEvent(cancellationToken, @event.Id).ConfigureAwait(false);
                 }
-
-                //if (@event.CreatedAt.AddMinutes(@event.ModificationPeriod) <= DateTime.Now)
-                //{
-                //    await _eventService.SetEventUneditableAsync(cancellationToken, @event.Id);
-                //}
             }
         }
     }

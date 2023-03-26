@@ -7,30 +7,18 @@
 
 <div class="event">
     <div class="event-inner-div">
-        <a href="/Event/Details/@Model.Id" class="inner-link">
-            <div class="img-div">
-                <img src="@Model.ImageDataUrl" class="event-img" />
-            </div>
+        <div class="img-div">
+            <img src="@Url.Content(@Model.ImageDataUrl)" class="event-img" />
+        </div>
 
-            <div class="event-details-outter">
-                <div class="event-details">
-                    <h4> @Model.Title</h4>
-                    <p>@Model.StartDate - @Model.FinishDate</p>
-                </div>
-                <a class="btn-sm btn-info" href="/Event/Details/@Model.Id">See Details</a>
- @*               @if (@Model.ModificationDeadline > DateTime.Now && Model.OwnerId == this.User.FindFirstValue(ClaimTypes.NameIdentifier))
-                {
-                    <a class="btn btn-primary" href="/Event/Edit/@Model.Id">Edit</a>
-                }*@
-            </div>                <div>
-                @if (this.User.IsInRole("Admin") && Model.IsArchived == false)
-                {
-                    @*<button class="btn btn-sm btn-success">@Html.ActionLink("ActivateEvent", "ActivateEvent", "AdminPanel", new { id = Model.Id }, null)</button>*@
-                    <a class="btn btn-sm btn-success" href="/AdminPanel/ActivateEvent/@Model.Id">Activate</a>
-                    <a class="btn btn-sm btn-info" href="/Event/Edit/@Model.Id">Edit</a>
-                    <a class="btn btn-sm btn-danger" href="/Event/Edit/@Model.Id">Delete</a>
-                }
+        <div class="event-details-outter">
+            <div class="event-details">
+                <h4> @Model.Title</h4>
+                <p>@Model.StartDate - @Model.FinishDate</p>
             </div>
-        </a>
+        </div>
+        <div style ="margin-top:0.5rem;">
+            <a class="btn-sm btn-info"  href="/Event/Details/@Model.Id">See Details</a>
+        </div>
     </div>
 </div>

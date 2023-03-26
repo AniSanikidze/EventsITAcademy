@@ -15,9 +15,6 @@ namespace EventsITAcademy.Infrastructure.Users
 {
     public class UserRepository : IUserRepository
     {
-        #region Private repository(HAS A)
-        //private IBaseRepository<User> _repository;
-        #endregion
         readonly ApplicationContext _applicationContext;
         #region Ctor
         public UserRepository(ApplicationContext applicationContext)
@@ -26,12 +23,6 @@ namespace EventsITAcademy.Infrastructure.Users
             _applicationContext = applicationContext;
         }
         #endregion
-        public async Task<User> CreateAsync(CancellationToken cancellationToken, User user)
-        {
-            throw new NotImplementedException();
-            //var user = await _applicationContext.Users.SingleOrDefaultAsync(, token);
-        }
-
         public async Task DeleteAsync(CancellationToken cancellationToken, string userId)
         {
             var user = await GetAsync(cancellationToken, userId);
@@ -71,14 +62,9 @@ namespace EventsITAcademy.Infrastructure.Users
                 x.Status != EntityStatuses.Deleted, cancellationToken);
         }
 
-        public Task<User> GetByUsernameAsync(CancellationToken cancellationToken, string username)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<List<Event>> GetUserEventsAsync(CancellationToken cancellationToken, string userId)
         {
-            var user = await _applicationContext.Users.Include(x => x.Events.Where(x => x.IsArchived == false)).ThenInclude(x => x.Image)           
+            var user = await _applicationContext.Users.Include(x => x.Events.Where(x => x.Status == EntityStatuses.Active)).ThenInclude(x => x.Image)           
                                             .SingleOrDefaultAsync(x => x.Id == userId, cancellationToken);
             return user.Events;
         }

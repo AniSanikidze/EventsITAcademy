@@ -7,10 +7,14 @@ using EventsITAcademy.Persistence.Context;
 using EventsITAcademy.Persistence.Seed;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.OpenApi.Models;
+using PersonManagement.Web.Infrastructure.VersionSwagger;
 using Serilog;
 using Swashbuckle.AspNetCore.Filters;
 using System.Reflection;
@@ -26,11 +30,20 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
-// Add services to the container.
-
 builder.Services.AddControllers();
+builder.Services.AddApiVersioning(options =>
+{
+    options.DefaultApiVersion = new ApiVersion(1, 0);
+    options.AssumeDefaultVersionWhenUnspecified = true;
+
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddVersionedApiExplorer(option =>
+{
+    option.GroupNameFormat = "'v'VVV";
+    option.SubstituteApiVersionInUrl = true;
+});
 builder.Services.AddSwaggerGen(option =>
 {
     option.AddSecurityDefinition("basic", new OpenApiSecurityScheme
@@ -53,15 +66,10 @@ builder.Services.AddSwaggerGen(option =>
                                     Id = "basic"
                                 }
                             },
-                            new string[] {}
+                            Array.Empty<string>()
                     }
                 });
-    option.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Title = "ToDo App Api",
-        Version = "v1",
-        Description = "Api to manage todos and subtasks",
-    });
+    option.OperationFilter<SwaggerDefaultValues>();
 
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine($"{AppContext.BaseDirectory}", xmlFile);
@@ -84,9 +92,17 @@ builder.Services.AddDbContext<ApplicationContext>(options =>
     options.UseSqlServer(connectionString));
 
 //Add Identity
-builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
+builder.Services.AddDefaultIdentity<User>(options => {
+    options.SignIn.RequireConfirmedAccount = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireDigit = false;
+    })
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationContext>();
+
+//HealthChecks
+builder.Services.AddHealthChecks()
+    .AddSqlServer(builder.Configuration.GetConnectionString("ApplicationContextConnection"));
 
 //AddHttpContextAccessor
 builder.Services.AddHttpContextAccessor();
@@ -94,28 +110,50 @@ builder.Services.AddHttpContextAccessor();
 //Add Fluent Validator
 builder.Services.AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
 //Mapping 
 builder.Services.RegisterMaps();
 
 var app = builder.Build();
+var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(option =>
+    {
+        foreach (var desciptions in provider.ApiVersionDescriptions)
+        {
+            option.SwaggerEndpoint($"/swagger/{desciptions.GroupName}/swagger.json"
+                , $"{desciptions.GroupName.ToUpper()}");
+        }
+    });
 }
 //GlobalExceptionHandling middleware
 app.UseGlobalExceptionHandler();
 app.UseHttpsRedirection();
 //Request Response Logging Middleware
 app.UseRequestLogging();
+//Culture Middleware
+app.UseRequestCulture();
 
 app.UseAuthentication();
 
 app.UseAuthorization();
 
+app.MapHealthChecks("/health", new HealthCheckOptions()
+{
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
+
+app.MapHealthChecks("/quickhealth", new HealthCheckOptions()
+{
+    Predicate = _ => false
+});
+
 app.MapControllers();
+
 //Seeding
 EventsITAcademySeed.Initialize(app.Services);
 

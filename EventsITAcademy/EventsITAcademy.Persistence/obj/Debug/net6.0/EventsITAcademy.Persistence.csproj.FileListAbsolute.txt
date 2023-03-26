@@ -32,3 +32,6 @@ C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.Persistence\obj\De
 C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.Persistence\obj\Debug\net6.0\refint\EventsITAcademy.Persistence.dll
 C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.Persistence\obj\Debug\net6.0\EventsITAcademy.Persistence.pdb
 C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.Persistence\obj\Debug\net6.0\ref\EventsITAcademy.Persistence.dll
+C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.Persistence\bin\Debug\net6.0\Utilities.dll
+C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.Persistence\bin\Debug\net6.0\Utilities.pdb
+C:\Users\User\EventsITAcademy\EventsITAcademy\EventsITAcademy.Persistence\bin\Debug\net6.0\ka-GE\Utilities.resources.dll

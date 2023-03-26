@@ -18,30 +18,17 @@ using EventsITAcademy.Application.Images.Repositories;
 using EventsITAcademy.Infrastructure.Images;
 using EventsITAcademy.Application.Images;
 using EventsITAcademy.MVC.Infrastructure.Mappings;
-using EventsITAcademy.Application.Admin;
 using EventsITAcademy.Application.Roles;
 using EventsITAcademy.Application.Roles.Repositories;
 using EventsITAcademy.Infrastructure.Roles;
 using Utilities.CustomHasher;
+using EventsITAcademy.MVC.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddScoped<IEventService, EventService>();
-builder.Services.AddScoped<IEventRepository, EventRepository>();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<ITicketService, TicketService>();
-builder.Services.AddScoped<ITicketRepository, TicketRepository>();
-builder.Services.AddScoped<IImageRepository, ImageRepository>();
-builder.Services.AddScoped<IImageService, ImageService>();
-builder.Services.AddScoped<IAdminService, AdminService>();
-builder.Services.AddScoped<IRoleService, RoleService>();
-builder.Services.AddScoped<IRoleRepository, RoleRepository>();
-
-
-
+//Dependency Injection
+builder.Services.AddServices();
 
 builder.Services.AddSession(conf => conf.IdleTimeout = TimeSpan.FromMinutes(15));
-builder.Services.AddScoped<IPasswordHasher<User>, CustomPasswordHasher>();
 builder.Services.AddControllersWithViews();
 
 var connectionString = builder.Configuration.GetConnectionString("ConnectionString") ?? throw new InvalidOperationException("'ConnectionString' not found.");
@@ -49,13 +36,7 @@ var connectionString = builder.Configuration.GetConnectionString("ConnectionStri
 builder.Services.AddDbContext<ApplicationContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddDefaultIdentity<User>(opt =>
-{
-    opt.Password.RequiredLength = 7;
-    opt.User.RequireUniqueEmail = true;
-}
-//SignIn.RequireConfirmedAccount = true
-)
+builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationContext>();
 

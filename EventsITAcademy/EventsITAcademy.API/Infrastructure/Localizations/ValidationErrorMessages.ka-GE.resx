@@ -132,11 +132,17 @@
   <data name="InvalidEmail" xml:space="preserve">
     <value>იმეილი არასწორ ფორმატშია მოცემული</value>
   </data>
+  <data name="ModificationPeriodRequired" xml:space="preserve">
+    <value>რედქტირების პერიოდის მითითება სავალდებულოა</value>
+  </data>
   <data name="NumberOfTicketsRequired" xml:space="preserve">
     <value>ბილეთების რაოდენობა სავალდებულო ველია და უნდა იყოს 0ზე მეტი</value>
   </data>
   <data name="PasswordLength" xml:space="preserve">
     <value>პაროლი სავალდებულო ველია და სიმბოლოების რაოდენობა უნდა იყოს 6 - 30</value>
+  </data>
+  <data name="ReservationPeriodRequired" xml:space="preserve">
+    <value>რეზერვცაიის პერიოდის მითითება სავალდებულოა</value>
   </data>
   <data name="StartDateGreaterThanNow" xml:space="preserve">
     <value>ივენთის დაწყების თარიღი და დრო უნდა აღემატებოდეს ამჟამინდელ თარიღს და დროს</value>

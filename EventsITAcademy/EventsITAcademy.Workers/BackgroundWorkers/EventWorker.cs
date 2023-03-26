@@ -38,7 +38,7 @@ namespace EventsITAcademy.Workers.BackgroundWorkers
                     using (var scope = _serviceProvider.CreateScope())
                     {
                         var service = scope.ServiceProvider.GetRequiredService<ServiceClient>();
-                        await service.ArchiveAndLimitEventEdit(stoppingToken);
+                        await service.ArchiveEvent(stoppingToken).ConfigureAwait(false);
                     }
 
                     _logger.LogInformation("Limit event edit worker running at :{0}", DateTime.Now.ToString());

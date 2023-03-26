@@ -17,11 +17,11 @@ namespace EventsITAcademy.API.Infrastructure.Middlewares
         {
             try
             {
-                await _next(httpContext);
+                await _next(httpContext).ConfigureAwait(false);
             }
             catch (Exception exception)
             {
-                await HandleException(exception, httpContext);
+                await HandleException(exception, httpContext).ConfigureAwait(false);
             }
         }
 
@@ -35,9 +35,7 @@ namespace EventsITAcademy.API.Infrastructure.Middlewares
             httpContext.Response.ContentType = "application/json";
             httpContext.Response.StatusCode = error.Status.Value;
 
-            await httpContext.Response.WriteAsync(result);
-            //var completePath = Directory.GetCurrentDirectory() + "\\Infrastructure\\Logging\\ErrorLogs.txt";
-            //await File.AppendAllTextAsync(completePath, $"{Environment.NewLine}*******Exception Log*******{Environment.NewLine}" + resultToLog);
+            await httpContext.Response.WriteAsync(result).ConfigureAwait(false);
             Log.Information(resultToLog);
         }
     }

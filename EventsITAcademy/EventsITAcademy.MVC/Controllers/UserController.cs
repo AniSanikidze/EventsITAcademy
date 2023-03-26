@@ -22,7 +22,7 @@ namespace EventsITAcademy.MVC.Controllers
 
         public async Task<IActionResult> Events(CancellationToken cancellationToken)
         {
-            var events = await _userService.GetUserEventsAsync(cancellationToken, User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            var events = await _userService.GetUserEventsAsync(cancellationToken, User?.FindFirst(ClaimTypes.NameIdentifier)?.Value).ConfigureAwait(false);
             return View("~/Views/User/Events.cshtml", events);
         }
     }

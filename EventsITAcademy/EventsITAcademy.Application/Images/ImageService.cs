@@ -1,12 +1,8 @@
-﻿using EventsITAcademy.Application.Events.Repositories;
-using EventsITAcademy.Application.Images.Repositories;
+﻿using EventsITAcademy.Application.Images.Repositories;
 using EventsITAcademy.Domain.Images;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Hosting;
 
 namespace EventsITAcademy.Application.Images
 {
@@ -20,40 +16,34 @@ namespace EventsITAcademy.Application.Images
         }
         public async Task<Image> SaveImageAsync(CancellationToken cancellationToken, IFormFile uploadedImage, int eventId)
         {
-            //string uniqueFileName = null;
-            //byte[]? bytes = null;
-            //if(formFile != null)
-            //{
-            //    using (Stream fileStream = formFile.OpenReadStream())
-            //    {
-            //        using (BinaryReader binaryReader = new BinaryReader(fileStream))
-            //        {
-            //            bytes = binaryReader.ReadBytes((int)fileStream.Length);
-            //        }
-            //    }
-            //}
+            var contentPath = Path.GetFullPath("wwwroot");
+            var path = Path.Combine(contentPath, "Uploads");
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+            var uniqueString = Guid.NewGuid().ToString();
+            var newFileName = uniqueString + uploadedImage.FileName;
+            string fileWithPath = Path.Combine(path, newFileName);
+            var stream = new FileStream(fileWithPath, FileMode.Create);
+       
+                await uploadedImage.CopyToAsync(stream).ConfigureAwait(false);
+                stream.Close();
 
             Image img = new Image();
             img.EventId = eventId;
-            img.ImageName = uploadedImage.FileName;
+            img.ImageName = newFileName;
+            img.ImagePath = newFileName;
 
             MemoryStream ms = new MemoryStream();
 
             uploadedImage.CopyTo(ms);
-            img.ImageData = ms.ToArray();
+            img.ImagePath = fileWithPath;
 
             ms.Close();
             ms.Dispose();
 
             return await _imageRepository.SaveImageAsync(cancellationToken, img);
-            //Image image = new Image()
-            //{
-            //    ImageData = Convert.ToBase64String(bytes, 0, bytes.Length),
-
-
-            //};
-
-
         }
     }
 }

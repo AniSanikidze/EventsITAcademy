@@ -1,10 +1,5 @@
 ﻿using EventsITAcademy.Application.Events.Requests;
 using EventsITAcademy.Application.Events.Responses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EventsITAcademy.Application.Events
 {
@@ -13,16 +8,14 @@ namespace EventsITAcademy.Application.Events
         Task<List<EventResponseModel>> GetAllAsync(CancellationToken cancellationToken);
         Task<List<EventResponseModel>> GetAllConfirmedAsync(CancellationToken cancellationToken);
         Task<List<EventResponseModel>> GetAllArchivedAsync(CancellationToken cancellationToken);
-        Task<List<EventResponseModel>> GetUserEventsAsync(CancellationToken cancellationToken, string userId);
         Task<List<EventResponseModel>> GetAllUnconfirmedAsync(CancellationToken cancellationToken);
-        Task<EventResponseModel> ConfirmEventAsync(CancellationToken cancellationToken, int id);
         Task<EventResponseModel> GetAsync(CancellationToken cancellationToken, int id);
-        Task<EventResponseModel> ArchiveEvent(CancellationToken cancellationToken, int id);
-        Task<EventResponseModel> ActivateEvent(CancellationToken cancellationToken, int id);
-        Task<EventResponseModel> SetEventUneditableAsync(CancellationToken cancellationToken, int id);
-        Task<EventResponseModel> CreateAsync(CancellationToken cancellationToken, EventRequestModel eventRequest, string userId);
-        Task<EventResponseModel> UpdateAsync(CancellationToken cancellationToken, UpdateEventRequestModel eventRequest, string userId);
-        Task<EventResponseModel> UpdateEventByAdminAsync(CancellationToken cancellationToken, AdminUpdateEventRequestModel eventRequest);
-        Task DeleteAsync(CancellationToken cancellationToken, int id);
+        Task<int> ArchiveEvent(CancellationToken cancellationToken, int id);
+        Task<int> ActivateEvent(CancellationToken cancellationToken, int id);
+        Task<int> SetEventUneditableAsync(CancellationToken cancellationToken, int id);
+        Task<int> CreateAsync(CancellationToken cancellationToken, EventRequestModel eventRequest, string userId);
+        Task<int> UpdateAsync(CancellationToken cancellationToken, UpdateEventRequestModel eventRequest, string userId);
+        Task<int> UpdateEventByAdminAsync(CancellationToken cancellationToken, AdminUpdateEventRequestModel eventRequest);
+        Task<int> DeleteAsync(CancellationToken cancellationToken, int id);
     }
 }

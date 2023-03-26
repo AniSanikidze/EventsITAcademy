@@ -38,7 +38,7 @@ namespace EventsITAcademy.Workers.BackgroundWorkers
                     using (var scope = _serviceProvider.CreateScope())
                     {
                         var service = scope.ServiceProvider.GetRequiredService<ServiceClient>();
-                        await service.RemoveTicketReservations(stoppingToken);
+                        await service.RemoveTicketReservations(stoppingToken).ConfigureAwait(false);
                     }
 
                     _logger.LogInformation("Ticket worker running at :{0}", DateTime.Now.ToString());

@@ -106,6 +106,15 @@ namespace EventsITAcademy.API.Infrastructure.Localizations {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Modification period is required field.
+        /// </summary>
+        public static string ModificationPeriodRequired {
+            get {
+                return ResourceManager.GetString("ModificationPeriodRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Number of tickets field is mandatory and must be greater than 0.
         /// </summary>
         public static string NumberOfTicketsRequired {
@@ -120,6 +129,15 @@ namespace EventsITAcademy.API.Infrastructure.Localizations {
         public static string PasswordLength {
             get {
                 return ResourceManager.GetString("PasswordLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservation period is required field.
+        /// </summary>
+        public static string ReservationPeriodRequired {
+            get {
+                return ResourceManager.GetString("ReservationPeriodRequired", resourceCulture);
             }
         }
         

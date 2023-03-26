@@ -1,9 +1,7 @@
-﻿using EventsITAcademy.Application.Admin;
-using EventsITAcademy.Application.Events;
+﻿using EventsITAcademy.Application.Events;
 using EventsITAcademy.Application.Events.Requests;
 using EventsITAcademy.Application.Roles;
 using EventsITAcademy.Application.Users;
-using EventsITAcademy.Domain.Users;
 using EventsITAcademy.MVC.Models;
 using Mapster;
 using Microsoft.AspNetCore.Authorization;
@@ -18,13 +16,11 @@ namespace EventsITAcademy.MVC.Controllers
     {
         private readonly IUserService _userService;
         private readonly IEventService _eventService;
-        private IAdminService _adminService;
         private IRoleService _roleService;
-        public AdminPanelController(IUserService userService, IEventService eventService, IAdminService adminService, IRoleService roleService)
+        public AdminPanelController(IUserService userService, IEventService eventService, IRoleService roleService)
         {
             _userService = userService;
             _eventService = eventService;
-            _adminService = adminService;
             _roleService = roleService;
         }
 
@@ -32,55 +28,55 @@ namespace EventsITAcademy.MVC.Controllers
         {
             return View();
         }
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Users(CancellationToken cancellationToken)
         {
-            var users = await _userService.GetAllUsersAsync(cancellationToken);
+            var users = await _userService.GetAllUsersAsync(cancellationToken).ConfigureAwait(false);
             return View(users);
         }
-
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> PendingEvents(CancellationToken cancellationToken)
         {
-            var events = await _eventService.GetAllUnconfirmedAsync(cancellationToken);
+            var events = await _eventService.GetAllUnconfirmedAsync(cancellationToken).ConfigureAwait(false);
             return View("~/Views/AdminPanel/Events.cshtml", events);
         }
-
+        [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> ActiveEvents(CancellationToken cancellationToken)
         {
-            var events = await _eventService.GetAllConfirmedAsync(cancellationToken);
+            var events = await _eventService.GetAllConfirmedAsync(cancellationToken).ConfigureAwait(false);
             return View("~/Views/AdminPanel/Events.cshtml", events);
         }
-
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteEvent(int id, CancellationToken cancellationToken)
         {
-            var events = await _eventService.GetAllConfirmedAsync(cancellationToken);
-            await _adminService.DeleteEventAsync(cancellationToken, id);
-            return View("~/Views/AdminPanel/Events.cshtml", events);
+            await _eventService.DeleteAsync(cancellationToken, id).ConfigureAwait(false);
+            return RedirectToAction("PendingEvents");
         }
-
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> ArchivedEvents(CancellationToken cancellationToken)
         {
-            var events = await _eventService.GetAllArchivedAsync(cancellationToken);
+            var events = await _eventService.GetAllArchivedAsync(cancellationToken).ConfigureAwait(false);
             return View("~/Views/AdminPanel/Events.cshtml", events);
         }
 
         [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> ActivateEvent(int id, CancellationToken cancellationToken)
         {
-            await _eventService.ActivateEvent(cancellationToken, id);
+            await _eventService.ActivateEvent(cancellationToken, id).ConfigureAwait(false);
             return RedirectToAction("ActiveEvents");
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> EditEvent(int id, CancellationToken cancellationToken)
         {
             if (id == 0)
             {
                 return NotFound();
             }
-            var @event = await _eventService.GetAsync(cancellationToken, id);
+            var @event = await _eventService.GetAsync(cancellationToken, id).ConfigureAwait(false);
             return View(@event.Adapt<AdminUpdateEventRequestModel>());
         }
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> EditEvent(AdminUpdateEventRequestModel eventRequest, CancellationToken cancellationToken)
         {
@@ -92,7 +88,8 @@ namespace EventsITAcademy.MVC.Controllers
             {
                 try
                 {
-                    var updatedEvent = await _adminService.UpdateEventAsync(cancellationToken, eventRequest);
+                    var updatedEventId = await _eventService.UpdateEventByAdminAsync(cancellationToken, eventRequest).ConfigureAwait(false);
+                    var updatedEvent = await _eventService.GetAsync(cancellationToken, updatedEventId).ConfigureAwait(false);
                     TempData["success"] = "Event updated successfully";
                     if (!updatedEvent.IsActive)
                         return RedirectToAction("PendingEvents");
@@ -107,13 +104,12 @@ namespace EventsITAcademy.MVC.Controllers
             }
             return View();
         }
-
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AssignRole(string id, CancellationToken cancellationToken)
         {
 
             var roles = _roleService.GetRolesAsync(cancellationToken);
-            var userRoleName = await _roleService.GetUserRoleAsync(cancellationToken, id);
+            var userRoleName = await _roleService.GetUserRoleAsync(cancellationToken, id).ConfigureAwait(false);
             SelectListItem userRole = null;        
             
             roles.ForEach(x =>
@@ -130,8 +126,6 @@ namespace EventsITAcademy.MVC.Controllers
                     role.Id,
                     role.Name == userRoleName)).ToList();
 
-
-
             var viewModel = new AssignRoleViewModel
             {
                 UserId = id,
@@ -141,81 +135,28 @@ namespace EventsITAcademy.MVC.Controllers
 
             return View(viewModel);
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> AssignRole( AssignRoleViewModel roleViewModel, CancellationToken cancellationToken)
         {
             roleViewModel.UserId = roleViewModel.UserId;
-            await _roleService.AssignRoleToUserAsync(cancellationToken, roleViewModel.UserId, roleViewModel.SelectedRole);
-            //if (eventRequest.FinishDate < eventRequest.StartDate)
-            //{
-            //    ModelState.AddModelError("", "Finish Date cannot be less than the start date");
-            //}
-            //else if (ModelState.IsValid)
-            //{
-            //    try
-            //    {
-            //        var updatedEvent = await _adminService.UpdateEventAsync(cancellationToken, eventRequest);
-            //        TempData["success"] = "Event updated successfully";
-            //        if (!updatedEvent.IsActive)
-            //            return RedirectToAction("PendingEvents");
-            //        else
-            //            return RedirectToAction("ActiveEvents");
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        TempData["warning"] = ex.Message;
-            //    }
-
-            //}
+            if (ModelState.IsValid)
+            {
+                await _roleService.AssignRoleToUserAsync(cancellationToken, roleViewModel.UserId, roleViewModel.SelectedRole).ConfigureAwait(false);
+            }
+            else
+            {
+                return View();
+            }
             return RedirectToAction("Users");
         }
 
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteUser(string id, CancellationToken cancellationToken)
         {
-            await _roleService.RemoveUserRoleAsync(cancellationToken, id);
-            await _adminService.DeleteUserAsync(cancellationToken, id);
+            await _roleService.RemoveUserRoleAsync(cancellationToken, id).ConfigureAwait(false);
+            await _userService.DeleteUserAsync(cancellationToken, id).ConfigureAwait(false);
             return RedirectToAction("Users");
         }
-
-
-
-
-
-
-
-
-
-
-        //[Authorize(Roles = "Admin")]
-        //public async Task<IActionResult> EditEvent(int id, CancellationToken cancellationToken)
-        //{
-        //    if (id == 0)
-        //    {
-        //        return NotFound();
-        //    }
-        //    var @event = await _eventService.GetAsync(cancellationToken, id);
-        //    return View(@event.Adapt<AdminUpdateEventRequestModel>());
-        //}
-
-        //[Authorize(Roles = "Admin")]
-        //[HttpPost]
-        //public async Task<IActionResult> Edit(AdminEventRequestModel eventRequest, CancellationToken cancellationToken)
-        //{
-        //    var role = User.FindFirst(ClaimTypes.Role).Value;
-        //    var userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
-        //    if (eventRequest.FinishDate < eventRequest.StartDate)
-        //    {
-        //        ModelState.AddModelError("", "Finish Date cannot be less than the start date");
-        //    }
-        //    else if (ModelState.IsValid)
-        //    {
-        //        await _eventService.UpdateAsync(cancellationToken, eventRequest, null, role);
-        //        TempData["success"] = "Event updated successfully";
-        //        return RedirectToAction("List");
-        //    }
-        //    return View();
-        //}
     }
 }
