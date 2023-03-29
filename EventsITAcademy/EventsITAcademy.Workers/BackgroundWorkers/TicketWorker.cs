@@ -2,11 +2,6 @@
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using NCrontab;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EventsITAcademy.Workers.BackgroundWorkers
 {
@@ -17,7 +12,7 @@ namespace EventsITAcademy.Workers.BackgroundWorkers
         private readonly IServiceProvider _serviceProvider;
         private DateTime _nextRun;
 
-        private string Schedule => "50 * * * * * ";
+        private static string Schedule => "50 * * * * * ";
 
         public TicketWorker(ILogger<TicketWorker> logger, IServiceProvider serviceProvider)
         {
@@ -37,7 +32,7 @@ namespace EventsITAcademy.Workers.BackgroundWorkers
                 {
                     using (var scope = _serviceProvider.CreateScope())
                     {
-                        var service = scope.ServiceProvider.GetRequiredService<ServiceClient>();
+                        var service = scope.ServiceProvider.GetRequiredService<ServiceWrapper>();
                         await service.RemoveTicketReservations(stoppingToken).ConfigureAwait(false);
                     }
 

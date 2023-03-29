@@ -1,10 +1,4 @@
-﻿using EventsITAcademy.Application.Tickets.Requests;
-using EventsITAcademy.Application.Tickets.Responses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EventsITAcademy.Application.Tickets.Responses;
 
 namespace EventsITAcademy.Application.Tickets
 {

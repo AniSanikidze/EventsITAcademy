@@ -88,6 +88,15 @@ namespace Utilities.Localizations {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No tickets left for this event.
+        /// </summary>
+        public static string NoTicketsLeft {
+            get {
+                return ResourceManager.GetString("NoTicketsLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to User has already reserved the ticket.
         /// </summary>
         public static string TicketReserved {

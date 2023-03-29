@@ -4,12 +4,12 @@ using Microsoft.Extensions.Logging;
 
 namespace EventsITAcademy.Workers
 {
-    public class ServiceClient
+    public class ServiceWrapper
     {
-        private readonly ILogger<ServiceClient> _logger;
+        private readonly ILogger<ServiceWrapper> _logger;
         private readonly ITicketService _ticketService;
         private readonly IEventService _eventService;
-        public ServiceClient(ILogger<ServiceClient> logger, ITicketService ticketService, IEventService eventService)
+        public ServiceWrapper(ILogger<ServiceWrapper> logger, ITicketService ticketService, IEventService eventService)
         {
             _logger = logger;
             _ticketService = ticketService;

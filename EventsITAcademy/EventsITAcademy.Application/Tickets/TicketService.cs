@@ -46,13 +46,21 @@ namespace EventsITAcademy.Application.Tickets
 
             return await AddTicketAsync(cancellationToken, ticketRequest).ConfigureAwait(false);
         }
-
+        public async Task<TicketResponseModel> Reserve(CancellationToken cancellationToken, int eventId, string userId)
+        {
+            var ticketRequest = new TicketRequestModel
+            {
+                EventId = eventId,
+                UserId = userId,
+                TicketStatus = TicketStatuses.Reserved
+            };
+            return await AddTicketAsync(cancellationToken, ticketRequest).ConfigureAwait(false);
+        }
         public async Task<List<TicketResponseModel>> GetAllReservedAsync(CancellationToken cancellationToken)
         {
             var tickets = await _ticketRepository.GetAllReservedAsync(cancellationToken).ConfigureAwait(false);
             return tickets.Adapt<List<TicketResponseModel>>();
         }
-
         public async Task<bool> RemoveReservationAsync(CancellationToken cancellationToken, string userId, int eventId)
         {
             var ticket = await _ticketRepository.GetReservedAsync(cancellationToken, userId, eventId).ConfigureAwait(false);
@@ -65,18 +73,6 @@ namespace EventsITAcademy.Application.Tickets
 
             return await _ticketRepository.RemoveReservationAsync(cancellationToken, ticket).ConfigureAwait(false);
         }
-
-        public async Task<TicketResponseModel> Reserve(CancellationToken cancellationToken,int eventId, string userId)
-        {
-            var ticketRequest = new TicketRequestModel
-            {
-                EventId = eventId,
-                UserId = userId,
-                TicketStatus = TicketStatuses.Reserved
-            };
-            return await AddTicketAsync(cancellationToken, ticketRequest).ConfigureAwait(false);
-        }
-
         public async Task<TicketResponseModel> AddTicketAsync(CancellationToken cancellationToken, TicketRequestModel ticketRequest)
         {
             if (!await _userRepository.Exists(cancellationToken, ticketRequest.UserId).ConfigureAwait(false))
@@ -94,7 +90,7 @@ namespace EventsITAcademy.Application.Tickets
                 if (await _ticketRepository.Exists(cancellationToken, x => x.UserId == ticketRequest.UserId && x.EventId == ticketRequest.EventId
                         && (x.TicketStatus == TicketStatuses.Reserved)).ConfigureAwait(false))
                 {
-                    throw new ItemAlreadyExistsException(ErrorMessages.TicketReserved,"TicketAlreadyReserved");
+                    throw new ItemAlreadyExistsException(ErrorMessages.TicketReserved, "TicketAlreadyReserved");
                 }
             }
 
@@ -104,9 +100,13 @@ namespace EventsITAcademy.Application.Tickets
                 @event.NumberOfTickets -= 1;
                 await _eventRepository.UpdateAsync(cancellationToken, @event).ConfigureAwait(false);
             }
+            else
+            {
+                throw new NoTicketsLeftException(ErrorMessages.NoTicketsLeft);
+            }
 
             var ticket = ticketRequest.Adapt<Ticket>();
-            if(ticket.TicketStatus == TicketStatuses.Reserved)
+            if (ticket.TicketStatus == TicketStatuses.Reserved)
                 ticket.ReservationDeadline = DateTime.Now.AddMinutes(@event.ReservationPeriod);
             else
                 ticket.ReservationDeadline = null;

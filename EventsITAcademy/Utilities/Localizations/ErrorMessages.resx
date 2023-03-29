@@ -126,6 +126,9 @@
   <data name="NotFound" xml:space="preserve">
     <value>was not found</value>
   </data>
+  <data name="NoTicketsLeft" xml:space="preserve">
+    <value>No tickets left for this event</value>
+  </data>
   <data name="TicketReserved" xml:space="preserve">
     <value>User has already reserved the ticket</value>
   </data>

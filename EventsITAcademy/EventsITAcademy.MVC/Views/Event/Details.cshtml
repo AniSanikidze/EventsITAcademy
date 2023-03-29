@@ -20,7 +20,9 @@
         <div class="div-info">
             <div style="margin-left:20px;">
                 @Html.DisplayNameFor(model => model.Title)
-                @Html.DisplayFor(model => model.Title)
+                <div>
+                    @Html.DisplayFor(model => model.Title)
+                </div>
                 <br />
                 @Html.DisplayNameFor(model => model.Description)</>
                 <p class="desc">
@@ -33,7 +35,9 @@
                     @Html.DisplayFor(model => model.FinishDate)
                 </div>
                 @Html.DisplayNameFor(x => x.NumberOfTickets)
+                <div>
                 @Html.DisplayFor(model => model.NumberOfTickets)
+                </div>
 
             </div>
             <div style="margin-left:20px;">

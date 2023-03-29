@@ -29,7 +29,6 @@ namespace EventsITAcademy.Persistence.Seed
         {
             var seeded = false;
 
-            //SeedUsers(context, ref seeded);
             SeedUsers(context, ref seeded);
             SeedRoles(context, ref seeded);
             SeedUserRoles(context, ref seeded);
@@ -95,7 +94,7 @@ namespace EventsITAcademy.Persistence.Seed
 
                 seeded = true;
             }
-            context.SaveChanges();
+            //context.SaveChanges();
         }
 
         private static void SeedRoles(ApplicationContext context, ref bool seeded)
@@ -126,7 +125,7 @@ namespace EventsITAcademy.Persistence.Seed
 
                 seeded = true;
             }
-            context.SaveChanges();
+            //context.SaveChanges();
         }
         private static void SeedUserRoles(ApplicationContext context, ref bool seeded)
         {
@@ -161,56 +160,9 @@ namespace EventsITAcademy.Persistence.Seed
 
                 seeded = true;
             }
-            context.SaveChanges();
+            //context.SaveChanges();
         }
 
-        //private static void SeedSubtasks(ApplicationContext context, ref bool seeded)
-        //{
-        //    var subtasks = new List<Subtask>()
-        //    {
-        //        new Subtask
-        //        {
-        //           ToDoItemId = context.ToDos.SingleOrDefault(x=>x.Title == "ToDo1 for User 1").Id,
-        //           CreatedAt = DateTime.Now,
-        //           ModifiedAt = DateTime.Now,
-        //           Status = EntityStatuses.Active,
-        //           Title = "Subtask1 For ToDo1"
-        //        },
-        //        new Subtask
-        //        {
-        //           ToDoItemId = context.ToDos.SingleOrDefault(x=>x.Title == "ToDo1 for User 1").Id,
-        //           CreatedAt = DateTime.Now,
-        //           ModifiedAt = DateTime.Now,
-        //           Status = EntityStatuses.Active,
-        //           Title = "Subtask2 For ToDo1"
-        //        },
-        //        new Subtask
-        //        {
-        //           ToDoItemId = context.ToDos.SingleOrDefault(x=>x.Title == "ToDo2 for User 1").Id,
-        //           CreatedAt = DateTime.Now,
-        //           ModifiedAt = DateTime.Now,
-        //           Status = EntityStatuses.Active,
-        //           Title = "Subtask withId 3 For ToDo2"
-        //        },
-        //        new Subtask
-        //        {
-        //            ToDoItemId = context.ToDos.SingleOrDefault(x=>x.Title == "ToDo3 for User 1").Id,
-        //            CreatedAt = DateTime.Now,
-        //            ModifiedAt = DateTime.Now,
-        //            Status = EntityStatuses.Active,
-        //            Title = "Subtask with Id 5 for  For ToDo3"
-        //        }
-        //    };
-        //    foreach (var subtask in subtasks)
-        //    {
-        //        if (context.Subtasks.Any(x => x.Title == subtask.Title)) continue;
-
-        //        context.Subtasks.Add(subtask);
-
-        //        seeded = true;
-        //    }
-        //    context.SaveChanges();
-        //}
         private static string GenerateHash(string input)
         {
             const string SECRET_KEY = "lfherffg324";
@@ -229,39 +181,5 @@ namespace EventsITAcademy.Persistence.Seed
                 return sb.ToString();
             }
         }
-
-        //private static void SeedUsers(ApplicationContext context, ref bool seeded)
-        //{
-        //    var users = new List<User>()
-        //    {
-        //        new User
-        //        {
-        //            Username = "TestUser1",
-        //            Password = GenerateHash("TestPassword1"),
-        //            CreatedAt = DateTime.Now,
-        //            ModifiedAt = DateTime.Now,
-        //            Status = EntityStatuses.Active
-        //        },
-        //        new User
-        //        {
-        //            Username = "TestUser2",
-        //            Password = GenerateHash("TestPassword2"),
-        //            CreatedAt = DateTime.Now,
-        //            ModifiedAt = DateTime.Now,
-        //            Status = EntityStatuses.Active
-        //        }
-
-        //    };
-
-        //    foreach (var user in users)
-        //    {
-        //        if (context.Users.Any(x => x.Username == user.Username)) continue;
-
-        //        context.Users.Add(user);
-
-        //        seeded = true;
-        //    }
-        //    context.SaveChanges();
-        //}
     }
 }

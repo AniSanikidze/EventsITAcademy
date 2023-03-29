@@ -52,7 +52,7 @@ namespace EventsITAcademy.API.Controllers
         [ProducesResponseType(typeof(UserExample), StatusCodes.Status200OK)]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(UserExample))]
         [Produces("application/json")]
-        [Route("/register")]
+        [Route("register")]
         [HttpPost]
         public async Task<UserResponseModel> Register(CancellationToken cancellation, CreateUserRequestModel user)
         {
@@ -81,7 +81,7 @@ namespace EventsITAcademy.API.Controllers
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(LoggedInUserExample))]
         //[ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [Produces("application/json")]
-        [Route("/login")]
+        [Route("login")]
         [HttpPost]
         public async Task<LoggedInUserResponseModel> LogIn(CancellationToken cancellation, LoginUserRequestModel request)
         {

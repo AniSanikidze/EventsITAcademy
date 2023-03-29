@@ -17,7 +17,6 @@ using EventsITAcademy.Workers.BackgroundWorkers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
@@ -28,6 +27,7 @@ var configuration = new ConfigurationBuilder()
 
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(configuration)
+    .MinimumLevel.Override("Microsoft.EntityFrameworkCore.Database.Command", Serilog.Events.LogEventLevel.Warning)
     .CreateLogger();
 
 try
@@ -52,10 +52,8 @@ IHostBuilder CreateHostBuilder(string[] args) =>
     .ConfigureServices((hostContext, services) =>
     {
         services.AddDbContext<ApplicationContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("ConnectionString") ?? throw new InvalidOperationException("'ConnectionString' not found.")),
-            ServiceLifetime.Transient
-            );
-        services.AddSingleton<ServiceClient>();
+            options.UseSqlServer(configuration.GetConnectionString("ConnectionString") ?? throw new InvalidOperationException("'ConnectionString' not found.")));
+        services.AddSingleton<ServiceWrapper>();
         services.AddScoped<ITicketService, TicketService>();
         services.AddScoped<ITicketRepository, TicketRepository>();
         services.AddScoped<IUserService, UserService>();

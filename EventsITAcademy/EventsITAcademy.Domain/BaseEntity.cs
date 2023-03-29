@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EventsITAcademy.Domain
+﻿namespace EventsITAcademy.Domain
 {
     public abstract class BaseEntity
     {
@@ -17,7 +11,6 @@ namespace EventsITAcademy.Domain
     public enum EntityStatuses
     {
         Active,
-        Deleted,
-        Archived
+        Deleted
     }
 }

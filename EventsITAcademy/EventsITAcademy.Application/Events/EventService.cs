@@ -78,12 +78,6 @@ namespace EventsITAcademy.Application.Events
             return unconfirmedEvents.Adapt<List<EventResponseModel>>();
         }
 
-        //public async Task<List<EventResponseModel>> GetUserEventsAsync(CancellationToken cancellationToken, string userId)
-        //{
-        //    var userEvents = await _eventRepository.GetUserEventsAsync(cancellationToken, userId).ConfigureAwait(false);
-        //    return userEvents.Adapt<List<EventResponseModel>>();
-        //}
-
         public async Task<int> UpdateAsync(CancellationToken cancellationToken, UpdateEventRequestModel eventRequest, string userId)
         {
             if (!await _eventRepository.Exists(cancellationToken, x => x.Id == eventRequest.Id
@@ -119,34 +113,26 @@ namespace EventsITAcademy.Application.Events
         public async Task<int> ArchiveEvent(CancellationToken cancellationToken, int id)
         {
             var @event = await GetAsync(cancellationToken, id).ConfigureAwait(false);
-            var archivedEvent = @event.Adapt<Event>();
-            archivedEvent.IsArchived = true;
-            archivedEvent.Status = EntityStatuses.Archived;
-            var result = await _eventRepository.UpdateAsync(cancellationToken, archivedEvent).ConfigureAwait(false);
+            var eventToArchive = @event.Adapt<Event>();
+            eventToArchive.IsArchived = true;
+            //archivedEvent.Status = EntityStatuses.Archived;
+            var result = await _eventRepository.UpdateAsync(cancellationToken, eventToArchive).ConfigureAwait(false);
             return result;
         }
 
         public async Task<int> ActivateEvent(CancellationToken cancellationToken, int id)
         {
             var @event = await GetAsync(cancellationToken, id).ConfigureAwait(false);
-            var archivedEvent = @event.Adapt<Event>();
-            archivedEvent.IsActive = true;
-            var result = await _eventRepository.UpdateAsync(cancellationToken, archivedEvent).ConfigureAwait(false);
-            return result;
-        }
-
-        public async Task<int> SetEventUneditableAsync(CancellationToken cancellationToken, int id)
-        {
-            var @event = await GetAsync(cancellationToken, id).ConfigureAwait(false);
-            var archivedEvent = @event.Adapt<Event>();
-            var result = await _eventRepository.UpdateAsync(cancellationToken, archivedEvent).ConfigureAwait(false);
+            var eventToActivate = @event.Adapt<Event>();
+            eventToActivate.IsActive = true;
+            var result = await _eventRepository.UpdateAsync(cancellationToken, eventToActivate).ConfigureAwait(false);
             return result;
         }
 
         public async Task<List<EventResponseModel>> GetAllArchivedAsync(CancellationToken cancellationToken)
         {
-            var unconfirmedEvents = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active && x.IsArchived == true).ConfigureAwait(false);
-            return unconfirmedEvents.Adapt<List<EventResponseModel>>();
+            var archivedEvents = await _eventRepository.GetAllAsync(cancellationToken, x => x.Status == EntityStatuses.Active && x.IsArchived == true).ConfigureAwait(false);
+            return archivedEvents.Adapt<List<EventResponseModel>>();
         }
     }
 }

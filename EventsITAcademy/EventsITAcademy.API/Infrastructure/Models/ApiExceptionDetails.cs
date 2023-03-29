@@ -7,8 +7,8 @@ namespace EventsITAcademy.API.Infrastructure.Models
     public class ApiExceptionDetails : ProblemDetails
     {
         public const string UnhandledErrorCode = "UnhandledError";
-        private HttpContext _context;
-        private Exception _exception;
+        private readonly HttpContext _context;
+        private readonly Exception _exception;
 
         public LogLevel LogLevel { get; set; }
         public string Code { get; set; }
@@ -75,23 +75,14 @@ namespace EventsITAcademy.API.Infrastructure.Models
             LogLevel = LogLevel.Information;
         }
 
-        //private void HandleException(UserHasNotOrderedPizzaException exception)
-        //{
-        //    Code = "UserHasNotOrderedPizza";
-        //    Status = (int)HttpStatusCode.BadRequest;
-        //    Type = "https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.9";
-        //    Title = exception.Message;
-        //    LogLevel = LogLevel.Information;
-        //}
-
-        //private void HandleException(ConflictingUserAddressException exception)
-        //{
-        //    Code = "AddressDoesNotBelongToUser";
-        //    Status = (int)HttpStatusCode.Conflict;
-        //    Type = "https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.9";
-        //    Title = exception.Message;
-        //    LogLevel = LogLevel.Information;
-        //}
+        private void HandleException(NoTicketsLeftException exception)
+        {
+            Code = exception.Code;
+            Status = (int)HttpStatusCode.Conflict;
+            Type = "https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.8";
+            Title = exception.Message;
+            LogLevel = LogLevel.Information;
+        }
         private void HandleException(Exception exception)
         {
 

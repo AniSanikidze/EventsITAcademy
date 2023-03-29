@@ -126,6 +126,9 @@
   <data name="NotFound" xml:space="preserve">
     <value>ვერ მოიძებნა</value>
   </data>
+  <data name="NoTicketsLeft" xml:space="preserve">
+    <value>ბილეთების არასაკმარისი რაოდენობა</value>
+  </data>
   <data name="TicketReserved" xml:space="preserve">
     <value>ბილეთი დაჯავშნილია</value>
   </data>

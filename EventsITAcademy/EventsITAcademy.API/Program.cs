@@ -49,7 +49,6 @@ builder.Services.AddSwaggerGen(option =>
     option.AddSecurityDefinition("basic", new OpenApiSecurityScheme
     {
         Name = "Authorization",
-        //Type = SecuritySchemeType.Http,
         Type = SecuritySchemeType.ApiKey,
         Scheme = "basic",
         In = ParameterLocation.Header,

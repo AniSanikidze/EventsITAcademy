@@ -63,23 +63,23 @@ namespace EventsITAcademy.Infrastructure.Events
         public async Task<Event> GetAsync(CancellationToken cancellationToken, int id)
         {
             return await _applicationContext.Events.Include(x => x.Image).Include(x => x.Tickets).FirstOrDefaultAsync(x => x.Id == id &&
-            x.Status == EntityStatuses.Active, cancellationToken);
+            x.Status == EntityStatuses.Active, cancellationToken).ConfigureAwait(false);
         }
 
         public async Task<Event> GetUserEventAsync(CancellationToken cancellationToken, int id, string userId)
         {
-            return await _applicationContext.Events.SingleOrDefaultAsync(x => x.Id == id && x.User.Id == userId, cancellationToken);
+            return await _applicationContext.Events.SingleOrDefaultAsync(x => x.Id == id && x.User.Id == userId, cancellationToken).ConfigureAwait(false);
         }
 
         public async Task<List<Event>> GetUserEventsAsync(CancellationToken cancellationToken, string userId)
         {
             return await _applicationContext.Events.Where(x => x.Status == EntityStatuses.Active &&
-            x.User.Id == userId).ToListAsync(cancellationToken);
+            x.User.Id == userId).ToListAsync(cancellationToken).ConfigureAwait(false);
         }
 
         public async Task<int> UpdateAsync(CancellationToken cancellationToken, Event @event)
         {
-            var retrievedEvent = await GetAsync(cancellationToken, @event.Id);
+            var retrievedEvent = await GetAsync(cancellationToken, @event.Id).ConfigureAwait(false);
             _applicationContext.Entry(retrievedEvent).State = EntityState.Detached;
 
             @event.ModificationPeriod = retrievedEvent.ModificationPeriod;
@@ -92,15 +92,15 @@ namespace EventsITAcademy.Infrastructure.Events
 
         public async Task<Event> UpdateEventModResPeriodsAsync(CancellationToken cancellationToken, Event @event)
         {
-            var retrievedEvent = await GetAsync(cancellationToken, @event.Id);
+            var retrievedEvent = await GetAsync(cancellationToken, @event.Id).ConfigureAwait(false);
             _applicationContext.Entry(retrievedEvent).State = EntityState.Detached;
 
             @event.CreatedAt = retrievedEvent.CreatedAt;
             @event.OwnerId = retrievedEvent.OwnerId;
             @event.IsActive = retrievedEvent.IsActive;
             _applicationContext.Events.Update(@event);
-            await _applicationContext.SaveChangesAsync(cancellationToken);
-            return await GetAsync(cancellationToken, @event.Id);
+            await _applicationContext.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+            return await GetAsync(cancellationToken, @event.Id).ConfigureAwait(false);
         }
     }
 }

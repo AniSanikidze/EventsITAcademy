@@ -19,8 +19,6 @@ namespace EventsITAcademy.Application.Events.Requests
         [Required]
         [Range(0, int.MaxValue, ErrorMessage = "Please enter a value bigger than {1}")]
         public int NumberOfTickets { get; set; }
-        //public bool IsActive { get; set; }
-        //public bool IsArchived { get; set; }
         [Required]
         public int ModificationPeriod { get; set; }
         [Required]
